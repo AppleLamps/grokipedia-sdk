@@ -5,9 +5,9 @@ from bs4 import BeautifulSoup
 import re
 from datetime import datetime
 from typing import Optional, List, Tuple
-from urllib.parse import urljoin
+from urllib.parse import urljoin, quote_plus
 
-from .models import Article, ArticleSummary, Section, ArticleMetadata
+from .models import Article, ArticleSummary, Section, ArticleMetadata, SearchResult
 from .exceptions import ArticleNotFound, RequestError
 
 
@@ -376,4 +376,116 @@ class Client:
                 return section
         
         return None
+    
+    def search(self, query: str) -> List[SearchResult]:
+        """
+        Search for articles on Grokipedia.
+        
+        Args:
+            query: Search query string
+            
+        Returns:
+            List of SearchResult objects
+            
+        Raises:
+            RequestError: For network or HTTP errors
+        """
+        # Construct search URL with properly encoded query
+        search_url = f"{self.base_url}/search?q={quote_plus(query)}"
+        
+        try:
+            html = self._fetch_html(search_url)
+        except ArticleNotFound:
+            # Search returned 404, but this is still a valid search with no results
+            return []
+        except RequestError as e:
+            # Re-raise RequestError as-is
+            raise e
+        
+        soup = BeautifulSoup(html, 'html.parser')
+        results = []
+        
+        # Look for common search result patterns
+        # Try multiple potential selectors based on common web patterns
+        result_containers = (
+            soup.find_all('div', class_='search-result') or
+            soup.find_all('li', class_='search-result') or
+            soup.find_all('article', class_='search-result') or
+            soup.find_all('div', class_='result') or
+            soup.find_all('li', class_='result')
+        )
+        
+        # If no specific containers found, try finding all links in the main content area
+        if not result_containers:
+            main_content = soup.find('main') or soup.find('article') or soup.find('div', id='content')
+            if main_content:
+                # Look for links that look like article links
+                links = main_content.find_all('a', href=True)
+                result_containers = links
+        
+        for container in result_containers:
+            try:
+                # Try to find the link element
+                link = container.find('a', href=True) if hasattr(container, 'find') else container
+                
+                if not link or not hasattr(link, 'get'):
+                    continue
+                
+                href = link.get('href', '')
+                if not href:
+                    continue
+                
+                # Extract title
+                title = link.get_text(strip=True)
+                if not title:
+                    # Try alt text or other attributes
+                    title = link.get('title', '') or link.get('aria-label', '')
+                
+                if not title:
+                    continue
+                
+                # Extract slug from href
+                # Handle different formats: /page/Slug, /Slug, Slug, etc.
+                slug = None
+                if '/page/' in href:
+                    slug = href.split('/page/')[-1].split('/')[0].split('?')[0]
+                elif href.startswith('/'):
+                    slug = href.lstrip('/').split('/')[0].split('?')[0]
+                else:
+                    slug = href.split('/')[-1].split('?')[0]
+                
+                # Clean up slug
+                slug = slug.strip().replace(' ', '_')
+                
+                # Construct full URL
+                url = urljoin(self.base_url, href)
+                
+                # Try to extract snippet
+                snippet = None
+                # Look for common snippet patterns
+                snippet_elem = (
+                    container.find('p', class_='search-snippet') or
+                    container.find('p', class_='snippet') or
+                    container.find('span', class_='snippet') or
+                    container.find('div', class_='summary')
+                )
+                
+                if snippet_elem:
+                    snippet = snippet_elem.get_text(strip=True)
+                
+                # Create SearchResult object
+                search_result = SearchResult(
+                    title=title,
+                    slug=slug,
+                    url=url,
+                    snippet=snippet
+                )
+                
+                results.append(search_result)
+                
+            except Exception as e:
+                # Skip malformed results but continue processing others
+                continue
+        
+        return results
 
