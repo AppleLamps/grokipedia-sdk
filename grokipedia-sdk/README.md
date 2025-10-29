@@ -64,21 +64,31 @@ grokipedia-sdk/
 │           ├── names.txt        # Article names
 │           └── urls.txt         # Article URLs
 ├── tests/                       # Comprehensive test suite
+│   ├── test_bk_tree.py
+│   ├── test_client_async.py
+│   ├── test_client_caching.py
+│   ├── test_client_config.py
+│   ├── test_client_http.py
+│   ├── test_client_validation.py
 │   ├── test_dependency_injection.py
+│   ├── test_exceptions.py
 │   ├── test_integration.py
+│   ├── test_models.py
 │   ├── test_parsers.py
-│   ├── test_slug_search.py
 │   ├── test_performance.py
-│   ├── test_bktree_performance.py
-│   └── benchmark_comparison.py
+│   └── test_slug_search.py
 ├── examples/                    # Example scripts
 │   ├── example.py               # Basic usage examples
 │   ├── example_slug_search.py   # Slug search examples
 │   └── demo.py                  # Quick demo script
 ├── docs/                        # Documentation
 │   ├── OPTIMIZATION.md          # Performance optimization details
+│   ├── RELEASE_NOTES_v1.1.0.md  # Release notes for v1.1.0
 │   └── SLUG_SEARCH_FEATURE.md   # Slug search feature documentation
+├── scripts/                     # Utility scripts
+│   └── fuzzy_search_diagnostics.py
 ├── README.md                    # This file
+├── CHANGELOG.md                 # Project changelog
 ├── setup.py                     # Package configuration
 └── pytest.ini                   # Pytest configuration
 ```
