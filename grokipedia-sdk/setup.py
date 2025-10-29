@@ -21,7 +21,7 @@ with open(init_file, "r", encoding="utf-8") as f:
 setup(
     name="grokipedia-sdk",
     version=version,
-    author="Grokipedia SDK Contributors",
+    author="Apple Lamps",
     description="A Python SDK for accessing Grokipedia content",
     long_description=long_description,
     long_description_content_type="text/markdown",

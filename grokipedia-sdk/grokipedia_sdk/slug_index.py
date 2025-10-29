@@ -4,7 +4,7 @@ import asyncio
 import heapq
 import random
 from pathlib import Path
-from typing import List, Optional, Dict, Tuple
+from typing import Dict, List, Optional, Tuple
 
 try:
     from rapidfuzz import fuzz
@@ -13,6 +13,8 @@ except ImportError:
     # Fallback to difflib if rapidfuzz is not installed
     from difflib import SequenceMatcher
     HAS_RAPIDFUZZ = False
+else:
+    from difflib import SequenceMatcher
 
 try:
     from .bk_tree import BKTree
@@ -64,6 +66,101 @@ class SlugIndex:
             'joe biden'
         """
         return slug.lower().replace('_', ' ')
+
+    @staticmethod
+    def _substring_match_score(text: str, pattern: str) -> Optional[Tuple[int, int, int]]:
+        """Calculate a relevance score for substring matches.
+
+        Scores favour exact matches, then word-boundary matches, prefixes, and finally
+        loose substring matches. Returns None when pattern does not occur."""
+
+        if not pattern:
+            return None
+
+        if text == pattern:
+            return (4, 0, -len(text))
+
+        best_score: Optional[Tuple[int, int, int]] = None
+        start = 0
+
+        while True:
+            idx = text.find(pattern, start)
+            if idx == -1:
+                break
+
+            before_char = text[idx - 1] if idx > 0 else ' '
+            after_index = idx + len(pattern)
+            after_char = text[after_index] if after_index < len(text) else ' '
+
+            left_boundary = not before_char.isalnum()
+            right_boundary = not after_char.isalnum()
+
+            if left_boundary and right_boundary:
+                primary = 3
+            elif left_boundary or right_boundary:
+                primary = 2
+            else:
+                primary = 1
+
+            candidate_score = (primary, -idx, -len(text))
+            if best_score is None or candidate_score > best_score:
+                best_score = candidate_score
+
+            # If we matched at the start with a word boundary on both sides, we won't
+            # find a better occurrence for this string.
+            if primary == 3 and idx == 0:
+                break
+
+            start = idx + 1
+
+        return best_score
+
+    @staticmethod
+    def _compute_similarity_score(query: str, candidate: str) -> float:
+        """Return a similarity score in the range [0, 100]."""
+
+        if HAS_RAPIDFUZZ:
+            if ' ' in query or ' ' in candidate:
+                return float(max(
+                    fuzz.token_set_ratio(query, candidate),
+                    fuzz.WRatio(query, candidate),
+                ))
+            return float(fuzz.ratio(query, candidate))
+
+        return SequenceMatcher(None, query, candidate).ratio() * 100.0
+
+    def _collect_substring_candidates(
+        self,
+        index: Dict[str, str],
+        query_normalized: str,
+        limit: int,
+    ) -> List[str]:
+        """Gather top substring matches ranked by relevance."""
+
+        candidate_scores: Dict[str, Tuple[int, int, int]] = {}
+
+        for normalized_name, slug in index.items():
+            if query_normalized not in normalized_name:
+                continue
+
+            score = self._substring_match_score(normalized_name, query_normalized)
+            if score is None:
+                continue
+
+            existing = candidate_scores.get(slug)
+            if existing is None or score > existing:
+                candidate_scores[slug] = score
+
+        if not candidate_scores:
+            return []
+
+        sorted_slugs = sorted(
+            candidate_scores.items(),
+            key=lambda item: item[1],
+            reverse=True,
+        )
+
+        return [slug for slug, _ in sorted_slugs[:limit]]
     
     def load(self) -> Dict[str, str]:
         """
@@ -161,22 +258,34 @@ class SlugIndex:
         """
         index = self.load()
         query_normalized = self._normalize_name(query)
-        
-        # Strategy 1: Exact substring matches (case-insensitive)
-        matches = []
+
+        if limit <= 0:
+            return []
+
+        if not query_normalized:
+            if not self._all_slugs:
+                return []
+            return self._all_slugs[:limit]
+
+        # Strategy 1: Exact/substring matches ranked by relevance
+        matches: List[str] = []
         seen = set()
-        
-        for normalized_name, slug in index.items():
-            if query_normalized in normalized_name:
-                if slug not in seen:
-                    matches.append(slug)
-                    seen.add(slug)
-                    if len(matches) >= limit:
-                        break
+
+        substring_candidates = self._collect_substring_candidates(index, query_normalized, limit)
+        for slug in substring_candidates:
+            if slug not in seen:
+                matches.append(slug)
+                seen.add(slug)
+            if len(matches) >= limit:
+                break
+
+        if not fuzzy or len(matches) >= limit:
+            return matches[:limit]
         
         # Strategy 2: Fuzzy matching if enabled and we don't have enough matches
         if fuzzy and len(matches) < limit:
             remaining = limit - len(matches)
+            min_similarity_threshold = min_similarity * 100.0
             
             # Strategy 2a: Use BK-Tree for O(log n) fuzzy search (if available)
             if self._bk_tree is not None:
@@ -185,21 +294,35 @@ class SlugIndex:
                 max_distance = int(query_len * (1 - min_similarity))
                 
                 # Search BK-Tree (dramatically faster than linear scan)
-                bk_results = self._bk_tree.search(query_normalized, max_distance, remaining * 3)
-                
-                # Add results in order of distance (closest first)
+                bk_results = self._bk_tree.search(query_normalized, max_distance, remaining * 5)
+
+                ranked_candidates: List[Tuple[float, int, str]] = []
+
                 for slug, distance in bk_results:
+                    if slug in seen:
+                        continue
+
+                    candidate_normalized = self._normalize_name(slug)
+                    similarity = self._compute_similarity_score(query_normalized, candidate_normalized)
+
+                    if similarity < min_similarity_threshold:
+                        continue
+
+                    ranked_candidates.append((similarity, distance, slug))
+
+                ranked_candidates.sort(key=lambda item: (-item[0], item[1], item[2]))
+
+                for similarity, _, slug in ranked_candidates:
                     if slug not in seen:
                         matches.append(slug)
                         seen.add(slug)
-                        if len(matches) >= limit:
-                            break
+                    if len(matches) >= limit:
+                        break
             
             # Strategy 2b: Fallback to optimized linear search (if BK-Tree unavailable)
             else:
                 # Use min-heap to efficiently track top-k results without sorting all items
                 top_matches = []
-                min_similarity_threshold = min_similarity * 100 if HAS_RAPIDFUZZ else min_similarity
                 
                 query_len = len(query_normalized)
                 
@@ -216,21 +339,20 @@ class SlugIndex:
                         continue
                     
                     # Calculate similarity ratio
-                    if HAS_RAPIDFUZZ:
-                        similarity = fuzz.ratio(query_normalized, normalized_name)
-                    else:
-                        similarity = SequenceMatcher(None, query_normalized, normalized_name).ratio() * 100
+                    similarity = self._compute_similarity_score(query_normalized, normalized_name)
                     
                     if similarity >= min_similarity_threshold:
                         if len(top_matches) < remaining:
-                            heapq.heappush(top_matches, (similarity, slug))
-                        elif similarity > top_matches[0][0]:
-                            heapq.heapreplace(top_matches, (similarity, slug))
+                            heapq.heappush(top_matches, (similarity, -len(normalized_name), slug))
+                        else:
+                            smallest = top_matches[0]
+                            if similarity > smallest[0]:
+                                heapq.heapreplace(top_matches, (similarity, -len(normalized_name), slug))
                 
                 # Extract and sort matches from heap
-                fuzzy_matches = sorted(top_matches, reverse=True, key=lambda x: x[0])
+                fuzzy_matches = sorted(top_matches, reverse=True)
                 
-                for _, slug in fuzzy_matches:
+                for _, _, slug in fuzzy_matches:
                     if slug not in seen:
                         matches.append(slug)
                         seen.add(slug)

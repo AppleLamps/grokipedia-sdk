@@ -2,9 +2,8 @@
 
 import httpx
 from bs4 import BeautifulSoup
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Optional, List
-from urllib.parse import urljoin
 
 from .models import Article, ArticleSummary, Section, ArticleMetadata
 from .exceptions import ArticleNotFound, RequestError
@@ -158,7 +157,7 @@ class Client:
             table_of_contents=toc,
             references=references,
             metadata=metadata,
-            scraped_at=datetime.utcnow().isoformat()
+            scraped_at=datetime.now(timezone.utc).isoformat()
         )
         
         # Cache the article for future use
@@ -200,7 +199,7 @@ class Client:
             url=url,
             summary=summary,
             table_of_contents=toc[:10],  # Limit to first 10 for quick overview
-            scraped_at=datetime.utcnow().isoformat()
+            scraped_at=datetime.now(timezone.utc).isoformat()
         )
     
     def get_section(self, slug: str, section_title: str) -> Optional[Section]:

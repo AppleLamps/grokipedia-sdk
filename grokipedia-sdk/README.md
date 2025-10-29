@@ -1,54 +1,84 @@
 # Grokipedia SDK
 
-A Python SDK for accessing Grokipedia content programmatically. This SDK provides a clean, simple interface to fetch articles, summaries, and sections from Grokipedia without needing to implement web scraping yourself.
+A professional Python SDK for accessing Grokipedia content programmatically. This SDK provides a clean, simple interface to fetch articles, summaries, and sections from Grokipedia without needing to implement web scraping yourself.
+
+**Created by [Apple Lamps](https://github.com/AppleLamps)**
+
+## Features
+
+- **Full Article Retrieval** - Fetch complete articles with all sections, references, and metadata
+- **Summary Extraction** - Get quick summaries and table of contents
+- **Smart Article Search** - Built-in search with fuzzy matching across 885,000+ articles
+- **Fast Slug Lookup** - Optimized BK-Tree implementation for O(log n) search performance
+- **Type Safety** - Built with Pydantic for robust data validation
+- **Context Manager Support** - Proper resource management with context managers
+- **Section Navigation** - Fetch specific sections by title
 
 ## Installation
+
+### From PyPI (when available)
+
+```bash
+pip install grokipedia-sdk
+```
 
 ### From Source
 
 ```bash
-cd grokipedia-sdk
-pip install -r requirements.txt
-```
-
-### Install as Package
-
-```bash
+git clone https://github.com/AppleLamps/grokipedia-sdk.git
 cd grokipedia-sdk
 pip install -e .
 ```
 
+### Development Installation
+
+```bash
+git clone https://github.com/AppleLamps/grokipedia-sdk.git
+cd grokipedia-sdk
+pip install -e ".[dev]"
+```
+
+## Requirements
+
+- Python 3.8+
+- httpx >= 0.25.0
+- beautifulsoup4 >= 4.12.0
+- pydantic >= 2.0.0
+- lxml >= 4.9.0
+- rapidfuzz >= 3.0.0
+
 ## Project Structure
 
-```
+```text
 grokipedia-sdk/
 ├── grokipedia_sdk/              # Main SDK package
-│   ├── __init__.py              # Package exports
+│   ├── __init__.py              # Package exports and version
 │   ├── client.py                # Main Client class
-│   ├── models.py                # Pydantic models (Article, Section, etc.)
+│   ├── models.py                # Pydantic models (Article, Section, SearchResult, etc.)
 │   ├── exceptions.py            # Custom exceptions
 │   ├── parsers.py               # HTML parsing utilities
-│   ├── slug_index.py            # Article slug indexing
+│   ├── slug_index.py            # Article slug indexing with BK-Tree support
+│   ├── bk_tree.py               # BK-Tree implementation for fast fuzzy search
 │   └── links/                   # Sitemap data files
-│       └── sitemap-*/
+│       └── sitemap-*/           # Multiple sitemap directories
 │           ├── names.txt        # Article names
 │           └── urls.txt         # Article URLs
-├── tests/                       # Test suite
+├── tests/                       # Comprehensive test suite
 │   ├── test_dependency_injection.py
 │   ├── test_integration.py
 │   ├── test_parsers.py
-│   └── test_slug_search.py
+│   ├── test_slug_search.py
+│   ├── test_performance.py
+│   ├── test_bktree_performance.py
+│   └── benchmark_comparison.py
 ├── examples/                    # Example scripts
 │   ├── example.py               # Basic usage examples
 │   ├── example_slug_search.py   # Slug search examples
 │   └── demo.py                  # Quick demo script
 ├── docs/                        # Documentation
-│   ├── DEPENDENCY_INJECTION_SUMMARY.md
-│   ├── REFACTORING_SUMMARY.md
-│   ├── SLUG_INDEX_REFACTORING.md
-│   └── SLUG_SEARCH_FEATURE.md
+│   ├── OPTIMIZATION.md          # Performance optimization details
+│   └── SLUG_SEARCH_FEATURE.md   # Slug search feature documentation
 ├── README.md                    # This file
-├── requirements.txt             # Dependencies
 ├── setup.py                     # Package configuration
 └── pytest.ini                   # Pytest configuration
 ```
@@ -58,7 +88,7 @@ grokipedia-sdk/
 ### Basic Usage
 
 ```python
-from grokipedia_sdk import Client, ArticleNotFound
+from grokipedia_sdk import Client, ArticleNotFound, RequestError
 
 # Create a client instance
 client = Client()
@@ -78,7 +108,7 @@ finally:
     client.close()
 ```
 
-### Using Context Manager
+### Using Context Manager (Recommended)
 
 ```python
 from grokipedia_sdk import Client
@@ -107,15 +137,15 @@ with Client() as client:
         print("Section not found")
 ```
 
-### Searching for Articles (New!)
+### Searching for Articles
 
-The SDK now includes a local sitemap index with **885,000+ articles** to help you find the right slug quickly:
+The SDK includes a local sitemap index with **885,000+ articles** and optimized fuzzy search capabilities:
 
 ```python
 from grokipedia_sdk import Client
 
 with Client() as client:
-    # Search for articles by name
+    # Search for articles by name (fuzzy matching enabled)
     results = client.search_slug("joe biden", limit=5)
     print(results)
     # ['Joe_Biden', 'Joe_Biden_presidential_campaign', ...]
@@ -167,25 +197,42 @@ with Client() as client:
 
 ### Client
 
-#### `Client(base_url: str = "https://grokipedia.com", timeout: float = 30.0)`
+#### `Client(base_url: str = "https://grokipedia.com", timeout: float = 30.0, slug_index: Optional[SlugIndex] = None)`
 
 Initialize the Grokipedia SDK client.
 
 **Parameters:**
-- `base_url` (str): Base URL for Grokipedia (default: https://grokipedia.com)
-- `timeout` (float): Request timeout in seconds (default: 30.0)
+
+- `base_url` (str): Base URL for Grokipedia (default: `"https://grokipedia.com"`)
+- `timeout` (float): Request timeout in seconds (default: `30.0`)
+- `slug_index` (Optional[SlugIndex]): Optional SlugIndex instance for article lookup. If `None`, a default SlugIndex will be created.
+
+**Example:**
+
+```python
+# Default usage (auto-creates SlugIndex)
+client = Client()
+
+# With custom SlugIndex
+from grokipedia_sdk import SlugIndex
+custom_index = SlugIndex(links_dir="/custom/path")
+client = Client(slug_index=custom_index)
+```
 
 #### `get_article(slug: str) -> Article`
 
 Get a complete article from Grokipedia by slug.
 
 **Parameters:**
-- `slug` (str): Article slug (e.g., "Joe_Biden")
+
+- `slug` (str): Article slug (e.g., `"Joe_Biden"`)
 
 **Returns:**
+
 - `Article`: Complete article object with full content, sections, references, and metadata
 
 **Raises:**
+
 - `ArticleNotFound`: If the article doesn't exist
 - `RequestError`: For network or HTTP errors
 
@@ -194,12 +241,15 @@ Get a complete article from Grokipedia by slug.
 Get just the summary/intro of an article (faster, less data).
 
 **Parameters:**
-- `slug` (str): Article slug (e.g., "Joe_Biden")
+
+- `slug` (str): Article slug (e.g., `"Joe_Biden"`)
 
 **Returns:**
+
 - `ArticleSummary`: Article summary with table of contents
 
 **Raises:**
+
 - `ArticleNotFound`: If the article doesn't exist
 - `RequestError`: For network or HTTP errors
 
@@ -208,26 +258,31 @@ Get just the summary/intro of an article (faster, less data).
 Get a specific section of an article by title.
 
 **Parameters:**
-- `slug` (str): Article slug (e.g., "Joe_Biden")
+
+- `slug` (str): Article slug (e.g., `"Joe_Biden"`)
 - `section_title` (str): Section title to search for
 
 **Returns:**
-- `Optional[Section]`: Section object if found, None otherwise
+
+- `Optional[Section]`: Section object if found, `None` otherwise
 
 **Raises:**
+
 - `ArticleNotFound`: If the article doesn't exist
 - `RequestError`: For network or HTTP errors
 
 #### `search_slug(query: str, limit: int = 10, fuzzy: bool = True) -> List[str]`
 
-Search for article slugs matching a query using the local sitemap index.
+Search for article slugs matching a query using the local sitemap index with optimized fuzzy matching.
 
 **Parameters:**
+
 - `query` (str): Search query (partial name or slug, case-insensitive)
-- `limit` (int): Maximum number of results to return (default: 10)
-- `fuzzy` (bool): Enable fuzzy matching for approximate matches (default: True)
+- `limit` (int): Maximum number of results to return (default: `10`)
+- `fuzzy` (bool): Enable fuzzy matching for approximate matches (default: `True`)
 
 **Returns:**
+
 - `List[str]`: List of matching slugs ordered by relevance
 
 #### `find_slug(query: str) -> Optional[str]`
@@ -235,30 +290,36 @@ Search for article slugs matching a query using the local sitemap index.
 Find the best matching slug for a query.
 
 **Parameters:**
+
 - `query` (str): Article name or partial slug (case-insensitive)
 
 **Returns:**
-- `Optional[str]`: Best matching slug or None if not found
+
+- `Optional[str]`: Best matching slug or `None` if not found
 
 #### `slug_exists(slug: str) -> bool`
 
 Check if a slug exists in the sitemap index.
 
 **Parameters:**
+
 - `slug` (str): Slug to check
 
 **Returns:**
-- `bool`: True if slug exists, False otherwise
+
+- `bool`: `True` if slug exists, `False` otherwise
 
 #### `list_available_articles(prefix: str = "", limit: int = 100) -> List[str]`
 
 List available articles, optionally filtered by prefix.
 
 **Parameters:**
-- `prefix` (str): Filter articles starting with this prefix (case-insensitive)
-- `limit` (int): Maximum number of results (default: 100)
+
+- `prefix` (str): Filter articles starting with this prefix (case-insensitive, default: `""`)
+- `limit` (int): Maximum number of results (default: `100`)
 
 **Returns:**
+
 - `List[str]`: List of article slugs matching the prefix
 
 #### `get_total_article_count() -> int`
@@ -266,6 +327,7 @@ List available articles, optionally filtered by prefix.
 Get the total number of articles available in the index.
 
 **Returns:**
+
 - `int`: Total number of unique articles
 
 #### `get_random_articles(count: int = 10) -> List[str]`
@@ -273,16 +335,19 @@ Get the total number of articles available in the index.
 Get random article slugs from the index.
 
 **Parameters:**
-- `count` (int): Number of random slugs to return (default: 10)
+
+- `count` (int): Number of random slugs to return (default: `10`)
 
 **Returns:**
+
 - `List[str]`: List of random article slugs
 
 ### Models
 
 #### `Article`
 
-Complete article response with:
+Complete article response with full content:
+
 - `title` (str): Article title
 - `slug` (str): Article slug
 - `url` (str): Full URL to the article
@@ -296,7 +361,8 @@ Complete article response with:
 
 #### `ArticleSummary`
 
-Summary response with:
+Summary response with essential information:
+
 - `title` (str): Article title
 - `slug` (str): Article slug
 - `url` (str): Full URL to the article
@@ -307,13 +373,24 @@ Summary response with:
 #### `Section`
 
 Represents a section in an article:
+
 - `title` (str): Section title
 - `content` (str): Section content
 - `level` (int): Heading level (1-6)
 
+#### `SearchResult`
+
+Search result item:
+
+- `title` (str): Article title
+- `slug` (str): Article slug
+- `url` (str): Full URL to the article
+- `snippet` (Optional[str]): Optional content snippet
+
 #### `ArticleMetadata`
 
 Metadata about the article:
+
 - `fact_checked` (Optional[str]): Fact-check information
 - `last_updated` (Optional[str]): Last update date
 - `word_count` (int): Word count
@@ -322,7 +399,7 @@ Metadata about the article:
 
 #### `GrokipediaError`
 
-Base exception for the SDK.
+Base exception for the SDK. All other exceptions inherit from this.
 
 #### `ArticleNotFound`
 
@@ -345,6 +422,11 @@ client = Client(timeout=60.0)
 
 # Combine both
 client = Client(base_url="https://custom-grokipedia.com", timeout=60.0)
+
+# With custom SlugIndex
+from grokipedia_sdk import SlugIndex
+custom_index = SlugIndex(links_dir="/custom/path", use_bktree=True)
+client = Client(slug_index=custom_index)
 ```
 
 ## Error Handling
@@ -368,13 +450,13 @@ finally:
 
 ## Examples
 
+The SDK includes comprehensive examples in the `examples/` directory:
+
 - `examples/example.py` - Comprehensive examples of basic SDK usage
 - `examples/example_slug_search.py` - Detailed examples of slug search features
 - `examples/demo.py` - Quick demo script for slug search functionality
-- `tests/test_slug_search.py` - Test suite for slug search functionality
-- `tests/test_integration.py` - Integration test showing complete workflow
 
-To run examples:
+### Running Examples
 
 ```bash
 # Run basic usage examples
@@ -385,19 +467,57 @@ python examples/example_slug_search.py
 
 # Run quick demo
 python examples/demo.py
-
-# Run tests
-python -m pytest tests/ -v
 ```
+
+## Testing
+
+The project includes a comprehensive test suite covering all major functionality:
+
+```bash
+# Run all tests
+python -m pytest tests/ -v
+
+# Run specific test file
+python -m pytest tests/test_slug_search.py -v
+
+# Run with coverage
+python -m pytest tests/ --cov=grokipedia_sdk --cov-report=html
+```
+
+## Performance
+
+The SDK is optimized for performance with:
+
+- **BK-Tree Implementation**: O(log n) fuzzy search performance for article lookups
+- **Efficient Caching**: Built-in caching for frequently accessed articles
+- **Optimized Parsing**: Fast HTML parsing with BeautifulSoup4 and lxml
+- **Async Support**: Ready for future async/await implementations
+
+See `docs/OPTIMIZATION.md` for detailed performance benchmarks and optimization strategies.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
 This SDK is provided as-is for educational and development purposes. Please review Grokipedia's Terms of Service before heavy usage.
 
-## Notes
+## Acknowledgments
+
+- Created by **Apple Lamps**
+- Built with modern Python best practices
+- Uses [rapidfuzz](https://github.com/rapidfuzz/rapidfuzz) for fast fuzzy string matching
+- Powered by [httpx](https://www.python-httpx.org/) for reliable HTTP requests
+
+## Important Notes
 
 - This SDK scrapes content from Grokipedia's website
-- Please respect rate limits and robots.txt
-- Not affiliated with Grokipedia
+- Please respect rate limits and robots.txt guidelines
+- This SDK is not affiliated with Grokipedia
 - Cache your results appropriately for production use
+- The sitemap index includes 885,000+ articles for fast local search
 
+## Support
+
+For issues, questions, or contributions, please visit the [GitHub repository](https://github.com/AppleLamps/grokipedia-sdk).
