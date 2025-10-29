@@ -80,6 +80,12 @@ grokipedia-sdk/
 ├── examples/                    # Example scripts
 │   ├── example.py               # Basic usage examples
 │   ├── example_slug_search.py   # Slug search examples
+│   ├── example_advanced_config.py # Advanced configuration examples
+│   ├── example_batch_processing.py # Batch processing examples
+│   ├── example_working_with_sections.py # Working with sections examples
+│   ├── example_data_extraction.py # Data extraction examples
+│   ├── example_cli_tool.py      # CLI tool example
+│   ├── example_slug_index.py    # SlugIndex usage examples
 │   └── demo.py                  # Quick demo script
 ├── docs/                        # Documentation
 │   ├── OPTIMIZATION.md          # Performance optimization details
@@ -465,6 +471,12 @@ The SDK includes comprehensive examples in the `examples/` directory:
 - `examples/example.py` - Comprehensive examples of basic SDK usage
 - `examples/example_slug_search.py` - Detailed examples of slug search features
 - `examples/demo.py` - Quick demo script for slug search functionality
+- `examples/example_advanced_config.py` - Advanced configuration options (caching, rate limiting, custom SSL, etc.)
+- `examples/example_batch_processing.py` - Batch processing multiple articles with error handling
+- `examples/example_working_with_sections.py` - Working with article sections and hierarchies
+- `examples/example_data_extraction.py` - Data extraction and analysis examples
+- `examples/example_cli_tool.py` - Example CLI tool implementation
+- `examples/example_slug_index.py` - Using SlugIndex directly for article discovery
 
 ### Running Examples
 
@@ -477,6 +489,26 @@ python examples/example_slug_search.py
 
 # Run quick demo
 python examples/demo.py
+
+# Run advanced configuration examples
+python examples/example_advanced_config.py
+
+# Run batch processing examples
+python examples/example_batch_processing.py
+
+# Run section examples
+python examples/example_working_with_sections.py
+
+# Run data extraction examples
+python examples/example_data_extraction.py
+
+# Run CLI tool example
+python examples/example_cli_tool.py --help
+python examples/example_cli_tool.py search "artificial intelligence"
+python examples/example_cli_tool.py summary Joe_Biden
+
+# Run SlugIndex examples
+python examples/example_slug_index.py
 ```
 
 ## Testing
