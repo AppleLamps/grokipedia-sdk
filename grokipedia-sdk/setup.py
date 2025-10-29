@@ -1,5 +1,6 @@
 """Setup configuration for Grokipedia SDK"""
 
+import re
 from setuptools import setup, find_packages
 from pathlib import Path
 
@@ -7,14 +8,24 @@ from pathlib import Path
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text() if (this_directory / "README.md").exists() else ""
 
+# Read version from __init__.py
+version = ""
+init_file = this_directory / "grokipedia_sdk" / "__init__.py"
+with open(init_file, "r", encoding="utf-8") as f:
+    version_match = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', f.read(), re.MULTILINE)
+    if version_match:
+        version = version_match.group(1)
+    else:
+        raise RuntimeError("Unable to find version string in __init__.py")
+
 setup(
     name="grokipedia-sdk",
-    version="1.0.0",
+    version=version,
     author="Grokipedia SDK Contributors",
     description="A Python SDK for accessing Grokipedia content",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourrepo/grokipedia-sdk",
+    url="https://github.com/AppleLamps/grokipedia-sdk",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -34,6 +45,7 @@ setup(
         "beautifulsoup4>=4.12.0",
         "pydantic>=2.0.0",
         "lxml>=4.9.0",
+        "rapidfuzz>=3.0.0",
     ],
     extras_require={
         "dev": [

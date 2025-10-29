@@ -47,6 +47,7 @@ class Client:
         self.timeout = timeout
         self._client = httpx.Client(timeout=timeout, follow_redirects=True)
         self._slug_index = slug_index if slug_index is not None else SlugIndex()
+        self._article_cache = {}
     
     def __enter__(self):
         """Support for context manager"""
@@ -77,7 +78,7 @@ class Client:
         """
         try:
             headers = {
-                "User-Agent": "GrokipediaSDK/1.0 (Python SDK; +https://github.com/yourrepo)"
+                "User-Agent": "GrokipediaSDK/1.0 (Python SDK; +https://github.com/AppleLamps/grokipedia-sdk)"
             }
             response = self._client.get(url, headers=headers)
             response.raise_for_status()
@@ -95,6 +96,9 @@ class Client:
         """
         Get a complete article from Grokipedia by slug.
         
+        Articles are automatically cached after the first fetch to improve
+        performance for subsequent requests.
+        
         Args:
             slug: Article slug (e.g., "Joe_Biden")
             
@@ -105,6 +109,11 @@ class Client:
             ArticleNotFound: If the article doesn't exist
             RequestError: For network or HTTP errors
         """
+        # Check cache first
+        if slug in self._article_cache:
+            return self._article_cache[slug]
+        
+        # Not in cache, fetch from network
         url = f"{self.base_url}/page/{slug}"
         html = self._fetch_html(url)
         soup = BeautifulSoup(html, 'html.parser')
@@ -139,7 +148,7 @@ class Client:
             word_count=word_count
         )
         
-        return Article(
+        article = Article(
             title=title,
             slug=slug,
             url=url,
@@ -151,6 +160,11 @@ class Client:
             metadata=metadata,
             scraped_at=datetime.utcnow().isoformat()
         )
+        
+        # Cache the article for future use
+        self._article_cache[slug] = article
+        
+        return article
     
     def get_summary(self, slug: str) -> ArticleSummary:
         """
@@ -177,18 +191,15 @@ class Client:
         # Extract summary
         summary = parsers.extract_summary(soup, title_tag)
         
-        # Extract TOC for quick overview
-        toc = []
-        headings = soup.find_all(['h2', 'h3'])
-        for h in headings[:10]:  # Limit to first 10
-            toc.append(h.get_text(strip=True))
+        # Extract TOC using the same parser as get_article for consistency
+        _, toc = parsers.extract_sections(soup)
         
         return ArticleSummary(
             title=title,
             slug=slug,
             url=url,
             summary=summary,
-            table_of_contents=toc,
+            table_of_contents=toc[:10],  # Limit to first 10 for quick overview
             scraped_at=datetime.utcnow().isoformat()
         )
     
