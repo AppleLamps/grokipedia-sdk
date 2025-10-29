@@ -18,6 +18,41 @@ cd grokipedia-sdk
 pip install -e .
 ```
 
+## Project Structure
+
+```
+grokipedia-sdk/
+├── grokipedia_sdk/              # Main SDK package
+│   ├── __init__.py              # Package exports
+│   ├── client.py                # Main Client class
+│   ├── models.py                # Pydantic models (Article, Section, etc.)
+│   ├── exceptions.py            # Custom exceptions
+│   ├── parsers.py               # HTML parsing utilities
+│   ├── slug_index.py            # Article slug indexing
+│   └── links/                   # Sitemap data files
+│       └── sitemap-*/
+│           ├── names.txt        # Article names
+│           └── urls.txt         # Article URLs
+├── tests/                       # Test suite
+│   ├── test_dependency_injection.py
+│   ├── test_integration.py
+│   ├── test_parsers.py
+│   └── test_slug_search.py
+├── examples/                    # Example scripts
+│   ├── example.py               # Basic usage examples
+│   ├── example_slug_search.py   # Slug search examples
+│   └── demo.py                  # Quick demo script
+├── docs/                        # Documentation
+│   ├── DEPENDENCY_INJECTION_SUMMARY.md
+│   ├── REFACTORING_SUMMARY.md
+│   ├── SLUG_INDEX_REFACTORING.md
+│   └── SLUG_SEARCH_FEATURE.md
+├── README.md                    # This file
+├── requirements.txt             # Dependencies
+├── setup.py                     # Package configuration
+└── pytest.ini                   # Pytest configuration
+```
+
 ## Quick Start
 
 ### Basic Usage
@@ -333,10 +368,27 @@ finally:
 
 ## Examples
 
-- `example.py` - Comprehensive examples of basic SDK usage
-- `example_slug_search.py` - Detailed examples of slug search features
-- `test_slug_search.py` - Quick test script for slug search functionality
-- `test_integration.py` - Integration test showing complete workflow
+- `examples/example.py` - Comprehensive examples of basic SDK usage
+- `examples/example_slug_search.py` - Detailed examples of slug search features
+- `examples/demo.py` - Quick demo script for slug search functionality
+- `tests/test_slug_search.py` - Test suite for slug search functionality
+- `tests/test_integration.py` - Integration test showing complete workflow
+
+To run examples:
+
+```bash
+# Run basic usage examples
+python examples/example.py
+
+# Run slug search examples
+python examples/example_slug_search.py
+
+# Run quick demo
+python examples/demo.py
+
+# Run tests
+python -m pytest tests/ -v
+```
 
 ## License
 

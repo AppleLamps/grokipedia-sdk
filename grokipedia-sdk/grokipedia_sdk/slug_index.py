@@ -3,6 +3,7 @@
 from pathlib import Path
 from typing import List, Optional, Dict, Tuple
 from difflib import SequenceMatcher
+import asyncio
 
 
 class SlugIndex:
@@ -23,6 +24,26 @@ class SlugIndex:
         self.links_dir = Path(links_dir)
         self._index: Optional[Dict[str, str]] = None
         self._all_slugs: Optional[List[str]] = None
+    
+    @staticmethod
+    def _normalize_name(slug: str) -> str:
+        """
+        Normalize a slug for lookup.
+        
+        Converts to lowercase and replaces underscores with spaces.
+        This allows flexible matching across different formats.
+        
+        Args:
+            slug: The slug to normalize
+            
+        Returns:
+            Normalized slug (lowercase, underscores → spaces)
+            
+        Example:
+            >>> SlugIndex._normalize_name("Joe_Biden")
+            'joe biden'
+        """
+        return slug.lower().replace('_', ' ')
     
     def load(self) -> Dict[str, str]:
         """
@@ -50,8 +71,8 @@ class SlugIndex:
                             slug = line.strip()
                             if slug:
                                 unique_slugs.add(slug)
-                                # Store normalized version (lowercase, spaces instead of underscores)
-                                normalized = slug.lower().replace('_', ' ')
+                                # Store normalized version for flexible matching
+                                normalized = self._normalize_name(slug)
                                 self._index[normalized] = slug
                                 # Also store the lowercase original for exact matches
                                 self._index[slug.lower()] = slug
@@ -63,6 +84,25 @@ class SlugIndex:
         self._all_slugs = sorted(unique_slugs)
         
         return self._index
+    
+    async def load_async(self) -> Dict[str, str]:
+        """
+        Load the slug index from sitemap files asynchronously.
+        
+        Useful when integrating with async frameworks or when loading
+        from slow I/O sources. For typical local file systems, the
+        synchronous load() method is recommended.
+        
+        Returns:
+            Dictionary mapping normalized names to slugs
+            
+        Example:
+            >>> index = SlugIndex()
+            >>> index_dict = await index.load_async()
+        """
+        # Run the blocking load() in a thread pool to avoid blocking the event loop
+        loop = asyncio.get_event_loop()
+        return await loop.run_in_executor(None, self.load)
     
     def search(self, query: str, limit: int = 10, fuzzy: bool = True, min_similarity: float = 0.6) -> List[str]:
         """
@@ -83,14 +123,14 @@ class SlugIndex:
             ['Joe_Biden', 'Joe_Biden_presidential_campaign', ...]
         """
         index = self.load()
-        query_lower = query.lower().replace('_', ' ')
+        query_normalized = self._normalize_name(query)
         
         # Strategy 1: Exact substring matches (case-insensitive)
         matches = []
         seen = set()
         
         for normalized_name, slug in index.items():
-            if query_lower in normalized_name:
+            if query_normalized in normalized_name:
                 if slug not in seen:
                     matches.append(slug)
                     seen.add(slug)
@@ -106,7 +146,7 @@ class SlugIndex:
                     continue  # Skip already matched slugs
                 
                 # Calculate similarity ratio
-                similarity = SequenceMatcher(None, query_lower, normalized_name).ratio()
+                similarity = SequenceMatcher(None, query_normalized, normalized_name).ratio()
                 
                 if similarity >= min_similarity:
                     similarities.append((similarity, slug))

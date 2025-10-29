@@ -2,31 +2,51 @@
 
 import httpx
 from bs4 import BeautifulSoup
-import re
 from datetime import datetime
-from typing import Optional, List, Tuple
+from typing import Optional, List
 from urllib.parse import urljoin
 
 from .models import Article, ArticleSummary, Section, ArticleMetadata
 from .exceptions import ArticleNotFound, RequestError
 from .slug_index import SlugIndex
+from . import parsers
 
 
 class Client:
     """Client for accessing Grokipedia content"""
     
-    def __init__(self, base_url: str = "https://grokipedia.com", timeout: float = 30.0):
+    def __init__(
+        self, 
+        base_url: str = "https://grokipedia.com", 
+        timeout: float = 30.0,
+        slug_index: Optional[SlugIndex] = None
+    ):
         """
         Initialize the Grokipedia SDK client.
         
         Args:
             base_url: Base URL for Grokipedia (default: https://grokipedia.com)
             timeout: Request timeout in seconds (default: 30.0)
+            slug_index: Optional SlugIndex instance for article lookup. 
+                       If None, a default SlugIndex will be created.
+                       
+        Example:
+            >>> # Default usage (auto-creates SlugIndex)
+            >>> client = Client()
+            
+            >>> # With custom SlugIndex
+            >>> from grokipedia_sdk import SlugIndex
+            >>> custom_index = SlugIndex(links_dir="/custom/path")
+            >>> client = Client(slug_index=custom_index)
+            
+            >>> # For testing with mock
+            >>> mock_index = MockSlugIndex()
+            >>> client = Client(slug_index=mock_index)
         """
         self.base_url = base_url.rstrip('/')
         self.timeout = timeout
         self._client = httpx.Client(timeout=timeout, follow_redirects=True)
-        self._slug_index = SlugIndex()  # Initialize slug index
+        self._slug_index = slug_index if slug_index is not None else SlugIndex()
     
     def __enter__(self):
         """Support for context manager"""
@@ -71,186 +91,6 @@ class Client:
         except Exception as e:
             raise RequestError(f"Error fetching {url}: {str(e)}")
     
-    def _extract_sections(self, soup: BeautifulSoup) -> Tuple[List[Section], List[str]]:
-        """
-        Extract sections and table of contents from article.
-        
-        Args:
-            soup: BeautifulSoup object of the article
-            
-        Returns:
-            Tuple of (sections list, table of contents list)
-        """
-        sections = []
-        toc = []
-        
-        # Find all heading tags
-        headings = soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
-        
-        for heading in headings:
-            level = int(heading.name[1])  # Extract number from h1, h2, etc.
-            title = heading.get_text(strip=True)
-            
-            # Skip the main article title (usually h1)
-            if level == 1:
-                continue
-                
-            toc.append(title)
-            
-            # Get content after heading until next heading
-            content_parts = []
-            for sibling in heading.find_next_siblings():
-                if sibling.name and sibling.name.startswith('h'):
-                    break
-                text = sibling.get_text(strip=True)
-                if text:
-                    content_parts.append(text)
-            
-            sections.append(Section(
-                title=title,
-                content=" ".join(content_parts),
-                level=level
-            ))
-        
-        return sections, toc
-    
-    def _extract_references(self, soup: BeautifulSoup) -> List[str]:
-        """
-        Extract reference links from article.
-        
-        Args:
-            soup: BeautifulSoup object of the article
-            
-        Returns:
-            List of reference URLs
-        """
-        references = []
-        
-        # Look for References heading (h2 with id or text "References")
-        ref_section = soup.find(['h2', 'h3'], string=re.compile(r'^References?$', re.IGNORECASE))
-        if not ref_section:
-            # Try finding by id
-            ref_section = soup.find(id='references') or soup.find(id='References')
-        
-        if ref_section:
-            # Get all content after references section
-            current = ref_section.find_next_sibling()
-            while current:
-                # Stop if we hit another major section
-                if current.name in ['h1', 'h2']:
-                    break
-                
-                # Extract all links from ordered/unordered lists
-                if current.name in ['ol', 'ul']:
-                    for link in current.find_all('a', href=True):
-                        href = link.get('href', '')
-                        if href.startswith('http'):
-                            references.append(href)
-                
-                # Extract links from paragraphs or divs
-                elif current.name in ['p', 'div']:
-                    for link in current.find_all('a', href=True):
-                        href = link.get('href', '')
-                        if href.startswith('http'):
-                            references.append(href)
-                
-                current = current.find_next_sibling()
-        
-        # Fallback: Find all external links (excluding Grokipedia itself)
-        if not references:
-            all_links = soup.find_all('a', href=True)
-            for link in all_links:
-                href = link.get('href', '')
-                if href.startswith('http') and 'grokipedia.com' not in href:
-                    references.append(href)
-        
-        # Remove duplicates while preserving order
-        seen = set()
-        unique_refs = []
-        for ref in references:
-            if ref not in seen:
-                seen.add(ref)
-                unique_refs.append(ref)
-        
-        return unique_refs
-    
-    def _extract_fact_check_info(self, soup: BeautifulSoup) -> Optional[str]:
-        """
-        Extract fact-check information if available.
-        
-        Args:
-            soup: BeautifulSoup object of the article
-            
-        Returns:
-            Fact-check information or None
-        """
-        # Method 1: Look in meta tags
-        meta_desc = soup.find('meta', {'property': 'og:description'})
-        if meta_desc:
-            content = meta_desc.get('content', '')
-            if 'Fact-checked' in content:
-                match = re.search(r'Fact-checked by (.+?)(?:\.|$)', content)
-                if match:
-                    return match.group(1).strip()
-        
-        # Method 2: Look for text in the page
-        # Search for elements containing "Fact-checked"
-        for element in soup.find_all(string=re.compile(r'Fact-checked by', re.IGNORECASE)):
-            text = element.strip()
-            # Extract just the fact-check info
-            match = re.search(r'Fact-checked by\s+(.+?)(?:\s*[A-Z]|$)', text)
-            if match:
-                fact_check = match.group(1).strip()
-                # Clean up common concatenations
-                fact_check = re.split(r'\s{2,}|\n', fact_check)[0]
-                return fact_check
-        
-        return None
-    
-    def _extract_summary(self, soup: BeautifulSoup, title_tag) -> str:
-        """
-        Extract summary/intro text from article.
-        
-        Args:
-            soup: BeautifulSoup object of the article
-            title_tag: The h1 title tag
-            
-        Returns:
-            Summary text
-        """
-        summary = ""
-        
-        # Extract summary from meta description (most reliable)
-        meta_desc = soup.find('meta', {'property': 'og:description'}) or soup.find('meta', {'name': 'description'})
-        if meta_desc:
-            summary = meta_desc.get('content', '').strip()
-        
-        # Fallback: Extract from first paragraph if no meta description
-        if not summary:
-            # Try to find main article content area
-            main_content = soup.find('article') or soup.find('main') or soup
-            
-            # Look for first substantial paragraph after h1
-            if title_tag:
-                # Get next elements after title
-                for sibling in title_tag.find_next_siblings(['p', 'div']):
-                    text = sibling.get_text(strip=True)
-                    # Look for substantial content (intro paragraph is usually 200+ chars)
-                    if len(text) > 200 and not text.startswith('Jump to') and not text.startswith('From '):
-                        summary = text
-                        break
-            
-            # Last resort: first substantial paragraph anywhere
-            if not summary:
-                paragraphs = main_content.find_all('p')
-                for p in paragraphs:
-                    text = p.get_text(strip=True)
-                    if len(text) > 200:
-                        summary = text
-                        break
-        
-        return summary
-    
     def get_article(self, slug: str) -> Article:
         """
         Get a complete article from Grokipedia by slug.
@@ -274,23 +114,22 @@ class Client:
         title = title_tag.get_text(strip=True) if title_tag else slug.replace('_', ' ')
         
         # Extract summary
-        summary = self._extract_summary(soup, title_tag)
+        summary = parsers.extract_summary(soup, title_tag)
         
         # Extract references BEFORE modifying soup
-        references = self._extract_references(soup)
+        references = parsers.extract_references(soup)
         
         # Extract metadata BEFORE modifying soup
-        fact_checked = self._extract_fact_check_info(soup)
+        fact_checked = parsers.extract_fact_check_info(soup)
         
         # NOW remove unwanted elements for clean text
-        for element in soup(['script', 'style', 'nav', 'header', 'footer', 'button']):
-            element.decompose()
+        parsers.clean_html_for_text_extraction(soup)
         
         # Get full text content
         full_content = soup.get_text(separator='\n', strip=True)
         
         # Extract sections and TOC
-        sections, toc = self._extract_sections(soup)
+        sections, toc = parsers.extract_sections(soup)
         
         # Calculate word count
         word_count = len(full_content.split())
@@ -336,7 +175,7 @@ class Client:
         title = title_tag.get_text(strip=True) if title_tag else slug.replace('_', ' ')
         
         # Extract summary
-        summary = self._extract_summary(soup, title_tag)
+        summary = parsers.extract_summary(soup, title_tag)
         
         # Extract TOC for quick overview
         toc = []
