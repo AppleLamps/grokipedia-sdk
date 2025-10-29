@@ -2,10 +2,13 @@
 
 import re
 from typing import Tuple, List, Optional
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
 from .models import Section
 
+# Summary extraction constants
+MIN_SUMMARY_LENGTH = 200  # Minimum characters for a substantial summary paragraph
+MIN_FALLBACK_SUMMARY_LENGTH = 50  # Minimum characters for fallback summary
 
 # HTML Element Selectors (constants to replace magic strings)
 HEADING_TAGS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
@@ -52,17 +55,18 @@ def extract_sections(soup: BeautifulSoup) -> Tuple[List[Section], List[str]]:
         toc.append(title)
         
         # Get content after heading until next heading
-        content_parts = []
-        for sibling in heading.find_next_siblings():
-            if sibling.name and sibling.name.startswith('h'):
-                break
-            text = sibling.get_text(strip=True)
-            if text:
-                content_parts.append(text)
+        # Use list comprehension for efficient string collection
+        content_parts = [
+            sibling.get_text(strip=True)
+            for sibling in heading.find_next_siblings()
+            if sibling.name and not sibling.name.startswith('h')
+        ]
+        # Filter out empty strings and join efficiently
+        content = " ".join(filter(None, content_parts))
         
         sections.append(Section(
             title=title,
-            content=" ".join(content_parts),
+            content=content,
             level=level
         ))
     
@@ -165,7 +169,7 @@ def extract_fact_check_info(soup: BeautifulSoup) -> Optional[str]:
     return None
 
 
-def extract_summary(soup: BeautifulSoup, title_tag: Optional[BeautifulSoup]) -> str:
+def extract_summary(soup: BeautifulSoup, title_tag: Optional[Tag]) -> str:
     """
     Extract summary/intro text from article.
     
@@ -194,24 +198,28 @@ def extract_summary(soup: BeautifulSoup, title_tag: Optional[BeautifulSoup]) -> 
     
     # Look for first substantial paragraph after h1
     if title_tag:
-        # Get next elements after title
-        for sibling in title_tag.find_next_siblings(['p', 'div']):
-            text = sibling.get_text(strip=True)
+        # Use list comprehension for efficient text extraction
+        candidates = [
+            sibling.get_text(strip=True)
+            for sibling in title_tag.find_next_siblings(['p', 'div'])
+        ]
+        for text in candidates:
             # Look for substantial content (intro paragraph is usually 200+ chars)
-            if len(text) > 200 and not text.startswith('Jump to') and not text.startswith('From '):
+            if len(text) > MIN_SUMMARY_LENGTH and not text.startswith('Jump to') and not text.startswith('From '):
                 return text
     
     # Last resort: first substantial paragraph anywhere
     paragraphs = main_content.find_all('p')
-    for p in paragraphs:
-        text = p.get_text(strip=True)
-        if len(text) > 200 and not text.startswith('Jump to') and not text.startswith('From '):
+    # Use list comprehension for efficient text extraction
+    paragraph_texts = [p.get_text(strip=True) for p in paragraphs]
+    
+    for text in paragraph_texts:
+        if len(text) > MIN_SUMMARY_LENGTH and not text.startswith('Jump to') and not text.startswith('From '):
             return text
     
     # If no substantial paragraph found, return first non-empty paragraph
-    for p in paragraphs:
-        text = p.get_text(strip=True)
-        if text and len(text) > 50:
+    for text in paragraph_texts:
+        if text and len(text) > MIN_FALLBACK_SUMMARY_LENGTH:
             return text
     
     return ""

@@ -2,6 +2,7 @@
 
 import asyncio
 import heapq
+import logging
 import random
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
@@ -21,6 +22,9 @@ try:
     HAS_BKTREE = True
 except ImportError:
     HAS_BKTREE = False
+
+# Set up logger for this module
+logger = logging.getLogger(__name__)
 
 
 class SlugIndex:
@@ -46,6 +50,7 @@ class SlugIndex:
         self._index: Optional[Dict[str, str]] = None
         self._all_slugs: Optional[List[str]] = None
         self._bk_tree: Optional['BKTree'] = None
+        self._load_errors: List[Tuple[str, Exception]] = []  # Track file load errors
     
     @staticmethod
     def _normalize_name(slug: str) -> str:
@@ -174,17 +179,26 @@ class SlugIndex:
         
         self._index = {}
         unique_slugs = set()
+        self._load_errors = []  # Reset errors for this load
         
         if not self.links_dir.exists():
+            logger.warning(
+                f"Links directory does not exist: {self.links_dir}. "
+                "Slug index will be empty."
+            )
             return self._index
         
         # Load all sitemap files
+        total_files = 0
+        failed_files = 0
+        
         for sitemap_dir in sorted(self.links_dir.glob("sitemap-*")):
             names_file = sitemap_dir / "names.txt"
             if names_file.exists():
+                total_files += 1
                 try:
                     with open(names_file, 'r', encoding='utf-8') as f:
-                        for line in f:
+                        for line_num, line in enumerate(f, 1):
                             slug = line.strip()
                             if slug:
                                 unique_slugs.add(slug)
@@ -195,12 +209,33 @@ class SlugIndex:
                                 self._index[slug.lower()] = slug
                 except (IOError, OSError) as e:
                     # Handle file access errors (permissions, disk issues, etc.)
-                    print(f"Warning: Could not read file {names_file}: {e}")
+                    failed_files += 1
+                    error_msg = f"Failed to read sitemap file {names_file}: {e}"
+                    self._load_errors.append((str(names_file), e))
+                    logger.warning(error_msg)
                     continue
                 except UnicodeDecodeError as e:
                     # Handle encoding issues in the file
-                    print(f"Warning: Could not decode {names_file} as UTF-8: {e}")
+                    failed_files += 1
+                    error_msg = (
+                        f"Invalid UTF-8 encoding in {names_file} "
+                        f"(likely at line {line_num}): {e}"
+                    )
+                    self._load_errors.append((str(names_file), e))
+                    logger.error(error_msg)
                     continue
+        
+        # Log summary if files failed to load
+        if total_files > 0 and failed_files == total_files:
+            logger.error(
+                f"All {total_files} sitemap files failed to load. "
+                "Slug index may be incomplete or empty."
+            )
+        elif failed_files > 0:
+            logger.warning(
+                f"{failed_files} out of {total_files} sitemap files failed to load. "
+                "Slug index may be incomplete."
+            )
         
         # Store sorted list of all unique slugs
         self._all_slugs = sorted(unique_slugs)
@@ -232,6 +267,25 @@ class SlugIndex:
         # Run the blocking load() in a thread pool to avoid blocking the event loop
         loop = asyncio.get_event_loop()
         return await loop.run_in_executor(None, self.load)
+    
+    def get_load_errors(self) -> List[Tuple[str, Exception]]:
+        """
+        Get list of errors that occurred during index loading.
+        
+        Returns:
+            List of tuples containing (file_path, exception) for each file that failed to load.
+            Empty list if no errors occurred or if load() hasn't been called yet.
+            
+        Example:
+            >>> index = SlugIndex()
+            >>> index.load()
+            >>> errors = index.get_load_errors()
+            >>> if errors:
+            ...     print(f"Failed to load {len(errors)} files")
+            ...     for file_path, exc in errors:
+            ...         print(f"  {file_path}: {exc}")
+        """
+        return self._load_errors.copy()
     
     def search(self, query: str, limit: int = 10, fuzzy: bool = True, min_similarity: float = 0.6) -> List[str]:
         """

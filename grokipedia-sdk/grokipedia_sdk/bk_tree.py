@@ -174,8 +174,19 @@ class BKTree:
         min_child_dist = max(0, distance - max_distance)
         max_child_dist = distance + max_distance
         
+        # Early termination optimization: if we have enough results, only continue
+        # if we might find better matches than what we already have
+        if len(results) >= limit:
+            # Find the worst (highest) distance in current results
+            current_worst_distance = max(results, key=lambda x: x[1])[1] if results else max_distance
+            # Prune this branch if even the best possible match would be worse
+            # The triangle inequality tells us that exploring children can't give us
+            # matches better than (distance - max_distance) at best
+            if distance > current_worst_distance + max_distance:
+                return  # Prune this branch - can't find better matches
+        
         for child_dist in range(min_child_dist, max_child_dist + 1):
-            if child_dist in node.children and len(results) < limit * 10:  # Get extras for sorting
+            if child_dist in node.children:
                 self._search_recursive(
                     node.children[child_dist],
                     query,
