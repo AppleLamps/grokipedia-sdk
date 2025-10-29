@@ -9,6 +9,7 @@ from urllib.parse import urljoin
 
 from .models import Article, ArticleSummary, Section, ArticleMetadata
 from .exceptions import ArticleNotFound, RequestError
+from .slug_index import SlugIndex
 
 
 class Client:
@@ -25,6 +26,7 @@ class Client:
         self.base_url = base_url.rstrip('/')
         self.timeout = timeout
         self._client = httpx.Client(timeout=timeout, follow_redirects=True)
+        self._slug_index = SlugIndex()  # Initialize slug index
     
     def __enter__(self):
         """Support for context manager"""
@@ -376,4 +378,127 @@ class Client:
                 return section
         
         return None
+    
+    # Slug search and discovery methods
+    
+    def search_slug(self, query: str, limit: int = 10, fuzzy: bool = True) -> List[str]:
+        """
+        Search for article slugs matching a query.
+        
+        This method searches through the local sitemap index to find articles
+        matching your query. It's fast and doesn't require network requests.
+        
+        Args:
+            query: Search query (partial name or slug, case-insensitive)
+            limit: Maximum number of results to return (default: 10)
+            fuzzy: Enable fuzzy matching for approximate matches (default: True)
+            
+        Returns:
+            List of matching slugs ordered by relevance
+            
+        Example:
+            >>> client = Client()
+            >>> client.search_slug("joe biden")
+            ['Joe_Biden', 'Joe_Biden_presidential_campaign', ...]
+            >>> client.search_slug("artificial intelligence", limit=5)
+            ['Artificial_Intelligence', 'Artificial_Neural_Network', ...]
+        """
+        return self._slug_index.search(query, limit=limit, fuzzy=fuzzy)
+    
+    def find_slug(self, query: str) -> Optional[str]:
+        """
+        Find the best matching slug for a query.
+        
+        This is a convenience method that returns the single best match
+        for your query. Useful when you want to quickly find one article.
+        
+        Args:
+            query: Article name or partial slug (case-insensitive)
+            
+        Returns:
+            Best matching slug or None if not found
+            
+        Example:
+            >>> client = Client()
+            >>> slug = client.find_slug("elon musk")
+            >>> print(slug)
+            'Elon_Musk'
+            >>> article = client.get_article(slug)
+        """
+        return self._slug_index.find_best_match(query)
+    
+    def slug_exists(self, slug: str) -> bool:
+        """
+        Check if a slug exists in the sitemap index.
+        
+        Args:
+            slug: Slug to check
+            
+        Returns:
+            True if slug exists, False otherwise
+            
+        Example:
+            >>> client = Client()
+            >>> client.slug_exists("Joe_Biden")
+            True
+            >>> client.slug_exists("Nonexistent_Article")
+            False
+        """
+        return self._slug_index.exists(slug)
+    
+    def list_available_articles(self, prefix: str = "", limit: int = 100) -> List[str]:
+        """
+        List available articles, optionally filtered by prefix.
+        
+        Args:
+            prefix: Filter articles starting with this prefix (case-insensitive)
+            limit: Maximum number of results (default: 100)
+            
+        Returns:
+            List of article slugs matching the prefix
+            
+        Example:
+            >>> client = Client()
+            >>> articles = client.list_available_articles(prefix="Artificial", limit=20)
+            >>> print(articles)
+            ['Artificial_Intelligence', 'Artificial_Neural_Network', ...]
+            >>> all_articles = client.list_available_articles(limit=50)
+        """
+        return self._slug_index.list_by_prefix(prefix=prefix, limit=limit)
+    
+    def get_total_article_count(self) -> int:
+        """
+        Get the total number of articles available in the index.
+        
+        Returns:
+            Total number of unique articles
+            
+        Example:
+            >>> client = Client()
+            >>> total = client.get_total_article_count()
+            >>> print(f"Total articles available: {total}")
+            Total articles available: 50000
+        """
+        return self._slug_index.get_total_count()
+    
+    def get_random_articles(self, count: int = 10) -> List[str]:
+        """
+        Get random article slugs from the index.
+        
+        Useful for exploring the content or building sample datasets.
+        
+        Args:
+            count: Number of random slugs to return (default: 10)
+            
+        Returns:
+            List of random article slugs
+            
+        Example:
+            >>> client = Client()
+            >>> random_slugs = client.get_random_articles(5)
+            >>> for slug in random_slugs:
+            ...     article = client.get_summary(slug)
+            ...     print(article.title)
+        """
+        return self._slug_index.random_slugs(count=count)
 

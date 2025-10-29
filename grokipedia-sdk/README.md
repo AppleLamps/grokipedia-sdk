@@ -72,6 +72,62 @@ with Client() as client:
         print("Section not found")
 ```
 
+### Searching for Articles (New!)
+
+The SDK now includes a local sitemap index with **885,000+ articles** to help you find the right slug quickly:
+
+```python
+from grokipedia_sdk import Client
+
+with Client() as client:
+    # Search for articles by name
+    results = client.search_slug("joe biden", limit=5)
+    print(results)
+    # ['Joe_Biden', 'Joe_Biden_presidential_campaign', ...]
+    
+    # Find the best matching slug
+    slug = client.find_slug("elon musk")
+    print(slug)  # 'Elon_Musk'
+    
+    # Check if a slug exists
+    exists = client.slug_exists("Joe_Biden")
+    print(exists)  # True
+    
+    # List articles by prefix
+    articles = client.list_available_articles(prefix="Artificial", limit=10)
+    print(articles)
+    # ['Artificial_Intelligence', 'Artificial_Neural_Network', ...]
+    
+    # Get total article count
+    total = client.get_total_article_count()
+    print(f"Total articles: {total:,}")
+    
+    # Get random articles for exploration
+    random_slugs = client.get_random_articles(5)
+    print(random_slugs)
+```
+
+### Complete Workflow: Search -> Fetch
+
+```python
+from grokipedia_sdk import Client
+
+with Client() as client:
+    # 1. Search for an article
+    query = "artificial intelligence"
+    results = client.search_slug(query, limit=5)
+    print(f"Found {len(results)} matches")
+    
+    # 2. Get the best match
+    slug = client.find_slug(query)
+    
+    # 3. Fetch the article
+    if slug:
+        article = client.get_article(slug)
+        print(f"Title: {article.title}")
+        print(f"Content: {article.summary}")
+```
+
 ## API Reference
 
 ### Client
@@ -126,6 +182,66 @@ Get a specific section of an article by title.
 **Raises:**
 - `ArticleNotFound`: If the article doesn't exist
 - `RequestError`: For network or HTTP errors
+
+#### `search_slug(query: str, limit: int = 10, fuzzy: bool = True) -> List[str]`
+
+Search for article slugs matching a query using the local sitemap index.
+
+**Parameters:**
+- `query` (str): Search query (partial name or slug, case-insensitive)
+- `limit` (int): Maximum number of results to return (default: 10)
+- `fuzzy` (bool): Enable fuzzy matching for approximate matches (default: True)
+
+**Returns:**
+- `List[str]`: List of matching slugs ordered by relevance
+
+#### `find_slug(query: str) -> Optional[str]`
+
+Find the best matching slug for a query.
+
+**Parameters:**
+- `query` (str): Article name or partial slug (case-insensitive)
+
+**Returns:**
+- `Optional[str]`: Best matching slug or None if not found
+
+#### `slug_exists(slug: str) -> bool`
+
+Check if a slug exists in the sitemap index.
+
+**Parameters:**
+- `slug` (str): Slug to check
+
+**Returns:**
+- `bool`: True if slug exists, False otherwise
+
+#### `list_available_articles(prefix: str = "", limit: int = 100) -> List[str]`
+
+List available articles, optionally filtered by prefix.
+
+**Parameters:**
+- `prefix` (str): Filter articles starting with this prefix (case-insensitive)
+- `limit` (int): Maximum number of results (default: 100)
+
+**Returns:**
+- `List[str]`: List of article slugs matching the prefix
+
+#### `get_total_article_count() -> int`
+
+Get the total number of articles available in the index.
+
+**Returns:**
+- `int`: Total number of unique articles
+
+#### `get_random_articles(count: int = 10) -> List[str]`
+
+Get random article slugs from the index.
+
+**Parameters:**
+- `count` (int): Number of random slugs to return (default: 10)
+
+**Returns:**
+- `List[str]`: List of random article slugs
 
 ### Models
 
@@ -217,7 +333,10 @@ finally:
 
 ## Examples
 
-See `example.py` for more comprehensive examples.
+- `example.py` - Comprehensive examples of basic SDK usage
+- `example_slug_search.py` - Detailed examples of slug search features
+- `test_slug_search.py` - Quick test script for slug search functionality
+- `test_integration.py` - Integration test showing complete workflow
 
 ## License
 

@@ -3,6 +3,7 @@
 from .client import Client
 from .exceptions import GrokipediaError, ArticleNotFound, RequestError
 from .models import Article, ArticleSummary, Section, ArticleMetadata, SearchResult
+from .slug_index import SlugIndex
 
 __version__ = "1.0.0"
 __all__ = [
@@ -15,5 +16,6 @@ __all__ = [
     "Section",
     "ArticleMetadata",
     "SearchResult",
+    "SlugIndex",
 ]
 
