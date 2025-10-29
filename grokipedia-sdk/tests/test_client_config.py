@@ -91,10 +91,12 @@ class TestClientInitialization:
         
         assert client._verify is False
     
+    @patch('grokipedia_sdk.client.httpx.AsyncClient')
     @patch('grokipedia_sdk.client.httpx.Client')
-    def test_custom_cert(self, mock_client_class):
+    def test_custom_cert(self, mock_client_class, mock_async_client_class):
         """Test Client with custom certificate"""
         mock_client_class.return_value = Mock()
+        mock_async_client_class.return_value = Mock()
         
         client = Client(cert="/path/to/cert.pem")
         
@@ -105,8 +107,10 @@ class TestClientInitialization:
     
     def test_custom_cert_tuple(self):
         """Test Client with certificate tuple"""
-        with patch('grokipedia_sdk.client.httpx.Client') as mock_client_class:
+        with patch('grokipedia_sdk.client.httpx.Client') as mock_client_class, \
+             patch('grokipedia_sdk.client.httpx.AsyncClient') as mock_async_client_class:
             mock_client_class.return_value = Mock()
+            mock_async_client_class.return_value = Mock()
             
             client = Client(cert=("/path/to/cert.pem", "/path/to/key.pem"))
             
@@ -163,10 +167,12 @@ class TestClientInitialization:
         
         assert client.base_url == "https://explicit.example.com"
     
+    @patch('grokipedia_sdk.client.httpx.AsyncClient')
     @patch('grokipedia_sdk.client.httpx.Client')
-    def test_httpx_client_initialized_with_params(self, mock_client_class):
+    def test_httpx_client_initialized_with_params(self, mock_client_class, mock_async_client_class):
         """Test that httpx.Client is initialized with correct parameters"""
         mock_client_class.return_value = Mock()
+        mock_async_client_class.return_value = Mock()
         
         client = Client(
             base_url="https://test.com",

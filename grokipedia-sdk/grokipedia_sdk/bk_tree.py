@@ -11,7 +11,6 @@ References:
 """
 
 from typing import List, Tuple, Optional, Dict
-from difflib import SequenceMatcher
 
 try:
     from rapidfuzz.distance import Levenshtein
@@ -212,17 +211,41 @@ class BKTree:
             
         Note:
             Uses rapidfuzz.distance.Levenshtein if available (fast C implementation),
-            otherwise falls back to a simple ratio-based approximation.
+            otherwise falls back to pure Python implementation (Wagner-Fischer algorithm).
         """
         if HAS_RAPIDFUZZ:
             # Fast C implementation
             return Levenshtein.distance(s1, s2)
         else:
-            # Fallback: estimate distance from similarity ratio
-            # This is approximate but good enough for the fallback case
-            ratio = SequenceMatcher(None, s1, s2).ratio()
-            max_len = max(len(s1), len(s2), 1)
-            return int((1 - ratio) * max_len)
+            # Pure Python Levenshtein distance (Wagner-Fischer algorithm)
+            # This ensures consistent behavior regardless of rapidfuzz availability
+            if s1 == s2:
+                return 0
+            if len(s1) == 0:
+                return len(s2)
+            if len(s2) == 0:
+                return len(s1)
+            
+            # Create distance matrix
+            # Optimized to use only two rows instead of full matrix
+            len1, len2 = len(s1), len(s2)
+            prev_row = list(range(len2 + 1))
+            curr_row = [0] * (len2 + 1)
+            
+            for i in range(len1):
+                curr_row[0] = i + 1
+                for j in range(len2):
+                    # Cost of substitution (0 if characters match, 1 otherwise)
+                    cost = 0 if s1[i] == s2[j] else 1
+                    curr_row[j + 1] = min(
+                        prev_row[j + 1] + 1,    # deletion
+                        curr_row[j] + 1,        # insertion
+                        prev_row[j] + cost      # substitution
+                    )
+                # Swap rows for next iteration
+                prev_row, curr_row = curr_row, prev_row
+            
+            return prev_row[len2]
     
     def __len__(self) -> int:
         """Return the number of strings in the tree."""

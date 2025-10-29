@@ -26,7 +26,23 @@ DEFAULT_USER_AGENT = "GrokipediaSDK/1.0 (Python SDK; +https://github.com/AppleLa
 
 
 class Client:
-    """Client for accessing Grokipedia content"""
+    """
+    Client for accessing Grokipedia content.
+    
+    Important: This client manages HTTP connections that must be properly closed.
+    Always use one of the following patterns:
+    
+    1. Context manager (recommended):
+        >>> with Client() as client:
+        ...     article = client.get_article("Joe_Biden")
+    
+    2. Explicit close:
+        >>> client = Client()
+        >>> try:
+        ...     article = client.get_article("Joe_Biden")
+        ... finally:
+        ...     client.close()
+    """
     
     def __init__(
         self, 
@@ -103,13 +119,21 @@ class Client:
             verify=verify,
             cert=cert
         )
+        self._async_client = httpx.AsyncClient(
+            timeout=timeout,
+            follow_redirects=True,
+            verify=verify,
+            cert=cert
+        )
         self._slug_index = slug_index if slug_index is not None else SlugIndex()
         self._article_cache: OrderedDict[str, Article] = OrderedDict()
         self.max_cache_size = max_cache_size
         self._rate_limit = rate_limit
         self._last_request_time = 0.0
-        self._rate_limit_lock = Lock()
-        self._cache_lock = Lock()  # Lock for thread-safe cache operations
+        self._rate_limit_lock = Lock()  # Lock for sync rate limiting
+        self._async_rate_limit_lock = asyncio.Lock()  # Lock for async rate limiting
+        self._cache_lock = Lock()  # Lock for sync cache operations
+        self._async_cache_lock = asyncio.Lock()  # Lock for async cache operations
         self.max_retries = max_retries
     
     def __enter__(self):
@@ -120,19 +144,55 @@ class Client:
         """Clean up httpx client on exit"""
         self.close()
     
-    def __del__(self):
-        """Fallback cleanup when Client is garbage collected"""
-        if hasattr(self, '_client') and self._client:
-            try:
-                self.close()
-            except Exception:
-                pass  # Ignore errors during cleanup
-    
     def close(self):
-        """Close the HTTP client"""
+        """
+        Close the HTTP clients (synchronous).
+        
+        For async contexts, prefer using aclose() instead.
+        """
         if hasattr(self, '_client') and self._client:
             self._client.close()
             self._client = None
+        if hasattr(self, '_async_client') and self._async_client:
+            # Run async cleanup in a way that works even from sync context
+            try:
+                # Try to get the running loop
+                loop = asyncio.get_running_loop()
+                # If we're here, a loop is running - schedule cleanup as a task
+                asyncio.create_task(self._async_client.aclose())
+            except RuntimeError:
+                # No event loop is running, run cleanup synchronously
+                try:
+                    asyncio.run(self._async_client.aclose())
+                except RuntimeError:
+                    # If asyncio.run() fails, try the legacy approach
+                    loop = asyncio.new_event_loop()
+                    try:
+                        loop.run_until_complete(self._async_client.aclose())
+                    finally:
+                        loop.close()
+            self._async_client = None
+    
+    async def aclose(self):
+        """
+        Close the HTTP clients (asynchronous).
+        
+        This is the preferred method for closing clients in async contexts.
+        
+        Example:
+            >>> async def main():
+            ...     client = Client()
+            ...     try:
+            ...         article = await client.get_article_async("Joe_Biden")
+            ...     finally:
+            ...         await client.aclose()
+        """
+        if hasattr(self, '_client') and self._client:
+            self._client.close()
+            self._client = None
+        if hasattr(self, '_async_client') and self._async_client:
+            await self._async_client.aclose()
+            self._async_client = None
     
     def _validate_slug(self, slug: str) -> str:
         """
@@ -584,26 +644,21 @@ class Client:
         last_exception = None
         
         for attempt in range(self.max_retries + 1):
-            # Rate limiting
+            # Rate limiting with async lock to prevent race conditions
             if self._rate_limit > 0:
-                elapsed = time.time() - self._last_request_time
-                if elapsed < self._rate_limit:
-                    await asyncio.sleep(self._rate_limit - elapsed)
-                self._last_request_time = time.time()
+                async with self._async_rate_limit_lock:
+                    elapsed = time.time() - self._last_request_time
+                    if elapsed < self._rate_limit:
+                        await asyncio.sleep(self._rate_limit - elapsed)
+                    self._last_request_time = time.time()
             
             try:
-                async with httpx.AsyncClient(
-                    timeout=self.timeout,
-                    follow_redirects=True,
-                    verify=self._verify,
-                    cert=self._cert
-                ) as client:
-                    headers = {
-                        "User-Agent": self.user_agent
-                    }
-                    response = await client.get(url, headers=headers)
-                    response.raise_for_status()
-                    return response.text
+                headers = {
+                    "User-Agent": self.user_agent
+                }
+                response = await self._async_client.get(url, headers=headers)
+                response.raise_for_status()
+                return response.text
             except httpx.ConnectError as e:
                 # Connection errors - retryable
                 last_exception = RequestError(f"Failed to connect to {self.base_url}: {str(e)}")
@@ -693,8 +748,8 @@ class Client:
         # Validate and sanitize slug
         slug = self._validate_slug(slug)
         
-        # Check cache first (with LRU ordering) - thread-safe
-        with self._cache_lock:
+        # Check cache first (with LRU ordering) - async-safe
+        async with self._async_cache_lock:
             if slug in self._article_cache:
                 self._article_cache.move_to_end(slug)
                 return self._article_cache[slug]
@@ -704,9 +759,9 @@ class Client:
         html = await self._fetch_html_async(url, slug=slug)
         article = self._parse_article_html(html, slug, url, full_content=True)
         
-        # Cache the article for future use (with LRU eviction) - thread-safe with double-check
-        with self._cache_lock:
-            # Double-check pattern: another thread might have cached it while we were fetching
+        # Cache the article for future use (with LRU eviction) - async-safe with double-check
+        async with self._async_cache_lock:
+            # Double-check pattern: another async task might have cached it while we were fetching
             if slug not in self._article_cache:
                 if len(self._article_cache) >= self.max_cache_size:
                     self._article_cache.popitem(last=False)  # Remove oldest entry
