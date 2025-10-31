@@ -411,6 +411,94 @@ To disable:
         
         return avg_speedup
     
+    def test_trigram_performance(self):
+        """Test trigram indexing performance improvements."""
+        print("\n" + "="*80)
+        print("Test 5: Trigram Indexing Performance")
+        print("="*80)
+        
+        # Test with trigram indexing enabled vs disabled
+        print("\n" + "-"*60)
+        print("Comparing trigram indexing performance...")
+        print("-"*60)
+        
+        # Load index with trigram enabled
+        print("\nLoading index WITH trigram indexing...")
+        start = time.time()
+        index_with_trigram = SlugIndex(use_bktree=False, use_trigram=True)
+        index_with_trigram.load()
+        load_time_with_trigram = time.time() - start
+        print(f"✓ Loaded in {load_time_with_trigram:.3f}s")
+        print(f"  Trigram index built: {len(index_with_trigram._trigram_index)} trigrams")
+        
+        # Load index without trigram
+        print("\nLoading index WITHOUT trigram indexing...")
+        start = time.time()
+        index_without_trigram = SlugIndex(use_bktree=False, use_trigram=False)
+        index_without_trigram.load()
+        load_time_without_trigram = time.time() - start
+        print(f"✓ Loaded in {load_time_without_trigram:.3f}s")
+        
+        build_overhead = load_time_with_trigram - load_time_without_trigram
+        print(f"\nTrigram build overhead: +{build_overhead:.3f}s")
+        
+        # Test search performance
+        test_queries = [
+            "joe bidan",                    # Simple typo
+            "artificial inteligence",       # Complex typo
+            "machne learning",              # Multiple typos
+            "quantum mechancs",             # Technical term typo
+            "computr science"               # Common term typo
+        ]
+        
+        print(f"\nSearch Performance Comparison ({len(test_queries)} queries):")
+        print("-" * 70)
+        print(f"{'Query':<25} {'Without Trigram':<18} {'With Trigram':<15} {'Speedup'}")
+        print("-" * 70)
+        
+        total_time_without = 0
+        total_time_with = 0
+        
+        for query in test_queries:
+            # Test without trigram
+            start = time.time()
+            results_without = index_without_trigram.search(query, limit=10, fuzzy=True)
+            time_without = (time.time() - start) * 1000
+            total_time_without += time_without
+            
+            # Test with trigram
+            start = time.time()
+            results_with = index_with_trigram.search(query, limit=10, fuzzy=True)
+            time_with = (time.time() - start) * 1000
+            total_time_with += time_with
+            
+            speedup = time_without / time_with if time_with > 0 else float('inf')
+            
+            print(f"{query:<25} {time_without:>8.2f}ms        {time_with:>8.2f}ms     {speedup:>5.1f}x")
+        
+        avg_speedup = total_time_without / total_time_with if total_time_with > 0 else float('inf')
+        
+        print("-" * 70)
+        print(f"{'Average':<25} {total_time_without/len(test_queries):>8.2f}ms        {total_time_with/len(test_queries):>8.2f}ms     {avg_speedup:>5.1f}x")
+        
+        print(f"\nTrigram indexing summary:")
+        print(f"  Build overhead: +{build_overhead:.3f}s")
+        print(f"  Average speedup: {avg_speedup:.1f}x")
+        
+        # Calculate break-even point
+        if avg_speedup > 1:
+            queries_to_break_even = build_overhead / ((total_time_without - total_time_with) / len(test_queries) / 1000)
+            print(f"  Break-even after: {queries_to_break_even:.0f} fuzzy searches")
+        
+        if avg_speedup >= 5:
+            print(f"  Rating: 🚀 OUTSTANDING (5x+ faster)")
+        elif avg_speedup >= 2:
+            print(f"  Rating: ✅ GOOD (2x+ faster)")
+        else:
+            print(f"  Rating: ⚠️ MARGINAL (<2x faster)")
+        
+        return avg_speedup
+    
     def run_all_tests(self):
         """Run all performance tests"""
         print("\n" + "=" * 80)
@@ -427,21 +515,26 @@ To disable:
             # Test 3: Full search benchmark
             self.test_full_search_benchmark()
             
-            # Test 4: BK-Tree performance (if available)
-            self.test_bktree_performance()
+            # Test 4: BK-Tree performance
+            bktree_speedup = self.test_bktree_performance()
+            
+            # Test 5: Trigram indexing performance
+            trigram_speedup = self.test_trigram_performance()
             
             # Final summary
-            print("\n" + "=" * 80)
+            print("\n" + "="*80)
             print("FINAL SUMMARY")
-            print("=" * 80)
+            print("="*80)
             print("✓ All performance tests completed")
             print("✓ rapidfuzz provides 10-100x speedup over difflib")
-            print("✓ BK-Tree provides additional 10-100x speedup for fuzzy search")
-            print("\n💡 For sub-second fuzzy search, consider:")
-            print("   - Trigram/n-gram indexing (5-10x faster)")
-            print("   - BK-tree data structure (100-1000x faster)")
-            print("   - Full-text search engine like Whoosh")
-            print("=" * 80 + "\n")
+            print(f"✓ BK-Tree provides {bktree_speedup:.1f}x speedup for fuzzy search")
+            print(f"✓ Trigram indexing provides {trigram_speedup:.1f}x speedup for candidate filtering")
+            
+            print(f"\n💡 For sub-second fuzzy search, consider:")
+            print(f"   - Trigram indexing (5-10x faster) {'✅ ENABLED' if trigram_speedup >= 2 else '⚠️ CHECK PERFORMANCE'}")
+            print(f"   - BK-tree data structure (100-1000x faster) {'✅ ENABLED' if bktree_speedup >= 10 else '⚠️ CHECK PERFORMANCE'}")
+            print(f"   - Full-text search engine like Whoosh")
+            print("="*80)
             
         except Exception as e:
             print(f"\n✗ Error during testing: {e}")
