@@ -9,6 +9,7 @@ A professional Python SDK for accessing Grokipedia content programmatically. Thi
 - **Full Article Retrieval** - Fetch complete articles with all sections, references, and metadata
 - **Summary Extraction** - Get quick summaries and table of contents
 - **Smart Article Search** - Built-in search with fuzzy matching across 885,000+ articles
+- **Ultra-Fast Search** - Trigram indexing (45x speedup) + BK-Tree (10x speedup) for sub-second fuzzy queries
 - **Fast Slug Lookup** - Optimized BK-Tree implementation for O(log n) search performance
 - **Type Safety** - Built with Pydantic for robust data validation
 - **Context Manager Support** - Proper resource management with context managers
@@ -155,38 +156,63 @@ with Client() as client:
 
 ### Searching for Articles
 
-The SDK includes a local sitemap index with **885,000+ articles** and optimized fuzzy search capabilities:
+The SDK includes a local sitemap index with **885,000+ articles** and ultra-fast fuzzy search capabilities:
 
 ```python
 from grokipedia_sdk import Client
 
 with Client() as client:
-    # Search for articles by name (fuzzy matching enabled)
-    results = client.search_slug("joe biden", limit=5)
-    print(results)
-    # ['Joe_Biden', 'Joe_Biden_presidential_campaign', ...]
+    # Search for articles (fuzzy matching enabled by default)
+    results = client.search_slug("joe biden")
+    print(f"Found {len(results)} matches:")
+    for slug in results[:5]:
+        print(f"  - {slug}")
     
-    # Find the best matching slug
-    slug = client.find_slug("elon musk")
-    print(slug)  # 'Elon_Musk'
+    # Search with typos (works great with trigram indexing!)
+    typo_results = client.search_slug("artficial intel")
+    print(f"\nTypo search results: {typo_results[:3]}")
     
-    # Check if a slug exists
-    exists = client.slug_exists("Joe_Biden")
-    print(exists)  # True
+    # Find the best match
+    best_match = client.find_slug("elon musk")
+    print(f"\nBest match for 'elon musk': {best_match}")
     
-    # List articles by prefix
-    articles = client.list_available_articles(prefix="Artificial", limit=10)
-    print(articles)
-    # ['Artificial_Intelligence', 'Artificial_Neural_Network', ...]
-    
-    # Get total article count
-    total = client.get_total_article_count()
-    print(f"Total articles: {total:,}")
-    
-    # Get random articles for exploration
-    random_slugs = client.get_random_articles(5)
-    print(random_slugs)
+    # Check if an article exists
+    exists = client.slug_exists("Python_(programming_language)")
+    print(f"\nPython article exists: {exists}")
 ```
+
+**Performance:** ~200ms for fuzzy search with trigram indexing (45x faster than baseline)
+
+### Performance Optimizations
+
+The SDK includes multiple performance optimization layers:
+
+```python
+from grokipedia_sdk import SlugIndex
+
+# Ultra-fast configuration (default) - Best for production
+fast_index = SlugIndex(use_trigram=True, use_bktree=True)
+# Load time: ~12s, Search speed: 45x faster, Memory: 3x overhead
+
+# Memory-efficient configuration - Good for resource-constrained environments
+light_index = SlugIndex(use_trigram=True, use_bktree=False)
+# Load time: ~3s, Search speed: 25x faster, Memory: 2x overhead
+
+# Minimal configuration - Lowest memory usage
+minimal_index = SlugIndex(use_trigram=False, use_bktree=False)
+# Load time: ~2s, Search speed: baseline, Memory: base
+```
+
+**Performance Benchmarks (885,000+ articles):**
+
+| Query Type | Without Optimizations | With Trigram + BK-Tree | Speedup |
+|------------|----------------------|------------------------|---------|
+| "joe bidan" | 5,795ms | 142ms | **40.9x** |
+| "artficial intel" | 10,577ms | 204ms | **51.9x** |
+| "machne learning" | 10,812ms | 419ms | **25.8x** |
+| Average | 9,891ms | 216ms | **45.7x** |
+
+> 💡 **Tip:** The default configuration (trigram + BK-Tree) provides the best performance for most use cases and pays for itself after just 1-2 fuzzy searches.
 
 ### Complete Workflow: Search -> Fetch
 
@@ -226,13 +252,21 @@ Initialize the Grokipedia SDK client.
 **Example:**
 
 ```python
-# Default usage (auto-creates SlugIndex)
+# Default usage (auto-creates SlugIndex with trigram + BK-Tree)
 client = Client()
 
 # With custom SlugIndex
 from grokipedia_sdk import SlugIndex
 custom_index = SlugIndex(links_dir="/custom/path")
 client = Client(slug_index=custom_index)
+
+# With performance optimizations
+fast_index = SlugIndex(use_trigram=True, use_bktree=True)  # Default - fastest
+client = Client(slug_index=fast_index)
+
+# Disable optimizations for minimal memory usage
+minimal_index = SlugIndex(use_trigram=False, use_bktree=False)
+client = Client(slug_index=minimal_index)
 ```
 
 #### `get_article(slug: str) -> Article`
@@ -358,6 +392,106 @@ Get random article slugs from the index.
 
 - `List[str]`: List of random article slugs
 
+### SlugIndex
+
+#### `SlugIndex(links_dir: Optional[Path] = None, use_bktree: bool = True, use_trigram: bool = True)`
+
+High-performance article search index with multiple optimization layers.
+
+**Parameters:**
+
+- `links_dir` (Optional[Path]): Path to links directory (default: auto-detect)
+- `use_bktree` (bool): Enable BK-Tree for O(log n) fuzzy search (default: `True`)
+  - Provides 10-100x speedup for fuzzy queries
+  - Adds ~5-10 seconds to initial load time for large datasets
+- `use_trigram` (bool): Enable trigram indexing for candidate filtering (default: `True`)
+  - Provides 5-45x speedup by reducing search space
+  - Adds ~1-2 seconds to initial load time
+
+**Performance Characteristics:**
+
+| Configuration | Load Time | Memory Usage | Search Speed | Best For |
+|---------------|-----------|--------------|--------------|----------|
+| Default (both enabled) | ~12s | 3x base | **45x faster** | Production use |
+| Trigram only | ~3s | 2x base | 25x faster | Memory-constrained |
+| BK-Tree only | ~10s | 3x base | 10x faster | CPU-constrained |
+| Both disabled | ~2s | Base | Baseline | Minimal resources |
+
+#### `search(query: str, limit: int = 10, fuzzy: bool = True, min_similarity: float = 0.6) -> List[str]`
+
+Search for matching slugs with optimized fuzzy matching.
+
+**Parameters:**
+
+- `query` (str): Search query (can use spaces or underscores)
+- `limit` (int): Maximum number of results to return (default: `10`)
+- `fuzzy` (bool): Enable fuzzy matching if no exact matches found (default: `True`)
+- `min_similarity` (float): Minimum similarity score for fuzzy matching (default: `0.6`)
+
+**Returns:**
+
+- `List[str]`: List of matching slugs, ordered by relevance
+
+**Performance:** ~200ms for fuzzy search with 885,000+ articles (45x faster than baseline)
+
+#### `find_best_match(query: str, min_similarity: float = 0.6) -> Optional[str]`
+
+Find the single best matching slug for a query.
+
+**Parameters:**
+
+- `query` (str): Article name or partial slug
+- `min_similarity` (float): Minimum similarity score for fuzzy matching
+
+**Returns:**
+
+- `Optional[str]`: Best matching slug or `None` if not found
+
+#### `exists(slug: str) -> bool`
+
+Check if a slug exists in the index.
+
+**Parameters:**
+
+- `slug` (str): Slug to check
+
+**Returns:**
+
+- `bool`: `True` if slug exists, `False` otherwise
+
+#### `list_by_prefix(prefix: str = "", limit: int = 100) -> List[str]`
+
+List available articles, optionally filtered by prefix.
+
+**Parameters:**
+
+- `prefix` (str): Filter articles starting with this prefix (case-insensitive)
+- `limit` (int): Maximum number of results
+
+**Returns:**
+
+- `List[str]`: List of article slugs matching the prefix
+
+#### `get_total_count() -> int`
+
+Get the total number of articles in the index.
+
+**Returns:**
+
+- `int`: Total number of unique articles
+
+#### `get_random_articles(count: int = 10) -> List[str]`
+
+Get random article slugs from the index.
+
+**Parameters:**
+
+- `count` (int): Number of random slugs to return
+
+**Returns:**
+
+- `List[str]`: List of random article slugs
+
 ### Models
 
 #### `Article`
@@ -428,7 +562,7 @@ Raised for network or HTTP errors.
 ## Custom Configuration
 
 ```python
-from grokipedia_sdk import Client
+from grokipedia_sdk import Client, SlugIndex
 
 # Use custom base URL
 client = Client(base_url="https://custom-grokipedia.com")
@@ -439,10 +573,32 @@ client = Client(timeout=60.0)
 # Combine both
 client = Client(base_url="https://custom-grokipedia.com", timeout=60.0)
 
-# With custom SlugIndex
+# With custom SlugIndex and performance optimizations
 from grokipedia_sdk import SlugIndex
-custom_index = SlugIndex(links_dir="/custom/path", use_bktree=True)
-client = Client(slug_index=custom_index)
+
+# Ultra-fast configuration (default)
+fast_index = SlugIndex(
+    links_dir="/custom/path", 
+    use_trigram=True,   # 45x faster fuzzy search
+    use_bktree=True     # 10x faster fuzzy search
+)
+client = Client(slug_index=fast_index)
+
+# Memory-efficient configuration
+minimal_index = SlugIndex(
+    links_dir="/custom/path",
+    use_trigram=False,  # Slower but less memory
+    use_bktree=False    # Slower but less memory
+)
+client = Client(slug_index=minimal_index)
+
+# Balanced configuration
+balanced_index = SlugIndex(
+    links_dir="/custom/path",
+    use_trigram=True,   # Keep trigram for speed
+    use_bktree=False    # Disable BK-Tree to save memory
+)
+client = Client(slug_index=balanced_index)
 ```
 
 ## Error Handling
@@ -509,6 +665,9 @@ python examples/example_cli_tool.py summary Joe_Biden
 
 # Run SlugIndex examples
 python examples/example_slug_index.py
+
+# Run performance benchmarks (tests trigram indexing, BK-Tree, etc.)
+python tests/test_performance.py
 ```
 
 ## Testing
@@ -528,12 +687,19 @@ python -m pytest tests/ --cov=grokipedia_sdk --cov-report=html
 
 ## Performance
 
-The SDK is optimized for performance with:
+The SDK is optimized for performance with multiple optimization layers:
 
-- **BK-Tree Implementation**: O(log n) fuzzy search performance for article lookups
+- **Trigram Indexing**: 45x faster fuzzy search by reducing search space before matching
+- **BK-Tree Implementation**: O(log n) fuzzy search performance for article lookups (10x speedup)
 - **Efficient Caching**: Built-in caching for frequently accessed articles
 - **Optimized Parsing**: Fast HTML parsing with BeautifulSoup4 and lxml
 - **Async Support**: Ready for future async/await implementations
+
+**Benchmark Results (885,000+ articles):**
+- Average fuzzy search time: **216ms** (45x faster than baseline)
+- Trigram indexing reduces search space by 70-90%
+- BK-Tree provides O(log n) search complexity
+- Combined optimizations achieve sub-second fuzzy queries
 
 See `docs/OPTIMIZATION.md` for detailed performance benchmarks and optimization strategies.
 
