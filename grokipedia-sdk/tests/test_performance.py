@@ -38,7 +38,7 @@ class PerformanceTestSuite:
         self.index = None
         self.total_count = 0
         
-    def setup_index(self, use_bktree=False):
+    def setup_index(self, use_bktree=True):
         """Load slug index for testing"""
         print("Loading slug index...")
         self.index = SlugIndex(use_bktree=use_bktree)
