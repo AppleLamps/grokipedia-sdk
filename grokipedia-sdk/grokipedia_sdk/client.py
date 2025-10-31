@@ -130,10 +130,8 @@ class Client:
         self.max_cache_size = max_cache_size
         self._rate_limit = rate_limit
         self._last_request_time = 0.0
-        self._rate_limit_lock = Lock()  # Lock for sync rate limiting
-        self._async_rate_limit_lock = asyncio.Lock()  # Lock for async rate limiting
-        self._cache_lock = Lock()  # Lock for sync cache operations
-        self._async_cache_lock = asyncio.Lock()  # Lock for async cache operations
+        self._rate_limit_lock = Lock()  # Shared lock for all rate limiting (sync and async)
+        self._cache_lock = Lock()  # Shared lock for all cache operations (sync and async)
         self.max_retries = max_retries
     
     def __enter__(self):
@@ -644,12 +642,19 @@ class Client:
         last_exception = None
         
         for attempt in range(self.max_retries + 1):
-            # Rate limiting with async lock to prevent race conditions
+            # Rate limiting with shared lock to prevent race conditions
+            # Use threading lock directly since time operations are fast (won't block event loop)
             if self._rate_limit > 0:
-                async with self._async_rate_limit_lock:
+                sleep_time = 0.0
+                with self._rate_limit_lock:
                     elapsed = time.time() - self._last_request_time
                     if elapsed < self._rate_limit:
-                        await asyncio.sleep(self._rate_limit - elapsed)
+                        sleep_time = self._rate_limit - elapsed
+                # Release lock before sleeping to avoid blocking other requests
+                if sleep_time > 0:
+                    await asyncio.sleep(sleep_time)
+                # Update timestamp after sleep
+                with self._rate_limit_lock:
                     self._last_request_time = time.time()
             
             try:
@@ -748,8 +753,9 @@ class Client:
         # Validate and sanitize slug
         slug = self._validate_slug(slug)
         
-        # Check cache first (with LRU ordering) - async-safe
-        async with self._async_cache_lock:
+        # Check cache first (with LRU ordering) - thread-safe
+        # Use threading lock directly since OrderedDict ops are fast (won't block event loop)
+        with self._cache_lock:
             if slug in self._article_cache:
                 self._article_cache.move_to_end(slug)
                 return self._article_cache[slug]
@@ -759,9 +765,9 @@ class Client:
         html = await self._fetch_html_async(url, slug=slug)
         article = self._parse_article_html(html, slug, url, full_content=True)
         
-        # Cache the article for future use (with LRU eviction) - async-safe with double-check
-        async with self._async_cache_lock:
-            # Double-check pattern: another async task might have cached it while we were fetching
+        # Cache the article for future use (with LRU eviction) - thread-safe with double-check
+        with self._cache_lock:
+            # Double-check pattern: another thread/task might have cached it while we were fetching
             if slug not in self._article_cache:
                 if len(self._article_cache) >= self.max_cache_size:
                     self._article_cache.popitem(last=False)  # Remove oldest entry

@@ -55,14 +55,18 @@ def extract_sections(soup: BeautifulSoup) -> Tuple[List[Section], List[str]]:
         toc.append(title)
         
         # Get content after heading until next heading
-        # Use list comprehension for efficient string collection
-        content_parts = [
-            sibling.get_text(strip=True)
-            for sibling in heading.find_next_siblings()
-            if sibling.name and not sibling.name.startswith('h')
-        ]
-        # Filter out empty strings and join efficiently
-        content = " ".join(filter(None, content_parts))
+        content_parts = []
+        for sibling in heading.find_next_siblings():
+            # Stop when we encounter the next heading
+            if isinstance(sibling, Tag) and sibling.name in HEADING_TAGS:
+                break
+            # Collect text from non-heading elements
+            if sibling.name:
+                text = sibling.get_text(strip=True)
+                if text:
+                    content_parts.append(text)
+        # Join all collected content
+        content = " ".join(content_parts)
         
         sections.append(Section(
             title=title,

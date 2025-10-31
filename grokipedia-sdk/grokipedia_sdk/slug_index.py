@@ -11,11 +11,10 @@ try:
     from rapidfuzz import fuzz
     HAS_RAPIDFUZZ = True
 except ImportError:
-    # Fallback to difflib if rapidfuzz is not installed
-    from difflib import SequenceMatcher
     HAS_RAPIDFUZZ = False
-else:
-    from difflib import SequenceMatcher
+
+# Import SequenceMatcher for fallback similarity scoring
+from difflib import SequenceMatcher
 
 try:
     from .bk_tree import BKTree
