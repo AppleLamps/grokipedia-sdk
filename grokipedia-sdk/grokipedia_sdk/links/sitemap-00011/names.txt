@@ -1126,7 +1126,7 @@ Embraceable_You
 Embracer_Group
 Embracing_Skeletons_of_Alepotrypa
 Embraer
-Embraer/FMA_CBA_123_Vector
+FMA_CBA_123_Vector
 Embraer_C-390_Millennium
 Embraer_E-Jet_E2_family
 Embraer_E-Jet_family
@@ -2307,7 +2307,7 @@ Emmet_Otter's_Jug-Band_Christmas
 Emmet_Sheehan
 Emmetropia
 Emmett,_Idaho
-Emmett/Furla_Oasis
+Furla_Oasis
 Emmett_(name)
 Emmett_Brown
 Emmett_Chapman
@@ -2435,7 +2435,7 @@ Emotive_conjugation
 Emotivism
 Emoxypine
 Empagliflozin
-Empagliflozin/metformin
+metformin
 Empanada
 Empangeni
 Empath
@@ -2961,7 +2961,7 @@ Empty_Spain
 Empty_World
 Empty_book
 Empty_calories
-Empty_can/Full_can_tests
+Full_can_tests
 Empty_diagonal
 Empty_nest_syndrome
 Empty_net_goal
@@ -3011,7 +3011,7 @@ Emtee
 Emtek
 Emtidad_Movement
 Emtricitabine
-Emtricitabine/tenofovir
+tenofovir
 Emu
 Emu's_TV_programmes
 Emu_(puppet)
@@ -3211,7 +3211,7 @@ Enclosure
 Enclothed_cognition
 Encoder
 Encoder_(digital)
-Encoding/decoding_model_of_communication
+decoding_model_of_communication
 Encoding_(memory)
 Encoding_specificity_principle
 Encomienda
@@ -5018,7 +5018,7 @@ Entropy_production
 Entropy_rate
 Entropy_unit
 Entry-level_job
-Entry/Exit_System
+Exit_System
 Entry_into_force
 Entry_of_women_to_Sabarimala
 Entry_point
@@ -5513,7 +5513,7 @@ Epidemic_typhus
 Epidemiological_transition
 Epidemiology
 Epidemiology_(Community)
-Epidemiology_of_HIV/AIDS
+AIDS
 Epidemiology_of_autism
 Epidemiology_of_bed_bugs
 Epidemiology_of_cancer
@@ -6105,7 +6105,7 @@ Eranad
 Eranos
 Eranthis_hyemalis
 Eraring_Power_Station
-Erase/Rewind
+Rewind
 Erase_Me_(album)
 Erase_the_Slate
 Erased_(2012_film)
@@ -9169,7 +9169,7 @@ Et_cetera
 Et_in_Arcadia_ego_(Guercino)
 Et_in_Arcadia_ego_(Poussin)
 Et_si_tu_n'existais_pas
-Et_tu,_Brute?
+Et_tu,_Brute
 Eta
 Eta_(disambiguation)
 Eta_(glider)
@@ -9423,7 +9423,7 @@ Ethenone
 Ethephon
 Ether
 EtherCAT
-EtherNet/IP
+IP
 EtherType
 Ether_(B.o.B_album)
 Ether_(song)
@@ -9481,8 +9481,8 @@ Ethics_of_technology
 Ethics_of_terraforming
 Ethidium_bromide
 Ethinylestradiol
-Ethinylestradiol/cyproterone_acetate
-Ethinylestradiol/levonorgestrel
+cyproterone_acetate
+levonorgestrel
 Ethio-Djibouti_Railways
 Ethio-jazz
 Ethio_telecom
@@ -11988,7 +11988,7 @@ Even_the_Losers
 Even_the_Nights_Are_Better
 Even_the_Rain
 Evening
-Evening;_Red_Tree
+Evening
 Evening_(film)
 Evening_Magazine
 Evening_Primrose_(ABC_Stage_67)
@@ -12336,7 +12336,7 @@ Everybody_Dies_by_the_End
 Everybody_Dies_in_Their_Nightmares
 Everybody_Digs_Bill_Evans
 Everybody_Draw_Mohammed_Day
-Everybody_Else_Is_Doing_It,_So_Why_Can't_We?
+Everybody_Else_Is_Doing_It,_So_Why_Can't_We
 Everybody_Everybody_(song)
 Everybody_Has_Secrets
 Everybody_Hates_Chris
@@ -14833,7 +14833,7 @@ F.E.A.R._Perseus_Mandate
 F.I.N.E.*
 F.I.R.
 F.I.R._(TV_series)
-F.I.R_No._339/07/06
+06
 F.I.S.T._(film)
 F.L.M._(song)
 F.L.Y._(roller_coaster)
@@ -14887,10 +14887,10 @@ F._W._de_Klerk
 F._William_Engdahl
 F._X._Hadi_Rudyatmo
 F.lux
-F/8_and_be_there
-F/A-XX_program
-F/X
-F/X2
+8_and_be_there
+A-XX_program
+X
+X2
 F0rest
 F1000_(publisher)
 F110-class_frigate
@@ -14990,7 +14990,7 @@ FAMAS_Award
 FAMAS_Award_for_Best_Actress
 FAME_Studios
 FAM_AB
-FANS-1/A
+A
 FANUC
 FAO_Major_Fishing_Areas
 FAO_Schwarz
@@ -15510,7 +15510,7 @@ FET_amplifier
 FET_y_de_las_JONS
 FEU_Tamaraws
 FEU_Tamaraws_basketball
-FEV1/FVC_ratio
+FVC_ratio
 FEniCS_Project
 FF
 FFAS_Senior_League
@@ -15845,7 +15845,7 @@ FK_BRNO_Field_Pistol
 FK_Banga_Gargždai
 FK_Belasica
 FK_Beograd_(Australia)
-FK_Bodø/Glimt
+Glimt
 FK_Borac_Banja_Luka
 FK_Borac_Čačak
 FK_Budućnost_Podgorica
@@ -15981,7 +15981,7 @@ FM_(British_band)
 FM_(Canadian_band)
 FM_(No_Static_at_All)
 FM_(film)
-FM_24/29_light_machine_gun
+29_light_machine_gun
 FM_Consolidation_Line
 FM_Global
 FM_Towns
@@ -16113,7 +16113,7 @@ FTP-75
 FTPS
 FTP_server
 FTR_(professional_wrestling)
-FTSE/CoreCommodity_CRB_Index
+CoreCommodity_CRB_Index
 FTSE4Good_Index
 FTSE_100_Index
 FTSE_250_Index
@@ -16441,7 +16441,7 @@ Face
 Face's_Music_Party
 Face-Off_(1971_film)
 Face-off
-Face/Off
+Off
 FaceApp
 FaceTime
 Face_(1997_film)
@@ -16865,14 +16865,14 @@ Fahrenheit
 Fahrenheit_(2005_video_game)
 Fahrenheit_(Taiwanese_band)
 Fahrenheit_(Toto_album)
-Fahrenheit_11/9
+9
 Fahrenheit_451
 Fahrenheit_451_(1966_film)
 Fahrenheit_451_(2018_film)
 Fahrenheit_451_(disambiguation)
 Fahrenheit_451_(video_game)
-Fahrenheit_9/11
-Fahrenheit_9/11_controversies
+11
+11_controversies
 Fahrettin_Altay
 Fahrettin_Altun
 Fahri_Korutürk
@@ -16984,7 +16984,7 @@ Fairbanks-Morse
 Fairbanks_House_(Dedham,_Massachusetts)
 Fairbanks_Ice_Dogs
 Fairbanks_International_Airport
-Fairbanks_Morse_38_8-1/8_diesel_engine
+8_diesel_engine
 Fairbanks_North_Star_Borough,_Alaska
 Fairborn,_Ohio
 Fairbourne
@@ -17261,7 +17261,7 @@ Faith_(The_Cure_album)
 Faith_(The_Weeknd_song)
 Faith_(dog)
 Faith_(yacht)
-Faith_/_Void_Split
+_Void_Split
 Faith_Bacon
 Faith_Baldwin
 Faith_Bandler
@@ -17386,7 +17386,7 @@ Fake_fur
 Fake_it_till_you_make_it
 Fake_news
 Fake_nude_photography
-Fake_or_Fortune?
+Fake_or_Fortune
 Fake_orgasm
 Fake_passport
 Fake_snow
@@ -17546,7 +17546,7 @@ Falklands_War
 Falkner_(novel)
 Falkner–Skan_boundary_layer
 Falkon
-Fall;_or,_Dodge_in_Hell
+Fall
 Fall_(1997_film)
 Fall_(2022_film)
 Fall_(Better_Call_Saul)
@@ -19257,7 +19257,7 @@ Fashion_(2008_film)
 Fashion_(David_Bowie_song)
 Fashion_(band)
 Fashion_Cafe
-Fashion_Designer_s/o_Ladies_Tailor
+o_Ladies_Tailor
 Fashion_District_Philadelphia
 Fashion_House
 Fashion_Institute_of_Design_&_Merchandising
@@ -19696,7 +19696,7 @@ Father's_Day_Bank_Massacre
 Father's_Little_Dividend
 Father,_I'll_Take_Care_of_You
 Father-in-law_of_Europe
-Father/Son_Challenge
+Son_Challenge
 Father_&_Soldier
 Father_(rapper)
 Father_Brown
@@ -19882,7 +19882,7 @@ Fatma_Samoura
 Fatma_Sultan_(daughter_of_Ahmed_I)
 Fatma_Sultan_(daughter_of_Selim_I)
 Fatma_Şahin
-Fatmagül'ün_Suçu_Ne?
+Fatmagül'ün_Suçu_Ne
 Fatman_(2020_film)
 Fatman_Scoop
 Fatmawati
@@ -21162,7 +21162,7 @@ Feel_the_Pain
 Feel_the_Steel
 Feeld
 Feeler_gauge
-Feelin'_Alright?
+Feelin'_Alright
 Feelin'_Stronger_Every_Day
 Feeling
 Feeling_B
@@ -21906,7 +21906,7 @@ Fenestration
 Fenestron
 Fenethylline
 Fenfluramine
-Fenfluramine/phentermine
+phentermine
 Feng_(mythology)
 Feng_Congde
 Feng_Guozhang
@@ -22565,7 +22565,7 @@ Ferrari_312_PB
 Ferrari_315_S
 Ferrari_328
 Ferrari_330
-Ferrari_330_TRI/LM
+LM
 Ferrari_333_SP
 Ferrari_335_S
 Ferrari_340
@@ -22573,7 +22573,7 @@ Ferrari_348
 Ferrari_360
 Ferrari_365
 Ferrari_365_GT4_2+2,_400_and_412
-Ferrari_365_GTC/4
+4
 Ferrari_375_F1
 Ferrari_412_T1
 Ferrari_412_T2
@@ -22607,7 +22607,7 @@ Ferrari_F1%2f86
 Ferrari_F1%2f87
 Ferrari_F1-2000
 Ferrari_F1-75
-Ferrari_F116/F133_engine
+F133_engine
 Ferrari_F12
 Ferrari_F136_engine
 Ferrari_F138
@@ -22649,7 +22649,7 @@ Ferrari_Monza
 Ferrari_Monza_SP
 Ferrari_Mythos
 Ferrari_P
-Ferrari_P4/5_by_Pininfarina
+5_by_Pininfarina
 Ferrari_Pinin
 Ferrari_Portofino
 Ferrari_Purosangue
@@ -23128,7 +23128,7 @@ Fiat_Turbina
 Fiat_TwinAir_engine
 Fiat_Twin_Cam_engine
 Fiat_Uno
-Fiat_X1/9
+9
 Fiat_iustitia,_et_pereat_mundus
 Fiat_justitia_ruat_caelum
 Fiat_money
@@ -23607,7 +23607,7 @@ Fifth_Aliyah
 Fifth_Amendment_to_the_United_States_Constitution
 Fifth_Angel
 Fifth_Avenue
-Fifth_Avenue/53rd_Street_station
+53rd_Street_station
 Fifth_Avenue_Hotel
 Fifth_Avenue_Mile
 Fifth_Avenue–59th_Street_station
@@ -23760,7 +23760,7 @@ Fighter_Maker
 Fighter_Pilots'_Revolt_incident
 Fighter_Squadron
 Fighter_Squadron_1_(United_States_Navy)
-Fighter_Squadron_2/30_Normandie-Niemen
+30_Normandie-Niemen
 Fighter_aircraft
 Fighter_brand
 Fighter_catapult_ship
@@ -24446,7 +24446,7 @@ Final_Fantasy_VII_Rebirth
 Final_Fantasy_VII_Remake
 Final_Fantasy_X
 Final_Fantasy_X-2
-Final_Fantasy_X/X-2_HD_Remaster
+X-2_HD_Remaster
 Final_Fantasy_XI
 Final_Fantasy_XII
 Final_Fantasy_XIII

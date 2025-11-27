@@ -889,7 +889,7 @@ Clarice_Taylor
 Clarice_Tinsley
 Clarice_de'_Medici
 Claridge's
-Claridge_Hi-Tec/Goncz_Pistol
+Goncz_Pistol
 Clarification_and_stabilization_of_wine
 Clarifications_(The_Wire)
 Clarified_butter
@@ -943,7 +943,7 @@ Clark's_anemonefish
 Clark's_nutcracker
 Clark,_New_Jersey
 Clark,_Philippines
-Clark/Lake_station
+Lake_station
 Clark_(TV_series)
 Clark_(mascot)
 Clark_(musician)
@@ -2336,7 +2336,7 @@ Client
 Client-side
 Client-side_prediction
 Client-to-client_protocol
-Client/Server_Runtime_Subsystem
+Server_Runtime_Subsystem
 Client_(band)
 Client_(business)
 Client_(computing)
@@ -3356,7 +3356,7 @@ Closer_to_the_Heart
 Closer_to_the_Truth
 Closest_pair_of_points_problem
 Closet
-Closet?_You'll_Love_It!
+Closet
 Closet_Land
 Closet_Monster_(film)
 Closet_Space
@@ -3396,7 +3396,7 @@ Clostridium_difficile_toxin_B
 Clostridium_perfringens
 Clostridium_septicum
 Clostridium_tetani
-Closure/Continuation
+Continuation
 Closure_(The_X-Files)
 Closure_(computer_programming)
 Closure_(container)
@@ -3448,7 +3448,7 @@ Clotilde_Courau
 Clotilde_Hesme
 Clotilde_of_France
 Clotrimazole
-Clotrimazole/betamethasone_dipropionate
+betamethasone_dipropionate
 Clotted_cream
 Clotting_time
 Cloture
@@ -4112,7 +4112,7 @@ Coalition_Coupon
 Coalition_Forces_Land_Component_Command
 Coalition_Government_of_Democratic_Kampuchea
 Coalition_Movement
-Coalition_PSD/CDS
+CDS
 Coalition_Provisional_Authority
 Coalition_casualties_in_Afghanistan
 Coalition_for_Democratic_Change
@@ -4924,7 +4924,7 @@ Code_Composer_Studio
 Code_Geass
 Code_Geass_(season_1)
 Code_Geass_(season_2)
-Code_Geass_Lelouch_of_the_Re;surrection
+Code_Geass_Lelouch_of_the_Re
 Code_Geass_Lelouch_of_the_Rebellion
 Code_Kunst
 Code_Lyoko
@@ -5006,7 +5006,7 @@ Coded_aperture
 Coded_language_in_politics
 Codeforces
 Codeine
-Codeine/paracetamol
+paracetamol
 Codeine_(band)
 Codelco
 Codemasters
@@ -5231,7 +5231,7 @@ Coffea_liberica
 Coffea_stenophylla
 Coffee
 Coffee,_Do_Me_a_Favor
-Coffee,_Tea_or_Me?
+Coffee,_Tea_or_Me
 Coffee-Mate
 CoffeeScript
 Coffee_&_Kareem
@@ -8080,7 +8080,7 @@ Comedy
 ComedySportz
 Comedy_(drama)
 Comedy_(song)
-Comedy_23/6
+6
 Comedy_Bang!_Bang!
 Comedy_Bang!_Bang!_(TV_series)
 Comedy_Big_League
@@ -8659,7 +8659,7 @@ Commodore_IBM_PC_compatible_systems
 Commodore_International
 Commodore_Nutt
 Commodore_PET
-Commodore_Plus/4
+4
 Commodores
 Commodores_(album)
 Commodores_13
@@ -9147,7 +9147,7 @@ Communist_Party_of_Estonia
 Communist_Party_of_Finland
 Communist_Party_of_Finland_(1994)
 Communist_Party_of_Germany
-Communist_Party_of_Germany/Marxists–Leninists
+Marxists–Leninists
 Communist_Party_of_Germany_(1990)
 Communist_Party_of_Germany_(Opposition)
 Communist_Party_of_Great_Britain
@@ -9195,7 +9195,7 @@ Communist_Party_of_Sri_Lanka
 Communist_Party_of_Sweden_(1995)
 Communist_Party_of_Tajikistan
 Communist_Party_of_Thailand
-Communist_Party_of_Turkey/Marxist–Leninist
+Marxist–Leninist
 Communist_Party_of_Turkey_(historical)
 Communist_Party_of_Turkey_(modern)
 Communist_Party_of_Turkmenistan
@@ -10900,7 +10900,7 @@ Conestoga_High_School
 Conestoga_wagon
 Conex_box
 Conexant
-Conexpo-Con/Agg
+Agg
 Coney_Hatch
 Coney_Island
 Coney_Island_(Cincinnati,_Ohio)
@@ -13336,7 +13336,7 @@ Controversies_of_the_Ronald_Reagan_administration
 Controversies_over_drag_performances
 Controversies_regarding_Barack_Obama's_religion
 Controversies_regarding_COVID-19_contracts_in_the_United_Kingdom
-Controversies_related_to_ME/CFS
+CFS
 Controversies_relating_to_the_Six-Day_War
 Controversies_surrounding_G4S
 Controversies_surrounding_Mortal_Kombat
@@ -13601,7 +13601,7 @@ Convoy_PQ_18
 Convoy_battles_of_World_War_II
 Convoy_of_Hope
 Convoy_rescue_ship
-Convoys_HX_229/SC_122
+SC_122
 Convoys_in_World_War_I
 Convoz
 Convulsant
@@ -15097,7 +15097,7 @@ Cornelius_Vanderbilt_Whitney
 Cornelius_a_Lapide
 Cornelius_keg
 Cornelius_the_Centurion
-Cornell_5/8/77
+77
 Cornell_Belcher
 Cornell_Big_Red
 Cornell_Big_Red_football
@@ -16835,7 +16835,7 @@ Countries_in_the_International_Organization_for_Standardization
 Countries_of_the_Bay_of_Bengal
 Countries_of_the_United_Kingdom
 Countries_playing_Australian_rules_football
-Countries_using_DAB/DMB
+DMB
 Country
 Country-western_two-step
 Country_(disambiguation)
@@ -18468,7 +18468,7 @@ Crazier
 Crazing
 Crazy,_Not_Insane
 Crazy,_Stupid,_Love
-Crazy/Beautiful
+Beautiful
 CrazyGames
 CrazyNDaLazDayz
 CrazySexyCool
@@ -18733,7 +18733,7 @@ Creatures_(company)
 Creatures_(video_game_series)
 Creatures_of_Light_and_Darkness
 Creatures_of_the_Night
-Creatures_of_the_Night_Tour/10th_Anniversary_Tour
+10th_Anniversary_Tour
 Cred_(company)
 Credence_(statistics)
 Credence_table
@@ -19559,7 +19559,7 @@ Crisco
 Crises_(album)
 Crisfield,_Maryland
 Crisis
-Crisis?_What_Crisis?
+Crisis
 Crisis_(1950_film)
 Crisis_(2021_film)
 Crisis_(Alexisonfire_album)
@@ -21033,7 +21033,7 @@ Cruis'n_World
 Cruise
 Cruise-O-Matic
 Cruise-missile_submarine
-Cruise/Wagner_Productions
+Wagner_Productions
 Cruise_&_Maritime_Voyages
 Cruise_(aeronautics)
 Cruise_(autonomous_vehicle)
@@ -23065,7 +23065,7 @@ Curtido
 Curtilage
 Curtin_University
 Curtis
-Curtis/Live!
+Live!
 Curtis_(50_Cent_album)
 Curtis_(Curtis_Mayfield_album)
 Curtis_A._Buzzard
@@ -24867,7 +24867,7 @@ D'Urville_Martin
 D'Wan_Mathis
 D'Wayne_Eskridge
 D'Wayne_Wiggins
-D'You_Know_What_I_Mean?
+D'You_Know_What_I_Mean
 D'Youville_University
 D'arcy_Wretzky
 D'atra_Hicks

@@ -756,7 +756,7 @@ That's_All_She_Wrote
 That's_Amore
 That's_Carry_On!
 That's_Christmas_to_Me
-That's_Cunning!_Shijō_Saidai_no_Sakusen?
+That's_Cunning!_Shijō_Saidai_no_Sakusen
 That's_Entertainment!
 That's_Entertainment!_(song)
 That's_Entertainment!_III
@@ -1060,9 +1060,9 @@ The_1989_World_Tour
 The_1996_DEP_Sessions
 The_1_Second_Film
 The_1st_(album)
-The_20/20_Experience
-The_20/20_Experience_World_Tour
-The_20/20_Experience_–_2_of_2
+20_Experience
+20_Experience_World_Tour
+20_Experience_–_2_of_2
 The_2000s_(miniseries)
 The_2010s_(miniseries)
 The_20th-Century_Architecture_of_Frank_Lloyd_Wright
@@ -1161,7 +1161,7 @@ The_88
 The_8G_Band
 The_8th_Habit
 The_8th_Night
-The_8th_Son?_Are_You_Kidding_Me?
+The_8th_Son
 The_92_Club
 The_99
 The_9th_Company
@@ -2210,7 +2210,7 @@ The_Atlantic_Paranormal_Society
 The_Atlas_Six
 The_Atlas_of_Middle-earth
 The_Atlas_of_North_American_English
-The_Atom_Ant/Secret_Squirrel_Show
+Secret_Squirrel_Show
 The_Atomic_Bitchwax
 The_Atomic_Cafe
 The_Atomic_City
@@ -2219,7 +2219,7 @@ The_Atomic_Mr._Basie
 The_Atomic_Submarine
 The_Atrocity_Exhibition
 The_Atrocity_Exhibition..._Exhibit_A
-The_Attacks_of_26/11
+11
 The_Attic_(1980_film)
 The_Attic_(2007_film)
 The_Atticus_Institute
@@ -2442,7 +2442,7 @@ The_Bad_Seed_Returns
 The_Bad_Sleep_Well
 The_Bad_Touch
 The_Bad_and_the_Beautiful
-The_Baddest_(K/DA_song)
+DA_song)
 The_Baddies_(professional_wrestling)
 The_Badlanders
 The_Baffler
@@ -2628,8 +2628,8 @@ The_Bastard_Executioner
 The_Bastard_Son_&_The_Devil_Himself
 The_Bastard_of_Istanbul
 The_Bat_(1959_film)
-The_Bat_(Kings_Island;_opened_1981)
-The_Bat_(Kings_Island;_opened_1993)
+The_Bat_(Kings_Island
+The_Bat_(Kings_Island
 The_Bat_(novel)
 The_Bat_People
 The_Bat_Whispers
@@ -3038,9 +3038,9 @@ The_Best_of_Bread
 The_Best_of_Carly_Simon
 The_Best_of_Celine_Dion
 The_Best_of_Chris_Rea
-The_Best_of_David_Bowie_1969/1974
-The_Best_of_David_Bowie_1974/1979
-The_Best_of_David_Bowie_1980/1987
+1974
+1979
+1987
 The_Best_of_Depeche_Mode_Volume_1
 The_Best_of_Earth,_Wind_&_Fire,_Vol._1
 The_Best_of_Elvis_Costello_and_the_Attractions
@@ -3133,7 +3133,7 @@ The_Beyoncé_Experience
 The_Beyoncé_Experience_Live
 The_Beyond
 The_Beyond_(1981_film)
-The_Beyond_/_Where_the_Giants_Roam
+_Where_the_Giants_Roam
 The_Bible_(miniseries)
 The_Bible_Game
 The_Bible_Unearthed
@@ -3500,7 +3500,7 @@ The_Black_Orchid_(film)
 The_Black_Page
 The_Black_Panther_(newspaper)
 The_Black_Parade
-The_Black_Parade/Living_with_Ghosts
+Living_with_Ghosts
 The_Black_Parade_Is_Dead!
 The_Black_Pearl_(comics)
 The_Black_Phone
@@ -3614,7 +3614,7 @@ The_Blinding_Knife
 The_Blinding_of_Samson
 The_Bling_Ring
 The_Blip
-The_Bliss_Album...?_(Vibrations_of_Love_and_Anger_and_the_Ponderance_of_Life_and_Existence)
+The_Bliss_Album...
 The_Bliss_of_Mrs._Blossom
 The_Blithedale_Romance
 The_Blitz
@@ -4402,7 +4402,7 @@ The_Bugaloos
 The_Buggles
 The_Buggles_discography
 The_Bugle
-The_Bugs_Bunny/Road_Runner_Movie
+Road_Runner_Movie
 The_Bugs_Bunny_Birthday_Blowout
 The_Bugs_Bunny_Crazy_Castle
 The_Bugs_Bunny_Crazy_Castle_2
@@ -6223,7 +6223,7 @@ The_Daily_Courant
 The_Daily_Dot
 The_Daily_Ittefaq
 The_Daily_Life_of_the_Immortal_King
-The_Daily_Mail_/_Staircase
+_Staircase
 The_Daily_Sceptic
 The_Daily_Show
 The_Daily_Signal
@@ -6483,7 +6483,7 @@ The_Daydreamer_(film)
 The_Days
 The_Days_(Japanese_TV_series)
 The_Days_(song)
-The_Days_/_Nights_EP
+_Nights_EP
 The_Days_and_Nights_of_Molly_Dodd
 The_Days_of_Wine_and_Roses
 The_Days_of_the_Phoenix
@@ -7246,7 +7246,7 @@ The_Dream_of_a_Ridiculous_Man
 The_Dream_of_the_Blue_Turtles
 The_Dream_of_the_Fisherman's_Wife
 The_Dream_of_the_Rood
-The_Dreamer/The_Believer
+The_Believer
 The_Dreamer_(Blake_Shelton_album)
 The_Dreamers_(2003_film)
 The_Dreaming
@@ -7692,7 +7692,7 @@ The_Encyclopedia_of_Science_Fiction
 The_End
 The_End,_So_Far
 The_End...
-The_End?
+The_End
 The_End_(1978_film)
 The_End_(2012_film)
 The_End_(2024_film)
@@ -8943,7 +8943,7 @@ The_Fox's_Summer
 The_Fox_(1967_film)
 The_Fox_(Elton_John_album)
 The_Fox_(Forsyth_novel)
-The_Fox_(What_Does_the_Fox_Say?)
+The_Fox_(What_Does_the_Fox_Say
 The_Fox_(folk_song)
 The_Fox_(novella)
 The_Fox_and_the_Cat
@@ -9024,7 +9024,7 @@ The_Fresh_Prince_of_Bel-Air_theme_song
 The_Freshman_(1925_film)
 The_Freshman_(1990_film)
 The_Freshmen_(song)
-The_Freud/Jung_Letters
+Jung_Letters
 The_Friar's_Club
 The_Friar's_Tale
 The_Fridge_(nightclub)
@@ -9684,7 +9684,7 @@ The_Go-Go's_discography
 The_Goal_(novel)
 The_Goalie's_Anxiety_at_the_Penalty_Kick
 The_Goalkeeper's_Fear_of_the_Penalty
-The_Goat,_or_Who_Is_Sylvia?
+The_Goat,_or_Who_Is_Sylvia
 The_Goat_Amalthea_with_the_Infant_Jupiter_and_a_Faun
 The_Goat_Life
 The_Goat_Puzzle
@@ -11077,7 +11077,7 @@ The_Hitlist
 The_Hitman
 The_Hitman's_Bodyguard
 The_Hitman_and_Her
-The_Hits/The_B-Sides
+The_B-Sides
 The_Hits_(REO_Speedwagon_album)
 The_Hits_Collection,_Volume_One
 The_Hits_–_Chapter_One_(Backstreet_Boys_album)
@@ -11219,7 +11219,7 @@ The_Honking
 The_Honky_Tonk_Man
 The_Honorary_Consul
 The_Honorary_Consul_(film)
-The_Honour_Cross_of_the_World_War_1914/1918
+1918
 The_Honourable
 The_Honourable_Schoolboy
 The_Honourable_Woman
@@ -12465,7 +12465,7 @@ The_Kelly_Family_discography
 The_Kelly_File
 The_Kelpies
 The_Kendalls
-The_Kennedy/Marshall_Company
+Marshall_Company
 The_Kennedys_(TV_series)
 The_Kennedys_(miniseries)
 The_Kennel_Club
@@ -12861,7 +12861,7 @@ The_Ladies_of_Grace_Adieu_and_Other_Stories
 The_Ladies_of_the_House
 The_Lady's_Dressing_Room
 The_Lady's_Not_for_Burning
-The_Lady,_or_the_Tiger?
+The_Lady,_or_the_Tiger
 The_Lady_(2011_film)
 The_Lady_Chablis
 The_Lady_Eve
@@ -13038,8 +13038,8 @@ The_Last_Detective
 The_Last_Dinner_Party
 The_Last_Dinosaur
 The_Last_Dive
-The_Last_Domino?_Tour
-The_Last_Domino?_–_The_Hits
+The_Last_Domino
+The_Last_Domino
 The_Last_Don
 The_Last_Don_(album)
 The_Last_Don_(miniseries)
@@ -13429,7 +13429,7 @@ The_Left_Hand_of_God
 The_Left_Hand_of_God_(novel)
 The_Left_Handed_Gun
 The_Left_Right_Game
-The_Left_in_the_European_Parliament_–_GUE/NGL
+NGL
 The_Leftovers_(TV_series)
 The_Leftovers_(novel)
 The_Legacy_(1978_film)
@@ -14290,7 +14290,7 @@ The_Love_Bug_(1997_film)
 The_Love_Cats_(song)
 The_Love_Embrace_of_the_Universe,_the_Earth_(Mexico),_Myself,_Diego,_and_Señor_Xolotl
 The_Love_Eterne
-The_Love_God?
+The_Love_God
 The_Love_Guru
 The_Love_Hypothesis
 The_Love_I_Lost
@@ -15976,7 +15976,7 @@ The_N
 The_N-Word
 The_NATO_Hymn
 The_NBC_Mystery_Movie
-The_NFL_Show/NFL_This_Week
+NFL_This_Week
 The_NFL_Today
 The_NOCO_Company
 The_Nagus
@@ -17415,7 +17415,7 @@ The_Path_(TV_series)
 The_Path_(video_game)
 The_Path_of_Daggers
 The_Path_of_Totality
-The_Path_to_9/11
+11
 The_Pathfinder,_or_The_Inland_Sea
 The_Pathless
 The_Patience_Stone_(film)
@@ -17877,7 +17877,7 @@ The_Plank_(1967_film)
 The_Plank_(1979_film)
 The_Plant_(novel)
 The_Plasma_Shaft
-The_Plastic_Man_Comedy/Adventure_Show
+Adventure_Show
 The_Plastic_People_of_the_Universe
 The_Platform_(film)
 The_Platinum_Collection_(David_Bowie_album)
@@ -18510,7 +18510,7 @@ The_Pussycat_Dolls_discography
 The_Putin_Interviews
 The_Putney_School
 The_Puttermans
-The_Puzzle_/_Snuggles
+_Snuggles
 The_Puzzle_Palace
 The_Puzzle_Place
 The_Pyramid_(Antarctica)
@@ -18611,7 +18611,7 @@ The_Quiet_Man
 The_Quiet_Man_(video_game)
 The_Quiet_Ones_(2014_film)
 The_Quiet_Things_That_No_One_Ever_Knows
-The_Quiet_Zone/The_Pleasure_Dome
+The_Pleasure_Dome
 The_Quiett
 The_Quietus
 The_Quiller_Memorandum
@@ -18798,7 +18798,7 @@ The_Ray_Bradbury_Theater
 The_Razor's_Edge
 The_Razor's_Edge_(1946_film)
 The_Razor's_Edge_(1984_film)
-The_Razors_Edge_(AC/DC_album)
+DC_album)
 The_Re-Education_of_Molly_Singer
 The_ReFrame_Stamp
 The_ReVe_Festival_2022_–_Feel_My_Rhythm
@@ -20057,10 +20057,10 @@ The_Scientist_(song)
 The_Scientists
 The_Scions_of_Shannara
 The_Scofflaw
-The_Scooby-Doo/Dynomutt_Hour
+Dynomutt_Hour
 The_Scooby-Doo_Project
 The_Scooby-Doo_Show
-The_Scooby_&_Scrappy-Doo/Puppy_Hour
+Puppy_Hour
 The_Scoots
 The_Scorch_Trials
 The_Score_(2001_film)
@@ -21837,7 +21837,7 @@ The_Street_of_Crocodiles
 The_Streets
 The_Streets_discography
 The_Streets_of_San_Francisco
-The_Strength/The_Sound/The_Songs
+The_Songs
 The_Strenuous_Life
 The_Stretchers
 The_Strike_(Seinfeld)
@@ -22720,7 +22720,7 @@ The_Time_to_Live_and_the_Time_to_Die
 The_Timekeeper
 The_Timeless_Children
 The_Times
-The_Times-Picayune/The_New_Orleans_Advocate
+The_New_Orleans_Advocate
 The_Times_Group
 The_Times_Literary_Supplement
 The_Times_They_Are_a-Changin'_(Bob_Dylan_album)
@@ -22788,7 +22788,7 @@ The_Tonight_Show_Starring_Jimmy_Fallon
 The_Tonight_Show_Starring_Johnny_Carson
 The_Tonight_Show_with_Conan_O'Brien
 The_Tonight_Show_with_Jay_Leno
-The_Tony_Bennett/Bill_Evans_Album
+Bill_Evans_Album
 The_Tony_Danza_Show_(1997_TV_series)
 The_Tony_Danza_Tapdance_Extravaganza
 The_Tony_Elumelu_Foundation
@@ -24544,7 +24544,7 @@ The_Who
 The_Who's_Tommy
 The_Who_Hits_50!_(album)
 The_Who_Sell_Out
-The_Who_Was?_Show
+The_Who_Was
 The_Who_by_Numbers
 The_Who_by_Numbers_Tour
 The_Who_concert_disaster
@@ -24933,7 +24933,7 @@ The_Wonder_Spot
 The_Wonder_Stuff
 The_Wonder_Stuff_discography
 The_Wonder_That_Was_India
-The_Wonder_Who?
+The_Wonder_Who
 The_Wonder_Years
 The_Wonder_Years_(2021_TV_series)
 The_Wonder_Years_(Wonder_Girls_album)

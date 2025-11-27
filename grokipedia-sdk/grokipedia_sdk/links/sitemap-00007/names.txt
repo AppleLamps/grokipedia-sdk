@@ -344,7 +344,7 @@ Carl_Gustaf_8.4_cm_recoilless_rifle
 Carl_Gustaf_Emil_Mannerheim
 Carl_Gustaf_Mannerheim_(naturalist)
 Carl_Gustaf_Wrangel
-Carl_Gustaf_m/45
+45
 Carl_Gustaf_von_Rosen
 Carl_Gustafs_stads_gevärsfaktori
 Carl_Gustav_Carus
@@ -537,7 +537,7 @@ Carl_Yastrzemski
 Carl_Zeiss
 Carl_Zeiss_AG
 Carl_Zeiss_Meditec
-Carl_Zeiss_Planar_50mm_f/0.7
+0.7
 Carl_Zeiss_SMT
 Carl_and_Clarence_Aguirre
 Carl_von_Bismarck
@@ -1329,7 +1329,7 @@ Carmen_Sevilla
 Carmen_Silvera
 Carmen_Soo
 Carmen_Suite_(ballet)
-Carmen_Suites_(Bizet/Guiraud)
+Guiraud)
 Carmen_Suleiman
 Carmen_Thyssen_Museum
 Carmen_Twillie_(actress)
@@ -3352,7 +3352,7 @@ Casio_graphic_calculators
 Casiopea
 Casiopea_(album)
 Casiquiare_canal
-Casirivimab/imdevimab
+imdevimab
 Casisdead
 Casitas_Springs,_California
 Cask_strength
@@ -4009,7 +4009,7 @@ Casual_Dining_Group
 Casual_Friday
 Casual_Friday_(The_Office)
 Casual_Gods
-Casual_Sex?
+Casual_Sex
 Casual_dating
 Casual_game
 Casual_sex
@@ -4903,7 +4903,7 @@ Catholic_Boy
 Catholic_Charismatic_Renewal
 Catholic_Charities_USA
 Catholic_Church
-Catholic_Church_and_HIV/AIDS
+AIDS
 Catholic_Church_and_Islam
 Catholic_Church_and_Judaism
 Catholic_Church_and_Nazi_Germany
@@ -6029,7 +6029,7 @@ Cefoxitin
 Cefpodoxime
 Cefprozil
 Ceftazidime
-Ceftazidime/avibactam
+avibactam
 Ceftiofur
 Ceftobiprole
 Ceftriaxone
@@ -6043,7 +6043,7 @@ Ceiba_speciosa
 Ceiling
 Ceiling_(aeronautics)
 Ceiling_(cloud)
-Ceiling_Painting/Yes_Painting
+Yes_Painting
 Ceiling_effect_(pharmacology)
 Ceiling_effect_(statistics)
 Ceiling_fan
@@ -7558,7 +7558,7 @@ Cephalotes
 Cephalothorax
 Cephalotus
 Cephalus
-Cephalus_(son_of_Deione/Deioneus)
+Deioneus)
 Cephalus_(son_of_Hermes)
 Cephamycin
 Cephea_cephea
@@ -10006,11 +10006,11 @@ Chaocipher
 Chaonians
 Chaos
 Chaos!_Comics
-Chaos;Child
-Chaos;Child_(TV_series)
-Chaos;Head
-Chaos;Head_(TV_series)
-Chaos;Head_Love_Chu_Chu!
+Chaos
+Chaos
+Chaos
+Chaos
+Chaos
 Chaos_&_Colour
 Chaos_(2005_action_film)
 Chaos_(2005_horror_film)
@@ -10302,7 +10302,7 @@ Characters_of_Casualty
 Characters_of_Chrono_Cross
 Characters_of_Chrono_Trigger
 Characters_of_Dragon_Age_II
-Characters_of_Fate/stay_night
+stay_night
 Characters_of_Final_Fantasy_IX
 Characters_of_Final_Fantasy_VI
 Characters_of_Final_Fantasy_VIII
@@ -10504,7 +10504,7 @@ Chariots_of_Fire
 Chariots_of_Fire_(album)
 Chariots_of_Fire_(instrumental)
 Chariots_of_Fur
-Chariots_of_the_Gods?
+Chariots_of_the_Gods
 Chariots_of_the_Gods_(film)
 Charis_(name)
 Charis_Alliance
@@ -13147,7 +13147,7 @@ Che_Pope
 Che_Puan_Besar_Haminah
 Che_Ramos
 Che_gelida_manina
-Che_vuoi?
+Che_vuoi
 Chea_Sim
 Cheadle,_Greater_Manchester
 Cheadle,_Staffordshire
@@ -14353,7 +14353,7 @@ Cherry_Hills_subdivision_landslide
 Cherry_Jones
 Cherry_Lane_Theatre
 Cherry_Lips
-Cherry_Magic!_Thirty_Years_of_Virginity_Can_Make_You_a_Wizard?!
+Cherry_Magic!_Thirty_Years_of_Virginity_Can_Make_You_a_Wizard
 Cherry_Mash
 Cherry_Mobile
 Cherry_Orchard_F.C.
@@ -14877,11 +14877,11 @@ Chevrolet_Blazer_EV
 Chevrolet_Bolt
 Chevrolet_Bolt_EUV
 Chevrolet_Brookwood
-Chevrolet_C/K
-Chevrolet_C/K_(first_generation)
-Chevrolet_C/K_(fourth_generation)
-Chevrolet_C/K_(second_generation)
-Chevrolet_C/K_(third_generation)
+K
+K_(first_generation)
+K_(fourth_generation)
+K_(second_generation)
+K_(third_generation)
 Chevrolet_Camaro
 Chevrolet_Camaro_(fifth_generation)
 Chevrolet_Camaro_(first_generation)
@@ -14896,7 +14896,7 @@ Chevrolet_Celebrity
 Chevrolet_Chevelle
 Chevrolet_Chevelle_Laguna
 Chevrolet_Chevette
-Chevrolet_Chevy_II_/_Nova
+_Nova
 Chevrolet_Cheyenne
 Chevrolet_Cheyenne_(concept_car)
 Chevrolet_Citation
@@ -14978,7 +14978,7 @@ Chevrolet_Series_AC_International
 Chevrolet_Series_AD_Universal
 Chevrolet_Series_AE_Independence
 Chevrolet_Series_BA_Confederate
-Chevrolet_Series_CA_Eagle_/_Master
+_Master
 Chevrolet_Series_C_Classic_Six
 Chevrolet_Series_D
 Chevrolet_Silverado
@@ -18226,7 +18226,7 @@ Chlorate
 Chlordane
 Chlordecone
 Chlordiazepoxide
-Chlordiazepoxide/clidinium_bromide
+clidinium_bromide
 Chlorella
 Chlorella_vulgaris
 Chlorhexidine
@@ -21238,7 +21238,7 @@ Christlieger
 Christman_Genipperteinga
 Christmas
 Christmas,_Florida
-Christmas...Again?!
+Christmas...Again
 Christmas_&_Chill
 Christmas_(Baby_Please_Come_Home)
 Christmas_(Cher_album)
@@ -21260,7 +21260,7 @@ Christmas_Crackers_(Only_Fools_and_Horses)
 Christmas_Cupid
 Christmas_Drillings
 Christmas_Eve
-Christmas_Eve/Sarajevo_12/24
+24
 Christmas_EveL
 Christmas_Eve_(Gogol)
 Christmas_Eve_2000_Indonesia_bombings
@@ -22111,7 +22111,7 @@ Chronic_obstructive_pulmonary_disease
 Chronic_pain
 Chronic_pancreatitis
 Chronic_periodontitis
-Chronic_prostatitis/chronic_pelvic_pain_syndrome
+chronic_pelvic_pain_syndrome
 Chronic_radiation_syndrome
 Chronic_recurrent_multifocal_osteomyelitis
 Chronic_scar_keratosis
@@ -23622,7 +23622,7 @@ Cinchona_officinalis
 Cinchona_pubescens
 Cincinnati
 Cincinnati,_New_Orleans_and_Texas_Pacific_Railway
-Cincinnati/Northern_Kentucky_International_Airport
+Northern_Kentucky_International_Airport
 Cincinnati_Art_Museum
 Cincinnati_Bearcats
 Cincinnati_Bearcats_football

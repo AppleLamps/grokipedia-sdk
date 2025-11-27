@@ -999,7 +999,7 @@ J.L._Family_Ranch
 J.League
 J.League_Best_XI
 J.League_Cup
-J.League_Cup_/_Copa_Sudamericana_Championship
+_Copa_Sudamericana_Championship
 J.League_Jikkyou_Winning_Eleven
 J.League_U-22_Selection
 J.Lindeberg
@@ -1440,11 +1440,11 @@ J._Williams_(cinematographer)
 J._Wray_and_Nephew_Ltd.
 J._Y._Pillay
 J._Z._Knight
-J/22
-J/70
-J/APG-1
-J/Z_(New_York_City_Subway_service)
-J/psi_meson
+22
+70
+APG-1
+Z_(New_York_City_Subway_service)
+psi_meson
 J002E3
 J1_League
 J2O
@@ -1655,7 +1655,7 @@ JL-1
 JL-2
 JL-3
 JL50
-JLA/Avengers
+Avengers
 JLA_(comic_book)
 JLENS
 JLG_Industries
@@ -3389,7 +3389,7 @@ Jackson–Medgar_Wiley_Evers_International_Airport
 Jackson–Vanik_amendment
 Jackup_rig
 Jacky_Cheung
-Jacky_Cheung_1/2_Century_Tour
+2_Century_Tour
 Jacky_Clark_Chisholm
 Jacky_Heung
 Jacky_Ickx
@@ -4643,7 +4643,7 @@ Jailbirds_(2015_film)
 Jailbirds_(TV_series)
 JailbreakMe
 Jailbreak_(2017_film)
-Jailbreak_(AC/DC_song)
+DC_song)
 Jailbreak_(Thin_Lizzy_song)
 Jailbreak_(album)
 Jailer
@@ -5507,7 +5507,7 @@ Jamaica_Accords
 Jamaica_Avenue
 Jamaica_Bay
 Jamaica_Beach,_Texas
-Jamaica_Center–Parsons/Archer_station
+Archer_station
 Jamaica_Constabulary_Force
 Jamaica_Defence_Force
 Jamaica_Estates,_Queens
@@ -7487,7 +7487,7 @@ James_Young_Deer
 James_Young_Simpson
 James_Younger,_5th_Viscount_Younger_of_Leckie
 James_Younghusband
-James_Zadroga_9/11_Health_and_Compensation_Act
+11_Health_and_Compensation_Act
 James_Zagel
 James_Zhong
 James_Zogby
@@ -7527,7 +7527,7 @@ Jamestown,_Saint_Helena
 Jamestown,_South_Australia
 Jamestown,_Tennessee
 Jamestown,_Virginia
-Jamestown/Usshertown,_Accra
+Usshertown,_Accra
 Jamestown_(TV_series)
 Jamestown_Church
 Jamestown_Foundation
@@ -8348,7 +8348,7 @@ Jane's_Addiction_(album)
 Jane's_Addiction_discography
 Jane's_Combat_Simulations
 Jane's_Defence_Weekly
-Jane's_F/A-18
+A-18
 Jane's_Revenge
 Jane_(2017_film)
 Jane_(2022_film)
@@ -8387,7 +8387,7 @@ Jane_Beale
 Jane_Bennett_(political_theorist)
 Jane_Beshear
 Jane_Birkin
-Jane_Birkin/Serge_Gainsbourg
+Serge_Gainsbourg
 Jane_Boleyn,_Viscountess_Rochford
 Jane_Bolin
 Jane_Bonham_Carter,_Baroness_Bonham-Carter_of_Yarnbury
@@ -15345,7 +15345,7 @@ Jerry_Fuller
 Jerry_G._Bishop
 Jerry_Gaetz
 Jerry_Garcia
-Jerry_Garcia_/_David_Grisman
+_David_Grisman
 Jerry_Garcia_Band
 Jerry_Garcia_discography
 Jerry_Gergich
@@ -19256,7 +19256,7 @@ Joan_Armatrading_discography
 Joan_As_Police_Woman
 Joan_Baez
 Joan_Baez,_Vol._2
-Joan_Baez/5
+5
 Joan_Baez_(album)
 Joan_Baez_discography
 Joan_Baez_in_Concert
@@ -21713,7 +21713,7 @@ John_Aristotle_Phillips
 John_Arlott
 John_Armfield
 John_Armitage_(banker)
-John_Armstrong_(British_writer/philosopher)
+philosopher)
 John_Armstrong_Jr.
 John_Arnatt
 John_Arne_Riise
@@ -23798,7 +23798,7 @@ John_Leland_(antiquary)
 John_Lennard-Jones
 John_Lennon
 John_Lennon's_psychedelic_Rolls-Royce
-John_Lennon/Plastic_Ono_Band
+Plastic_Ono_Band
 John_Lennon_Anthology
 John_Lennon_Peace_Monument
 John_Lennon_Signature_Box

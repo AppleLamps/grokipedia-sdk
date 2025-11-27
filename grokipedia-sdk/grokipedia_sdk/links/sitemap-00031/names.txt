@@ -809,7 +809,7 @@ Streets_of_Rage_3
 Streets_of_Rage_4
 Streets_of_Rogue
 Streets_of_SimCity
-Streets_of_Sorrow/Birmingham_Six
+Birmingham_Six
 Streets_on_Lock_(Atlanta)
 Streetsboro,_Ohio
 Streetsville,_Mississauga
@@ -1032,9 +1032,9 @@ Stridor
 Stridsvagn_103
 Stridsvagn_122
 Stridsvagn_74
-Stridsvagn_m/37
-Stridsvagn_m/41
-Stridsvagn_m/42
+37
+41
+42
 Stridulation
 Strife_(1996_video_game)
 Strife_(band)
@@ -3173,7 +3173,7 @@ Sudan_I
 Sudan_III
 Sudan_International_University
 Sudan_Kirati
-Sudan_Liberation_Movement/Army
+Army
 Sudan_People's_Liberation_Movement
 Sudan_People's_Liberation_Movement-in-Opposition
 Sudan_People's_Liberation_Movement–North
@@ -4078,7 +4078,7 @@ Sukhna_Lake
 Sukhna_Wildlife_Sanctuary
 Sukhoi
 Sukhoi-Gulfstream_S-21
-Sukhoi/HAL_FGFA
+HAL_FGFA
 Sukhoi_KR-860
 Sukhoi_S-70_Okhotnik-B
 Sukhoi_Su-1
@@ -4267,7 +4267,7 @@ Sulfacetamide
 Sulfadiazine
 Sulfadimethoxine
 Sulfadimidine
-Sulfadoxine/pyrimethamine
+pyrimethamine
 Sulfamethoxazole
 Sulfamic_acid
 Sulfamide
@@ -4994,7 +4994,7 @@ Summon_Night_3
 Summon_Night_5
 Summon_Night_6
 Summon_the_Suit
-Summoned_to_Another_World..._Again?
+Summoned_to_Another_World..._Again
 Summoner_(video_game)
 Summoner_2
 Summoning_(band)
@@ -5937,7 +5937,7 @@ Suo_Gân
 Suo_jure
 Suomenlinna
 Suomi
-Suomi_KP/-31
+-31
 Suomi_NPP
 Suomisaundi
 Suona
@@ -5986,7 +5986,7 @@ Super-resolution_imaging
 Super-resolution_microscopy
 Super-seeding
 Super.com
-Super/System
+System
 Super2_Series
 Super50_Cup
 Super73
@@ -6259,7 +6259,7 @@ Super_High_Roller_Bowl
 Super_Hornio_Brothers
 Super_Hungama
 Super_HxEros
-Super_I/O
+O
 Super_Idol_(Taiwanese_TV_series)
 Super_Impassioned_Net_Generation
 Super_Inggo
@@ -6461,7 +6461,7 @@ Super_Turrican_(1993_video_game)
 Super_V
 Super_VGA
 Super_Video_CD
-Super_What?
+Super_What
 Super_Why!
 Super_Wings
 Super_World_of_Sports
@@ -6550,7 +6550,7 @@ Superclub
 Supercluster
 Superclásico
 Superclásico_de_las_Américas
-Supercollider_/_The_Butcher
+_The_Butcher
 Supercomputer
 Supercomputer_operating_system
 Supercomputing_in_China
@@ -6811,7 +6811,7 @@ Supermalt
 Superman
 Superman's_Pal_Jimmy_Olsen
 Superman's_Song
-Superman/Batman
+Batman
 Superman_&_Lois
 Superman_&_Lois_(season_1)
 Superman_&_Lois_(season_2)
@@ -6847,7 +6847,7 @@ Superman_II
 Superman_III
 Superman_Is_Dead
 Superman_Lives
-Superman_Red/Superman_Blue
+Superman_Blue
 Superman_Returns
 Superman_Returns_(video_game)
 Superman_Revenge_Squad
@@ -6873,7 +6873,7 @@ Supermarine
 Supermarine_545
 Supermarine_Aircraft_Spitfire
 Supermarine_Attacker
-Supermarine_B.12/36
+36
 Supermarine_Nighthawk
 Supermarine_S.4
 Supermarine_S.5
@@ -9226,7 +9226,7 @@ Suzuki_V-Strom_1000
 Suzuki_V-Strom_1050
 Suzuki_V-Strom_250
 Suzuki_V-Strom_650
-Suzuki_VL_1500_Intruder_LC_/_Boulevard_C90
+_Boulevard_C90
 Suzuki_VX_800
 Suzuki_Vitara
 Suzuki_Wagon_R
@@ -10069,7 +10069,7 @@ Sweep_picking
 Sweep_the_Leg_Johnny
 Sweepstake
 Sweet'n_Low
-Sweet/Vicious
+Vicious
 SweetWater_Brewing_Company
 Sweet_&_Sour_(film)
 Sweet_18
@@ -12363,7 +12363,7 @@ São_Luís,_Maranhão
 São_Martinho_(1580)
 São_Miguel_Island
 São_Paulo
-São_Paulo/Guarulhos_International_Airport
+Guarulhos_International_Airport
 São_Paulo_(state)
 São_Paulo_FC
 São_Paulo_Forum
@@ -12385,7 +12385,7 @@ São_Vicente,_Cape_Verde
 São_Vicente,_Madeira
 São_Vicente,_São_Paulo
 Säkkijärven_polkka
-Sälen/Scandinavian_Mountains_Airport
+Scandinavian_Mountains_Airport
 Sängerkrieg
 Säntis
 Sånta_Rita-Sumai,_Guam
@@ -12623,8 +12623,8 @@ T-43_medium_tank
 T-44
 T-4_Atomic_Demolition_Munition
 T-50_tank
-T-54/T-55
-T-54/T-55_operators_and_variants
+T-55
+T-55_operators_and_variants
 T-55AGM
 T-60_tank
 T-62
@@ -12992,7 +12992,7 @@ T37_(classification)
 T38_(classification)
 T3_(roller_coaster)
 T3_tanker
-T40/M17_Whizbang
+M17_Whizbang
 T42_medium_tank
 T44_(classification)
 T46_(classification)
@@ -13034,14 +13034,14 @@ TACOM
 TACSTD2
 TADEN_gun
 TADIL-J
-TADS/PNVS
+PNVS
 TAESA_Lineas_Aéreas
 TAE_Technologies
 TAE_buffer
 TAFE_NSW
 TAG_Heuer
 TAG_Heuer_Monaco
-TAI/AgustaWestland_T129_ATAK
+AgustaWestland_T129_ATAK
 TAI_Aksungur
 TAI_Anka
 TAI_Hürjet
@@ -13136,7 +13136,7 @@ TCM_Movies
 TCM_Underground
 TCO_Certified
 TCP
-TCP/IP_Illustrated
+IP_Illustrated
 TCP_(antiseptic)
 TCP_Fast_Open
 TCP_congestion_control
@@ -13167,7 +13167,7 @@ TC_Energy_Center
 TC_Robati
 TD-2
 TD2000
-TDC_Holding_A/S
+S
 TDECU_Stadium
 TDI_(engine)
 TDK
@@ -13288,7 +13288,7 @@ THeMIS
 TI
 TI-30
 TI-57
-TI-59_/_TI-58
+_TI-58
 TI-81
 TI-83_series
 TI-84_Plus_series
@@ -13314,7 +13314,7 @@ TIE_fighter
 TIFF
 TIFRAC
 TIGIT
-TIM/TOM_complex
+TOM_complex
 TIMI
 TIMP1
 TIM_Brasil
@@ -13365,7 +13365,7 @@ TK_Records
 TK_Samuels
 TL
 TL431
-TL;DR
+TL
 TLA+
 TLC
 TLC_(British_and_Irish_TV_channel)
@@ -13560,7 +13560,7 @@ TR-1700-class_submarine
 TR-1_Temp
 TR-55
 TR-85
-TR/ST
+ST
 TR3
 TRADIC
 TRAPPIST
@@ -15545,7 +15545,7 @@ Takeo_Watanabe
 Takeo_Yoshikawa
 Takeo_Ōtsuka_(voice_actor)
 Takeoff
-Takeoff/go-around_switch
+go-around_switch
 Takeoff_(rapper)
 Takeoff_and_landing
 Takeover
@@ -18622,7 +18622,7 @@ Tat_people_(Iran)
 Tata
 Tata,_Hungary
 Tata-tonga
-Tata_1510/1512
+1512
 Tata_1mg
 Tata_407
 Tata_Ace
@@ -19065,7 +19065,7 @@ Taurus_Model_82
 Taurus_Model_85
 Taurus_Mountains
 Taurus_PT22
-Taurus_PT24/7
+7
 Taurus_PT92
 Taurus_Project
 Taurus_Raging_Bull
@@ -23233,7 +23233,7 @@ Term_sheet
 Term_symbol
 Terma_(The_X-Files)
 Terma_(religion)
-Terma_A/S
+S
 Termagant
 Termanology
 Terme
@@ -24032,7 +24032,7 @@ Terry_v._Ohio
 Terrycloth
 Terrytoons
 Terryville,_Connecticut
-Terrängbil_m/42_KP
+42_KP
 Terschelling
 Tershawn_Wharton
 Tert-Amyl_alcohol

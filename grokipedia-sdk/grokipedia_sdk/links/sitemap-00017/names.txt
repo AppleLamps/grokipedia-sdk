@@ -647,7 +647,7 @@ John_the_Evangelist
 John_the_Fearless
 John_the_Presbyter
 John_the_Revelator_(disambiguation)
-John_the_Revelator_/_Lilian
+_Lilian
 John_the_Ripper
 John_the_Russian
 John_van_'t_Schip
@@ -740,7 +740,7 @@ Johnny_Antonelli
 Johnny_Appleseed
 Johnny_Appleseed_(film)
 Johnny_Archer
-Johnny_Are_You_Queer?
+Johnny_Are_You_Queer
 Johnny_Arthur
 Johnny_Avalos
 Johnny_B._Goode
@@ -1334,7 +1334,7 @@ Joint_Research_Centre
 Joint_Seat_Allocation_Authority
 Joint_Security_Area
 Joint_Security_Area_(film)
-Joint_Service_General_Purpose_Mask_M-50/M-51
+M-51
 Joint_Service_Small_Arms_Program
 Joint_Services_Command_and_Staff_College
 Joint_Special_Forces_Aviation_Wing
@@ -1353,7 +1353,7 @@ Joint_Task_Force_2
 Joint_Task_Force_Guantanamo
 Joint_Terrorism_Task_Force
 Joint_Typhoon_Warning_Center
-Joint_United_Nations_Programme_on_HIV/AIDS
+AIDS
 Joint_Unmanned_Combat_Air_Systems
 Joint_Venture_Protective_Carbine
 Joint_Warfare_Centre
@@ -5169,7 +5169,7 @@ José_Mari_Bakero
 José_Maria_Neves
 José_Martí
 José_Martí_International_Airport
-José_Martínez_(outfielder/first_baseman)
+first_baseman)
 José_María_Arguedas
 José_María_Arizmendiarrieta
 José_María_Aznar
@@ -7435,7 +7435,7 @@ Julie
 Julie's
 Julie's_Greenroom
 Julie,_Do_Ya_Love_Me
-Julie;_or,_The_New_Heloise
+Julie
 Julie_&_Julia
 Julie_(1956_film)
 Julie_(1975_film)
@@ -9098,7 +9098,7 @@ Just_Enough_Education_to_Perform
 Just_Fontaine
 Just_For_Feet
 Just_Friends
-Just_Friends?_(2009_film)
+Just_Friends
 Just_Friends_(2018_film)
 Just_Friends_(John_Klenner_and_Sam_M._Lewis_song)
 Just_Friends_(band)
@@ -9252,7 +9252,7 @@ Just_the_Way_You_Like_It_(The_S.O.S._Band_album)
 Just_transition
 Just_war_theory
 Just_watch_me
-Just_what_is_it_that_makes_today's_homes_so_different,_so_appealing?
+Just_what_is_it_that_makes_today's_homes_so_different,_so_appealing
 Justa_Grata_Honoria
 Justa_and_Rufina
 Justacorps
@@ -10569,8 +10569,8 @@ K._W._Jeter
 K._Waterschei_S.V._Thor_Genk
 K.d._lang
 K.d._lang_discography
-K/DA
-K/O_Paper_Products
+DA
+O_Paper_Products
 K10_Ammunition_Resupply_Vehicle
 K12_(mountain)
 K136_Kooryong
@@ -11079,7 +11079,7 @@ KPY_Bala
 KP_Sharma_Oli
 KP_Snacks
 KP_duty
-KP_m/44_submachine_gun
+44_submachine_gun
 KPÖ_Plus
 KQ-X
 KQCA
@@ -11284,8 +11284,8 @@ KXGN-TV
 KXLY-TV
 KXM
 KXTV
-KXTV/KOVR/KCRA_Tower
-KXTV/KOVR_tower
+KCRA_Tower
+KOVR_tower
 KXTX-TV
 KXXV
 KXXX
@@ -11508,7 +11508,7 @@ Kaaviya_Thalaivan_(2014_film)
 Kaaviyyan
 Kaavya_Arivumani
 Kaazhcha
-Kab?_Kyoon?_Aur_Kahan?
+Kab
 Kaba_Ma_Kyei
 Kaba_Modern
 Kabab_barg
@@ -12618,8 +12618,8 @@ Kalakalappu_(2001_film)
 Kalakalappu_2
 Kalakand
 Kalakeyas
-Kalakka_Povathu_Yaaru?
-Kalakka_Povathu_Yaaru?_Champions
+Kalakka_Povathu_Yaaru
+Kalakka_Povathu_Yaaru
 Kalakkad
 Kalakkad_Mundanthurai_Tiger_Reserve
 Kalakshetra_Foundation
@@ -14643,7 +14643,7 @@ Kaplan,_Inc.
 Kaplan,_Louisiana
 Kaplan_(surname)
 Kaplan_Business_School
-Kaplan_MT_/_Harimau
+_Harimau
 Kaplan_University
 Kaplan_turbine
 Kaplan–Meier_estimator
@@ -15808,7 +15808,7 @@ Karlskrona
 Karlsplatz
 Karlsplatz_(Stachus)
 Karlsruhe
-Karlsruhe/Baden-Baden_Airport
+Baden-Baden_Airport
 Karlsruhe_(region)
 Karlsruhe_Institute_of_Technology
 Karlsruhe_Palace
@@ -15816,7 +15816,7 @@ Karlsruher_SC
 Karlsruher_Virtueller_Katalog
 Karlsson-on-the-Roof
 Karlstad
-Karlu_Karlu_/_Devils_Marbles_Conservation_Reserve
+_Devils_Marbles_Conservation_Reserve
 Karluk_Yabghu
 Karluk_languages
 Karluks
@@ -17717,7 +17717,7 @@ Katsu_curry
 Katsucon
 Katsudon
 Katsudō_Shashin
-Katsugeki/Touken_Ranbu
+Touken_Ranbu
 Katsuhiko_Nakajima
 Katsuhiro_Harada
 Katsuhiro_Otomo
@@ -17890,13 +17890,13 @@ Kaum_De_Heere
 Kaumaram
 Kaumodaki
 Kaumualiʻi
-Kaun?
+Kaun
 Kaun_(wrestler)
 Kaun_Banega_Crorepati
 Kaun_Banegi_Shikharwati
-Kaun_Hai?
+Kaun_Hai
 Kaun_Hai_Jo_Sapno_Mein_Aaya
-Kaun_Pravin_Tambe?
+Kaun_Pravin_Tambe
 Kaun_Tujhe
 Kaunakes
 Kaunas
@@ -18012,7 +18012,7 @@ Kavi_Pradeep
 Kavi_Raz
 Kavi_Shastri
 Kavi_Subhash_metro_station
-Kavi_Uddheshichathu..?
+Kavi_Uddheshichathu..
 Kavieng
 Kavikkuyil
 Kavimani_Desigavinayagam_Pillai
@@ -18127,7 +18127,7 @@ Kawasaki_KLE500
 Kawasaki_KLR250
 Kawasaki_KLR650
 Kawasaki_KLX250S
-Kawasaki_KR-1/KR-1S
+KR-1S
 Kawasaki_KX250F
 Kawasaki_KX450F
 Kawasaki_Ki-10
@@ -22951,7 +22951,7 @@ Kfar_Saba
 Kfir_Brigade
 Kfm_94.5
 Kfz_13
-Kg_m/40_automatic_rifle
+40_automatic_rifle
 Kgalagadi_Transfrontier_Park
 Kgalagadi_language
 Kgalema_Motlanthe

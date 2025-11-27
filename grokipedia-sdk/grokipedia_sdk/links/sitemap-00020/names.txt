@@ -1194,7 +1194,7 @@ List_of_female_chief_ministers_in_India
 List_of_female_classical_conductors
 List_of_female_dancers
 List_of_female_defence_ministers
-List_of_female_detective/mystery_writers
+mystery_writers
 List_of_female_detective_characters
 List_of_female_drummers
 List_of_female_film_and_television_directors
@@ -2710,7 +2710,7 @@ List_of_highest-grossing_films_in_the_United_States_and_Canada
 List_of_highest-grossing_films_in_the_United_States_by_year
 List_of_highest-grossing_horror_films
 List_of_highest-grossing_independent_films
-List_of_highest-grossing_live-action/animated_films
+animated_films
 List_of_highest-grossing_live-action_comedy_films
 List_of_highest-grossing_live_music_artists
 List_of_highest-grossing_media_franchises
@@ -3547,7 +3547,7 @@ List_of_keytarists
 List_of_khans_of_the_Golden_Horde
 List_of_kibbutzim
 List_of_kickboxing_organizations
-List_of_kicks_after_the_siren_in_the_VFL/AFL
+AFL
 List_of_kidnappings
 List_of_kigo
 List_of_killings_and_massacres_in_Mandatory_Palestine
@@ -5759,7 +5759,7 @@ List_of_number-one_Billboard_Streaming_Songs_of_2014
 List_of_number-one_Billboard_Streaming_Songs_of_2016
 List_of_number-one_Billboard_Streaming_Songs_of_2018
 List_of_number-one_Billboard_Top_Latin_Songs_from_the_1980s
-List_of_number-one_R&B/hip-hop_songs_of_2023_(U.S.)
+hip-hop_songs_of_2023_(U.S.)
 List_of_number-one_albums_of_2023_(Australia)
 List_of_number-one_dance_singles_of_1979_(U.S.)
 List_of_number-one_dance_singles_of_1985_(U.S.)
@@ -7640,7 +7640,7 @@ List_of_programs_broadcast_by_Paramount_Network
 List_of_programs_broadcast_by_People's_Television_Network
 List_of_programs_broadcast_by_Pop_(American_TV_channel)
 List_of_programs_broadcast_by_Qubo
-List_of_programs_broadcast_by_Radyo5/One_PH
+One_PH
 List_of_programs_broadcast_by_Retro_TV
 List_of_programs_broadcast_by_Seoul_Broadcasting_System
 List_of_programs_broadcast_by_Seven_Network
@@ -8324,7 +8324,7 @@ List_of_roles_and_awards_of_Salma_Hayek
 List_of_roles_and_awards_of_Sara_Ramirez
 List_of_roles_and_awards_of_Tom_Holland
 List_of_roles_and_awards_of_Trey_Parker
-List_of_roll-on/roll-off_vessel_accidents
+roll-off_vessel_accidents
 List_of_roller_coaster_elements
 List_of_roller_coaster_rankings
 List_of_roller_derby_leagues
@@ -8967,7 +8967,7 @@ List_of_songs_produced_by_Suga
 List_of_songs_recorded_by_"Weird_Al"_Yankovic
 List_of_songs_recorded_by_(G)I-dle
 List_of_songs_recorded_by_ABBA
-List_of_songs_recorded_by_AC/DC
+DC
 List_of_songs_recorded_by_Aaliyah
 List_of_songs_recorded_by_Ace_of_Base
 List_of_songs_recorded_by_Adele
@@ -10147,7 +10147,7 @@ List_of_teams_and_cyclists_in_the_2022_Tour_de_France
 List_of_teams_and_cyclists_in_the_2023_Tour_de_France
 List_of_teams_and_cyclists_in_the_2023_Vuelta_a_España
 List_of_teams_and_organizations_in_DC_Comics
-List_of_teams_in_the_NSWRL/ARL/SL/NRL
+NRL
 List_of_teams_to_overcome_3–0_series_deficits
 List_of_teams_to_overcome_3–1_series_deficits
 List_of_teams_with_the_highest_winning_percentage_in_NCAA_Division_I_men's_college_basketball
@@ -10706,7 +10706,7 @@ List_of_towns_in_Wales
 List_of_towns_in_Western_Australia
 List_of_towns_in_Wisconsin
 List_of_towns_in_the_United_Kingdom
-List_of_townships/cities_and_districts_in_Taiwan
+cities_and_districts_in_Taiwan
 List_of_townships_in_Ohio
 List_of_townships_in_Ontario
 List_of_townships_in_Pennsylvania
@@ -11048,7 +11048,7 @@ List_of_unsolved_problems_in_physics
 List_of_unsolved_problems_in_statistics
 List_of_unsuccessful_attacks_related_to_schools
 List_of_unsuccessful_major_party_candidates_for_President_of_the_United_States
-List_of_unsuccessful_terrorist_plots_in_the_United_States_post-9/11
+11
 List_of_unusual_biological_names
 List_of_unusual_deaths
 List_of_unusual_dismissals_in_international_cricket
@@ -13167,7 +13167,7 @@ Live!_Go_for_What_You_Know
 Live!_The_Farewell_Tour
 Live!_The_Ike_&_Tina_Turner_Show
 Live!_Tonight!_Sold_Out!!
-Live!_at_the_Star-Club_in_Hamburg,_Germany;_1962
+Live!_at_the_Star-Club_in_Hamburg,_Germany
 Live'r_Than_You'll_Ever_Be
 Live,_Laugh,_Love
 Live,_virtual,_and_constructive
@@ -13182,7 +13182,7 @@ Live..._in_the_Heart_of_the_City
 Live..._in_the_Raw
 Live._Love._ASAP
 Live.com
-Live/Dead
+Dead
 Live2D
 LiveAndWell.com
 LiveChat
@@ -13226,7 +13226,7 @@ Live_2012_(Coldplay_album)
 Live_8
 Live_8_concert,_London
 Live_8_concert,_Philadelphia
-Live_?!*@_Like_a_Suicide
+Live_
 Live_A_Live
 Live_Action_(organization)
 Live_Action_Toy_Story
@@ -13333,7 +13333,7 @@ Live_at_Bush_Hall
 Live_at_Carnegie_Hall_(Bill_Withers_album)
 Live_at_Carnegie_Hall_(Renaissance_album)
 Live_at_Carnegie_Hall_1963
-Live_at_Donington_(AC/DC_album)
+DC_album)
 Live_at_Donington_(Iron_Maiden_album)
 Live_at_Donington_1990
 Live_at_Eindhoven
@@ -13732,7 +13732,7 @@ Living_Tribunal
 Living_Water
 Living_Witness
 Living_Years
-Living_and_Dying_in_3/4_Time
+4_Time
 Living_apart_together
 Living_building_material
 Living_creatures_(Bible)
@@ -14299,7 +14299,7 @@ Loach
 Loacker
 Load-bearing_wall
 Load-following_power_plant
-Load-link/store-conditional
+store-conditional
 LoadRunner
 Load_(album)
 Load_(computing)
@@ -15509,7 +15509,7 @@ Lola_(song)
 Lola_Albright
 Lola_Amour
 Lola_Astanova
-Lola_B08/80
+80
 Lola_Beltrán
 Lola_Blanc
 Lola_Brooke
@@ -16713,7 +16713,7 @@ Look
 Look-Ka_Py_Py
 Look-alike
 Look-and-say_sequence
-Look-down/shoot-down
+shoot-down
 Look-elsewhere_effect
 Look-in
 Look_(2007_film)
@@ -16733,7 +16733,7 @@ Look_Back_in_Anger_(1980_film)
 Look_Back_in_Anger_(song)
 Look_Both_Ways_(2022_film)
 Look_East_policy_(India)
-Look_Hear?
+Look_Hear
 Look_Homeward,_Angel
 Look_Inside_the_Asylum_Choir
 Look_Me_in_the_Heart
@@ -17913,12 +17913,12 @@ Los_Ántrax
 Losail_International_Circuit
 Losar
 Losartan
-Losartan/hydrochlorothiazide
+hydrochlorothiazide
 Loschbour_man
 Loschmidt's_paradox
 Loschmidt_constant
 Loscil
-Lose/Lose
+Lose
 Lose_Control_(Meduza,_Becky_Hill_and_Goodboys_song)
 Lose_Control_(Missy_Elliott_song)
 Lose_Control_(Teddy_Swims_song)
@@ -18300,7 +18300,7 @@ Lottie_Ryan
 Lottie_Tham
 Lottie_Wilson_Jackson
 Lotto_(The_Office)
-Lotto_6/49
+49
 Lotto_America
 Lotto_Max
 Lotto_New_Zealand
@@ -19459,10 +19459,10 @@ Love-in
 Love..._Thy_Will_Be_Done
 Love._Angel._Music._Baby.
 Love._Die._Repeat.
-Love/Hate_(TV_series)
-Love/Hate_(The-Dream_album)
-Love/Hate_(band)
-Love?
+Hate_(TV_series)
+Hate_(The-Dream_album)
+Hate_(band)
+Love
 LoveFilm
 LoveGame
 LovePlus
@@ -19653,7 +19653,7 @@ Love_Is_All_(Roger_Glover_song)
 Love_Is_All_Around
 Love_Is_All_There_Is
 Love_Is_All_You_Need
-Love_Is_All_You_Need?_(2016_film)
+Love_Is_All_You_Need
 Love_Is_Blind
 Love_Is_Blind_(2019_film)
 Love_Is_Blind_(TV_series)
@@ -19674,7 +19674,7 @@ Love_Is_Like_Oxygen
 Love_Is_Like_a_Butterfly
 Love_Is_Like_a_Butterfly_(song)
 Love_Is_Like_a_Cocktail
-Love_Is_Love/Return_to_Dust
+Return_to_Dust
 Love_Is_Love_Is_Love_(film)
 Love_Is_Strange
 Love_Is_Strange_(film)
@@ -19794,7 +19794,7 @@ Love_Me,_Love_Me_Not_(manga)
 Love_Me_(2024_film)
 Love_Me_(Australian_TV_series)
 Love_Me_(Justin_Bieber_song)
-Love_Me_(Leiber/Stoller_song)
+Stoller_song)
 Love_Me_(Lil_Wayne_song)
 Love_Me_Again_(John_Newman_song)
 Love_Me_Again_(V_song)
@@ -19810,7 +19810,7 @@ Love_Me_Like_You
 Love_Me_Like_You_Mean_It
 Love_Me_More_(Sam_Smith_song)
 Love_Me_Not
-Love_Me_Now?
+Love_Me_Now
 Love_Me_Tender_(film)
 Love_Me_Tender_(song)
 Love_Me_Tomorrow
@@ -20384,7 +20384,7 @@ Low-energy_electron_diffraction
 Low-energy_house
 Low-energy_transfer
 Low-fat_diet
-Low-fiber/low-residue_diet
+low-residue_diet
 Low-floor_bus
 Low-frequency_effects
 Low-frequency_oscillation
@@ -22768,7 +22768,7 @@ Lulav
 Lule_Sámi
 Luleå
 Luleå-class_corvette
-Luleå/Kallax_Airport
+Kallax_Airport
 Luleå_HF
 Luleå_University_of_Technology
 Luliconazole

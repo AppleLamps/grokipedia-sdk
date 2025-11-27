@@ -566,7 +566,7 @@ Otis_Air_National_Guard_Base
 Otis_Anderson_Jr.
 Otis_Birdsong
 Otis_Blackwell
-Otis_Blue/Otis_Redding_Sings_Soul
+Otis_Redding_Sings_Soul
 Otis_Boykin
 Otis_Campbell
 Otis_Chandler
@@ -616,8 +616,8 @@ Oto-Manguean_languages
 Oto-hime
 Otoacoustic_emission
 Otoboke_Beaver
-Otobreda_127/54_Compact
-Otobreda_127/64
+54_Compact
+64
 Otocephaly
 Otocinclus
 Otodontidae
@@ -754,7 +754,7 @@ Otto
 Otto,_Count_of_Savoy
 Otto,_King_of_Bavaria
 Otto-William,_Count_of_Burgundy
-Otto;_or,_Up_with_Dead_People
+Otto
 Otto_Abetz
 Otto_Addo
 Otto_Ambros
@@ -2636,10 +2636,10 @@ Oxybelis_fulgidus
 Oxybenzone
 Oxybutynin
 Oxycodone
-Oxycodone/aspirin
-Oxycodone/ibuprofen
-Oxycodone/naloxone
-Oxycodone/paracetamol
+aspirin
+ibuprofen
+naloxone
+paracetamol
 Oxydendrum
 Oxydol
 Oxyeleotris_marmorata
@@ -2964,7 +2964,7 @@ P.O.D._discography
 P.O.S_(rapper)
 P.O.W._–_Bandi_Yuddh_Ke
 P.R.O.B.E.
-P.S.K._What_Does_It_Mean?
+P.S.K._What_Does_It_Mean
 P.S._(film)
 P.S._I_Love_You_(Beatles_song)
 P.S._I_Love_You_(film)
@@ -3177,8 +3177,8 @@ P._Vishnuvardhan_Reddy
 P._W._Botha
 P._W._Singer
 P._Wilson
-P/B_ratio
-P/poly
+B_ratio
+poly
 P0
 P0f
 P107
@@ -3188,7 +3188,7 @@ P16
 P1Harmony
 P1X3L
 P21
-P26/40_tank
+40_tank
 P2J
 P2P
 P2X_purinoreceptor
@@ -3215,7 +3215,7 @@ PAC
 PACELC_theorem
 PACER_(law)
 PACE_financing
-PAC_CT/4_Airtrainer
+4_Airtrainer
 PAC_Cresco
 PAC_MFI-17_Mushshak
 PAC_Omonia_29M
@@ -3334,7 +3334,7 @@ PC-8800_series
 PC-98
 PC-FX
 PC-Lint
-PC/104
+104
 PC12_cell_line
 PC1512
 PCA
@@ -3414,9 +3414,9 @@ PDE5_inhibitor
 PDF
 PDF-XChange_Viewer
 PDF.js
-PDF/A
-PDF/E
-PDF/UA
+A
+E
+UA
 PDF24_Creator
 PDF417
 PDFCreator
@@ -3451,8 +3451,8 @@ PEG_400
 PEG_ratio
 PEGylation
 PEL_(company)
-PEN/Faulkner_Award_for_Fiction
-PEN/Hemingway_Award_for_Debut_Novel
+Faulkner_Award_for_Fiction
+Hemingway_Award_for_Debut_Novel
 PENTTBOM
 PEN_America
 PEN_International
@@ -3555,7 +3555,7 @@ PGA_Tour_on_CBS
 PGA_West
 PGE
 PGE_Polska_Grupa_Energetyczna
-PGF/TikZ
+TikZ
 PGIM
 PGIMER_Satellite_Centre_Sangrur
 PGL_Major_Antwerp_2022
@@ -3625,7 +3625,7 @@ PIN_diode
 PIN_pad
 PIPES
 PISO_algorithm
-PITCHf/x
+x
 PIT_maneuver
 PJ1_TrackBite
 PJM_Interconnection
@@ -3675,11 +3675,11 @@ PL-5
 PL-7
 PL-8_(missile)
 PL-9
-PL/0
-PL/I
-PL/M
-PL/SQL
-PL/pgSQL
+0
+I
+M
+SQL
+pgSQL
 PLA
 PLATO_(computer_system)
 PLATO_(spacecraft)
@@ -3876,19 +3876,19 @@ PRhyme_2
 PS
 PS,_I_Love_You_(novel)
 PS,_The_Preventive_Maintenance_Monthly
-PS-05/A
-PS/2_port
+A
+2_port
 PS1
 PS10_solar_power_plant
 PS20_solar_power_plant
 PS22_Chorus
 PSA
-PSAT/NMSQT
+NMSQT
 PSA_(song)
 PSA_5.7_Rock
 PSA_Airlines
-PSA_ES/L_engine
-PSA_EW/DW_engine
+L_engine
+DW_engine
 PSA_Group
 PSA_HDi_engine
 PSA_International
@@ -6719,7 +6719,7 @@ Pambaram
 Pambatti_Siddhar
 Pambazo
 Pamela,_a_Love_Story
-Pamela;_or,_Virtue_Rewarded
+Pamela
 Pamela_(name)
 Pamela_(song)
 Pamela_Adlon
@@ -7304,7 +7304,7 @@ Pandemic
 Pandemic_(South_Park)
 Pandemic_(board_game)
 Pandemic_(film)
-Pandemic_H1N1/09_virus
+09_virus
 Pandemic_Studios
 Pandemic_severity_index
 Pandemonic_Incantations
@@ -8026,7 +8026,7 @@ Paola_Suárez
 Paola_Turbay
 Paoli,_Indiana
 Paoli,_Pennsylvania
-Paoli/Thorndale_Line
+Thorndale_Line
 Paoli_Dam
 Paolla_Oliveira
 Paolo
@@ -8111,7 +8111,7 @@ Papa's_Delicate_Condition
 Papa's_Goods
 Papa's_Got_a_Brand_New_Bag
 Papa's_Got_a_Brand_New_Pigbag
-Papa,_Can_You_Hear_Me?
+Papa,_Can_You_Hear_Me
 Papa-Oom-Mow-Mow
 Papa_(2018_film)
 Papa_Ajasco
@@ -8552,7 +8552,7 @@ Parable_of_the_drowning_man
 Parables_of_Jesus
 Parabola
 Parabola_(song)
-Parabola_GNU/Linux-libre
+Linux-libre
 Parabolic_SAR
 Parabolic_aluminized_reflector
 Parabolic_antenna
@@ -8663,7 +8663,7 @@ Paradise_(Lana_Del_Rey_EP)
 Paradise_(Morrison_novel)
 Paradise_(Sade_song)
 Paradise_(Spanish_TV_series)
-Paradise_(What_About_Us?)
+Paradise_(What_About_Us
 Paradise_(cocktail)
 Paradise_(disambiguation)
 Paradise_(video_game)
@@ -9637,7 +9637,7 @@ Paris_School_of_Business
 Paris_School_of_Economics
 Paris_Sciences_et_Lettres_University
 Paris_Singer
-Paris_Street;_Rainy_Day
+Paris_Street
 Paris_Texas_(hip_hop_group)
 Paris_Theater_(Manhattan)
 Paris_Themmen
@@ -10117,7 +10117,7 @@ Parler
 Parley
 Parley_Baer
 Parley_P._Pratt
-Parlez-vous_français_?
+Parlez-vous_français_
 Parli_Assembly_constituency
 Parli_Vaijnath
 Parliament
@@ -11532,7 +11532,7 @@ Pasukan_Gerakan_Khas
 Pasulj
 Pasumpon
 Pasumpon_Muthuramalinga_Thevar
-Pasupathi_c/o_Rasakkapalayam
+o_Rasakkapalayam
 Pasupathy
 Pasupathy_Pandian
 Pasur_(card_game)
@@ -15267,7 +15267,7 @@ Pawnography
 Pawns_&_Kings
 Paws,_Inc.
 Pawtucket,_Rhode_Island
-Pawtucket/Central_Falls_station
+Central_Falls_station
 Pawtucket_Red_Sox
 Pawtuxet_Village
 Pax
@@ -15570,7 +15570,7 @@ Peace_River_(Florida)
 Peace_River_Country
 Peace_River_Regional_District
 Peace_Sells
-Peace_Sells..._but_Who's_Buying?
+Peace_Sells..._but_Who's_Buying
 Peace_TV
 Peace_Talks_(The_Dresden_Files)
 Peace_Tower
@@ -15618,7 +15618,7 @@ Peace_of_Ryswick
 Peace_of_Utrecht
 Peace_of_Westphalia
 Peace_of_Zsitvatorok
-Peace_on_Earth/Little_Drummer_Boy
+Little_Drummer_Boy
 Peace_on_Earth_(film)
 Peace_plans_proposed_before_and_during_the_Bosnian_War
 Peace_symbols
@@ -16179,7 +16179,7 @@ Pedro_Gonzalez_Gonzalez
 Pedro_Gonçalves
 Pedro_Gonçalves_(football_manager)
 Pedro_Grifol
-Pedro_Guerrero_(first_baseman/outfielder)
+outfielder)
 Pedro_Henrique_(footballer,_born_1990)
 Pedro_Henrique_(footballer,_born_December_1992)
 Pedro_Henrique_of_Orléans-Braganza
@@ -17863,7 +17863,7 @@ People's_Police_(China)
 People's_Power_(Georgia)
 People's_Power_Party_(Singapore)
 People's_Power_Party_(Thailand)
-People's_Progressive_Party/Civic
+Civic
 People's_Progressive_Party_(Malaysia)
 People's_Public_Security_Television
 People's_Radical_Party
@@ -18146,7 +18146,7 @@ Peppino_Gagliardi
 Peppino_di_Capri
 Peppy_Martin
 Pepsi
-Pepsi,_Where's_My_Jet?
+Pepsi,_Where's_My_Jet
 Pepsi-Cola_Made_with_Real_Sugar
 Pepsi-Cola_sign
 PepsiCo
@@ -18302,7 +18302,7 @@ Perception_(NF_album)
 Perception_(TV_series)
 Perception_(video_game)
 Perception_management
-Perception_of_English_/r/_and_/l/_by_Japanese_speakers
+_by_Japanese_speakers
 Perceptions_of_African_American_criminality
 Perceptions_of_religious_imagery_in_natural_phenomena
 Perceptron
@@ -19122,7 +19122,7 @@ Perot_Systems
 Perovskite
 Perovskite_(structure)
 Perovskite_solar_cell
-PeroxWhy?Gen
+PeroxWhy
 Peroxidase
 Peroxide
 Peroxide_(Nina_Nesbitt_album)
@@ -22669,7 +22669,7 @@ Phenoxybenzamine
 Phenoxyethanol
 Phenoxymethylpenicillin
 Phentermine
-Phentermine/topiramate
+topiramate
 Phentolamine
 Phenyl-2-nitropropene
 Phenyl_group
@@ -22695,7 +22695,7 @@ Phenylpropanolamine
 Phenylpropene
 Phenylthiocarbamide
 Phenytoin
-Phenytoin/pentobarbital
+pentobarbital
 Pheochromocytoma
 Pheonix_Copley
 Pheran
@@ -23050,7 +23050,7 @@ Philadelphia,_Here_I_Come!
 Philadelphia,_Mississippi
 Philadelphia_(disambiguation)
 Philadelphia_(film)
-Philadelphia_/_Baltimore_Stars
+_Baltimore_Stars
 Philadelphia_76ers
 Philadelphia_76ers_all-time_roster
 Philadelphia_76ers_draft_history

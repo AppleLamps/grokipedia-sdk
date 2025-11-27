@@ -2074,7 +2074,7 @@ Kingdom_Force
 Kingdom_Hall
 Kingdom_Hearts
 Kingdom_Hearts_(video_game)
-Kingdom_Hearts_358/2_Days
+2_Days
 Kingdom_Hearts_Birth_by_Sleep
 Kingdom_Hearts_Coded
 Kingdom_Hearts_HD_1.5_Remix
@@ -2953,7 +2953,7 @@ Kirito_(Sword_Art_Online)
 Kiritsugu_Emiya
 Kirk
 Kirk's_dik-dik
-Kirk/Spock
+Spock
 Kirk_(TV_series)
 Kirk_(album)
 Kirk_Acevedo
@@ -4421,7 +4421,7 @@ Knobcone_pine
 Knobkerrie
 Knoc-turn'al
 Knock,_County_Mayo
-Knock,_Knock_Who's_There?
+Knock,_Knock_Who's_There
 Knock,_knock,_ginger
 Knock-down_kit
 Knock-for-knock_agreement
@@ -4515,7 +4515,7 @@ Know-It-All
 Know_My_Name:_A_Memoir
 Know_No_Better_(song)
 Know_Nothing
-Know_What_I_Mean?
+Know_What_I_Mean
 Know_Your_Enemy_(Green_Day_song)
 Know_Your_Enemy_(Manic_Street_Preachers_album)
 Know_Your_Enemy_(Rage_Against_the_Machine_song)
@@ -4525,7 +4525,7 @@ Know_thyself
 Know_your_customer
 Knower_(duo)
 Knowhere
-Knowhutimean?_Hey_Vern,_It's_My_Family_Album
+Knowhutimean
 Knowing_(film)
 Knowing_Bros
 Knowing_Me,_Knowing_You
@@ -5501,7 +5501,7 @@ Komiks_(TV_series)
 Komitadji
 Komitas
 Komiža
-Komm,_gib_mir_deine_Hand_/_Sie_liebt_dich
+_Sie_liebt_dich
 Komm,_süßer_Tod
 Komm,_süßer_Tod,_komm_selge_Ruh
 Kommanditgesellschaft
@@ -6325,7 +6325,7 @@ Korey_Wise
 Korfball
 Korg
 Korg_(character)
-Korg_01/W
+W
 Korg_Kronos
 Korg_M1
 Korg_MS2000
@@ -8385,7 +8385,7 @@ Kulpakji
 Kulraj_Randhawa
 Kulshedra
 Kulsoom_Nawaz
-Kulspruta_m/39
+39
 Kult_(band)
 Kult_(role-playing_game)
 Kultar_Singh_Sandhwan
@@ -9689,17 +9689,17 @@ Ky_Bowman
 Ky_Bush
 Ky_Furneaux
 Ky_Schevers
-Kya_Aap_Paanchvi_Pass_Se_Tez_Hain?
+Kya_Aap_Paanchvi_Pass_Se_Tez_Hain
 Kya_Dill_Mein_Hai
 Kya_Dilli_Kya_Lahore
-Kya_Haal,_Mr._Paanchal?
+Kya_Haal,_Mr._Paanchal
 Kya_Hadsaa_Kya_Haqeeqat
 Kya_Huaa_Tera_Vaada
 Kya_Kehna
 Kya_Love_Story_Hai
 Kya_Mast_Hai_Life
-Kya_Meri_Sonam_Gupta_Bewafa_Hai?
-Kya_Qusoor_Hai_Amala_Ka?
+Kya_Meri_Sonam_Gupta_Bewafa_Hai
+Kya_Qusoor_Hai_Amala_Ka
 Kya_Yehi_Pyaar_Hai
 Kyaa_Dil_Ne_Kahaa
 Kyaa_Hoga_Nimmo_Kaa
@@ -10242,7 +10242,7 @@ Kyushu_Railway_Company
 Kyushu_Shinkansen
 Kyushu_University
 Kyuss
-Kyuss_/_Queens_of_the_Stone_Age
+_Queens_of_the_Stone_Age
 Kyuss_discography
 Kyustendil
 Kyustendil_Province
@@ -10801,15 +10801,15 @@ L1A1_Self-Loading_Rifle
 L2
 L200
 L2O
-L3/33
-L3/35
+33
+35
 L39ION_of_Los_Angeles
 L3Harris
 L3_Technologies
 L42A1
 L4_microkernel_family
 L5_Society
-L6/40_tank
+40_tank
 L64%2f65
 L7_(album)
 L7_(band)
@@ -11474,8 +11474,8 @@ LNER_Peppercorn_Class_A1
 LNER_Peppercorn_Class_A1_60163_Tornado
 LNER_Peppercorn_Class_A2
 LNER_Peppercorn_Class_A2_60532_Blue_Peter
-LNER_Thompson/Peppercorn_Class_K1
-LNER_Thompson_Class_A2/3
+Peppercorn_Class_K1
+3
 LNER_Thompson_Class_B1_61306
 LNG_Canada
 LNG_carrier
@@ -12688,7 +12688,7 @@ Labrinth_discography
 Labro,_Lazio
 Labrum_(arthropod_mouthpart)
 Labrys
-Labs_Kita..._Okey_Ka_Lang?
+Labs_Kita..._Okey_Ka_Lang
 Labskaus
 Labuan
 Labuan_Airport
@@ -13674,7 +13674,7 @@ Lahpet
 Lahr
 Lahsa_Eyalet
 Lahti
-Lahti-Saloranta_M/26
+26
 Lahti_L-35
 Lahti_L-39
 Lahti_Pelicans
@@ -15369,7 +15369,7 @@ Land_Ordinance_of_1785
 Land_Reform_Movement
 Land_Registration_Authority_(Philippines)
 Land_Rover
-Land_Rover_1/2_ton_Lightweight
+2_ton_Lightweight
 Land_Rover_101_Forward_Control
 Land_Rover_Defender
 Land_Rover_Defender_(L663)
@@ -15433,7 +15433,7 @@ Land_of_Dreams_(2021_film)
 Land_of_Dreams_(Randy_Newman_album)
 Land_of_Enchantment_associated_difficulties
 Land_of_Frankincense
-Land_of_Giants_/_The_Giant_Claw
+_The_Giant_Claw
 Land_of_Goshen
 Land_of_Hope_and_Dreams
 Land_of_Hope_and_Glory
@@ -15909,7 +15909,7 @@ Language-agnostic
 Language-based_learning_disability
 Language-learning_aptitude
 Language-oriented_programming
-Language._Sex._Violence._Other?
+Language._Sex._Violence._Other
 LanguageLine_Solutions
 LanguageTool
 Language_(disambiguation)
@@ -16542,7 +16542,7 @@ Lares
 Lares,_Puerto_Rico
 Larestan_County
 Larfleeze
-Large,_Medium-Speed_Roll-on/Roll-off
+Roll-off
 Large-billed_crow
 Large-calibre_artillery
 Large-cell_lung_carcinoma
@@ -18212,7 +18212,7 @@ Laughing_on_the_Outside_(Crying_on_the_Inside)
 Laughing_owl
 Laughingthrushes
 Laughlin,_Nevada
-Laughlin/Bullhead_International_Airport
+Bullhead_International_Airport
 Laughlin_Air_Force_Base
 Laughter
 Laughter-induced_syncope
@@ -20947,7 +20947,7 @@ Ledger
 Ledger_art
 Ledikeni
 Ledio_Pano
-Ledipasvir/sofosbuvir
+sofosbuvir
 Ledisi
 Ledley_King
 Lednice
@@ -22847,7 +22847,7 @@ Leiper's_Fork,_Tennessee
 Leipsoi
 Leipzig
 Leipzig-class_cruiser
-Leipzig/Halle_Airport
+Halle_Airport
 Leipzig_Gewandhaus_Orchestra
 Leipzig_L-IV_experiment_accident
 Leipzig_Salient

@@ -63,7 +63,7 @@ M109_howitzer
 M10_Booker
 M10_motorway_(Great_Britain)
 M10_tank_destroyer
-M11/39_tank
+39_tank
 M110A1_rifle
 M110_155_mm_projectile
 M110_Semi-Automatic_Sniper_System
@@ -102,20 +102,20 @@ M1288_GMV_1.1
 M1297_Army_Ground_Mobility_Vehicle
 M1299_howitzer
 M12_Gun_Motor_Carriage
-M13/40_tank
+40_tank
 M134_Minigun
 M134_bomblet
 M13_Multiple_Gun_Motor_Carriage
 M13_bacteriophage
 M13_link
 M14
-M14/41_tank
+41_tank
 M141_Bunker_Defeat_Munition
 M142_HIMARS
 M14_mine
 M14_rifle
 M15
-M15/42_tank
+42_tank
 M151_¼-ton_4×4_utility_truck
 M15_(New_York_City_bus)
 M15_half-track
@@ -185,7 +185,7 @@ M1_motorway_(Republic_of_Ireland)
 M1llionz
 M2
 M2-9
-M2/M4/M6_(railcar)
+M6_(railcar)
 M2010_Enhanced_Sniper_Rifle
 M2020_tank
 M202_FLASH
@@ -316,7 +316,7 @@ M50_Reising
 M50_motorway_(Great_Britain)
 M50_motorway_(Ireland)
 M51_(missile)
-M53/59_Praga
+59_Praga
 M53_motorway
 M548
 M549
@@ -505,7 +505,7 @@ MARCOS
 MARC_Train
 MARC_standards
 MARPAT
-MARPOL_73/78
+78
 MARRS
 MARS-500
 MARSEC
@@ -548,7 +548,7 @@ MA_Tétouan
 MA_plot
 MB
 MBASIC
-MBB/Kawasaki_BK_117
+Kawasaki_BK_117
 MBB_Bo_105
 MBB_Lampyridae
 MBC_1_(Middle_Eastern_and_North_African_TV_channel)
@@ -827,7 +827,7 @@ MG_81_machine_gun
 MG_Bus_Station_metro_station
 MG_Cyberster
 MG_FF_cannon
-MG_F_/_MG_TF
+_MG_TF
 MG_GS
 MG_GT
 MG_HS
@@ -1045,7 +1045,7 @@ MLC_Transcription_System
 MLD_Entertainment
 MLI-84
 MLIR_(software)
-MLK/FBI
+FBI
 MLL–PLL_merger
 MLOps
 MLS_All-Star_Game
@@ -2550,7 +2550,7 @@ Machilipatnam_Assembly_constituency
 Machilipatnam_Lok_Sabha_constituency
 Machimosaurus
 Machin-like_formula
-Machina/The_Machines_of_God
+The_Machines_of_God
 Machina_II%2fThe_Friends_&_Enemies_of_Modern_Music
 Machinability
 Machinae_Supremacy
@@ -2679,7 +2679,7 @@ Macintosh_Quadra_800
 Macintosh_Quadra_900
 Macintosh_Quadra_950
 Macintosh_SE
-Macintosh_SE/30
+30
 Macintosh_clone
 Macintosh_startup
 Maciste
@@ -2955,7 +2955,7 @@ Macungie,_Pennsylvania
 Macushi
 Macushla
 Macworld
-Macworld/iWorld
+iWorld
 Macy's
 Macy's,_Inc.
 Macy's_Herald_Square
@@ -3042,7 +3042,7 @@ Mad_Mike_Hoare
 Mad_Mod
 Mad_Money
 Mad_Money_(film)
-Mad_Monster_Party?
+Mad_Monster_Party
 Mad_Not_Mad
 Mad_Professor
 Mad_River_(Ohio)
@@ -3243,7 +3243,7 @@ Madden_NFL_98
 Madden_NFL_99
 Madden_NFL_Mobile
 Madden–Julian_oscillation
-Maddie's_Do_You_Know?
+Maddie's_Do_You_Know
 Maddie_&_Tae
 Maddie_Baillio
 Maddie_Blaustein
@@ -6238,7 +6238,7 @@ Maine_Maritime_Academy
 Maine_Mendoza
 Maine_North_High_School
 Maine_Public_Broadcasting_Network
-Maine_Pyaar_Kyun_Kiya?
+Maine_Pyaar_Kyun_Kiya
 Maine_Pyar_Kiya
 Maine_Pyar_Kiya_(2014_film)
 Maine_Road
@@ -8719,7 +8719,7 @@ Man's_Best_Friend_(1993_film)
 Man's_Best_Friend_(The_Ren_&_Stimpy_Show)
 Man's_Castle
 Man's_Fate
-Man's_Favorite_Sport?
+Man's_Favorite_Sport
 Man's_Not_Hot
 Man's_Right_to_Knowledge
 Man's_Ruin_Records
@@ -8909,7 +8909,7 @@ Man_on_the_Run_(2023_film)
 Man_on_the_Run_(album)
 Man_on_the_Silver_Mountain
 Man_on_the_Train_(2011_film)
-Man_or_Astro-man?
+Man_or_Astro-man
 Man_or_Muppet
 Man_overboard
 Man_overboard_rescue_turn
@@ -8971,7 +8971,7 @@ Management_&_Science_University
 Management_(film)
 Management_Aptitude_Test
 Management_Component_Transport_Protocol
-Management_Data_Input/Output
+Output
 Management_Development_Institute_of_Singapore
 Management_Development_Institute_of_Singapore_in_Tashkent
 Management_SOOP
@@ -8988,7 +8988,7 @@ Management_fad
 Management_fee
 Management_information_base
 Management_information_system
-Management_of_HIV/AIDS
+AIDS
 Management_of_Savagery
 Management_of_Tourette_syndrome
 Management_of_a_Novice_Alchemist
@@ -9149,7 +9149,7 @@ Manaveeyam_Veedhi
 Manavgat
 Manavs
 Manawatu_(National_Provincial_Championship)
-Manawatāwhi_/_Three_Kings_Islands
+_Three_Kings_Islands
 Manawatū-Whanganui
 Manawydan
 Manayek
@@ -11619,8 +11619,8 @@ Marasmius_oreades
 Marasmus
 Marassa_Jumeaux
 Marasuchus
-Marat/Sade
-Marat/Sade_(film)
+Sade
+Sade_(film)
 Marat_Balagula
 Marat_Gafurov
 Marat_Grigorian
@@ -14821,7 +14821,7 @@ Marine_Special_Operator_Insignia
 Marine_Stewardship_Council
 Marine_VHF_radio
 Marine_Vacth
-Marine_World/Africa_USA
+Africa_USA
 Marine_air–ground_task_force
 Marine_aquarium
 Marine_archaeology_in_the_Gulf_of_Khambhat
@@ -17529,7 +17529,7 @@ Marriage_of_convenience
 Marriage_of_enslaved_people_(United_States)
 Marriage_of_the_Virgin
 Marriage_officiant
-Marriage_on_the_Rocks/Rock_Bottom
+Rock_Bottom
 Marriage_proposal
 Marriage_trends_and_challenges
 Marriage_vows
@@ -18208,7 +18208,7 @@ Martin-Baker_MB_3
 Martin-Baker_MB_5
 Martin-Gropius-Bau
 Martin-Gruber_Anastomosis
-Martin/General_Dynamics_RB-57F_Canberra
+General_Dynamics_RB-57F_Canberra
 Martin_&_Gina
 Martin_(1977_film)
 Martin_(2024_film)
@@ -19275,7 +19275,7 @@ Marx's_theory_of_human_nature
 Marx's_theory_of_the_state
 Marx-Engels-Gesamtausgabe
 Marx-Engels_Forum
-Marx/Engels_Collected_Works
+Engels_Collected_Works
 Marx_Brothers
 Marx_Reloaded
 Marx_generator
@@ -19316,7 +19316,7 @@ Mary's_Igloo,_Alaska
 Mary's_Meals
 Mary's_Prayer
 Mary's_Well
-Mary,_Did_You_Know?
+Mary,_Did_You_Know
 Mary,_Mary,_Quite_Contrary
 Mary,_Mary_(song)
 Mary,_Mediatrix_of_All_Grace
@@ -21187,7 +21187,7 @@ Master's_mate
 Master-General_of_the_Ordnance
 Master-at-arms
 Master-at-arms_(United_States_Navy)
-Master/slave_(BDSM)
+slave_(BDSM)
 MasterChef
 MasterChef_(American_TV_series)
 MasterChef_(American_season_1)
@@ -22300,7 +22300,7 @@ Matrine
 Matrioshka_brain
 Matriphagy
 Matrix
-Matrix-assisted_laser_desorption/ionization
+ionization
 Matrix_(Groff_novel)
 Matrix_(TV_series)
 Matrix_(chemical_analysis)
@@ -23848,8 +23848,8 @@ Maundy_(foot_washing)
 Maundy_Thursday
 Maung_Maung
 Maung_Maung_Lwin
-Maungakiekie_/_One_Tree_Hill
-Maungawhau_/_Mount_Eden
+_One_Tree_Hill
+_Mount_Eden
 Mauno_Koivisto
 Mauno_Manninen
 Maunsell_Forts
@@ -24836,8 +24836,8 @@ Maxim_Knight
 Maxim_Kontsevich
 Maxim_Lapierre
 Maxim_Litvinov
-Maxim_M/09-21
-Maxim_M/32-33
+09-21
+32-33
 Maxim_Martsinkevich
 Maxim_Mikhaylov_(volleyball)
 Maxim_Munzuk

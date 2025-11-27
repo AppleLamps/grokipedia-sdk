@@ -8,7 +8,7 @@ A professional Python SDK for accessing Grokipedia content programmatically. Thi
 
 - **Full Article Retrieval** - Fetch complete articles with all sections, references, and metadata
 - **Summary Extraction** - Get quick summaries and table of contents
-- **Smart Article Search** - Built-in search with fuzzy matching across 885,000+ articles
+- **Smart Article Search** - Built-in search with fuzzy matching across 950,000+ articles
 - **Ultra-Fast Search** - Trigram indexing (45x speedup) + BK-Tree (10x speedup) for sub-second fuzzy queries
 - **Fast Slug Lookup** - Optimized BK-Tree implementation for O(log n) search performance
 - **Type Safety** - Built with Pydantic for robust data validation
@@ -156,7 +156,7 @@ with Client() as client:
 
 ### Searching for Articles
 
-The SDK includes a local sitemap index with **885,000+ articles** and ultra-fast fuzzy search capabilities:
+The SDK includes a local sitemap index with **950,000+ articles** and ultra-fast fuzzy search capabilities:
 
 ```python
 from grokipedia_sdk import Client
@@ -203,7 +203,7 @@ minimal_index = SlugIndex(use_trigram=False, use_bktree=False)
 # Load time: ~2s, Search speed: baseline, Memory: base
 ```
 
-**Performance Benchmarks (885,000+ articles):**
+**Performance Benchmarks (950,000+ articles):**
 
 | Query Type | Without Optimizations | With Trigram + BK-Tree | Speedup |
 |------------|----------------------|------------------------|---------|
@@ -432,7 +432,7 @@ Search for matching slugs with optimized fuzzy matching.
 
 - `List[str]`: List of matching slugs, ordered by relevance
 
-**Performance:** ~200ms for fuzzy search with 885,000+ articles (45x faster than baseline)
+**Performance:** ~200ms for fuzzy search with 950,000+ articles (45x faster than baseline)
 
 #### `find_best_match(query: str, min_similarity: float = 0.6) -> Optional[str]`
 
@@ -480,7 +480,7 @@ Get the total number of articles in the index.
 
 - `int`: Total number of unique articles
 
-#### `get_random_articles(count: int = 10) -> List[str]`
+#### `random_slugs(count: int = 10) -> List[str]`
 
 Get random article slugs from the index.
 
@@ -695,7 +695,7 @@ The SDK is optimized for performance with multiple optimization layers:
 - **Optimized Parsing**: Fast HTML parsing with BeautifulSoup4 and lxml
 - **Async Support**: Ready for future async/await implementations
 
-**Benchmark Results (885,000+ articles):**
+**Benchmark Results (950,000+ articles):**
 - Average fuzzy search time: **216ms** (45x faster than baseline)
 - Trigram indexing reduces search space by 70-90%
 - BK-Tree provides O(log n) search complexity
@@ -724,7 +724,7 @@ This SDK is provided as-is for educational and development purposes. Please revi
 - Please respect rate limits and robots.txt guidelines
 - This SDK is not affiliated with Grokipedia
 - Cache your results appropriately for production use
-- The sitemap index includes 885,000+ articles for fast local search
+- The sitemap index includes 950,000+ articles for fast local search
 
 ## Support
 

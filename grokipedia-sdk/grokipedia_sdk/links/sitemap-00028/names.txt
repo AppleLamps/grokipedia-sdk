@@ -1888,8 +1888,8 @@ Robotic_process_automation
 Robotic_sensors
 Robotic_vacuum_cleaner
 Robotics
-Robotics;Notes
-Robotics;Notes_DaSH
+Robotics
+Robotics
 Robotix
 Robotman_(Cliff_Steele)
 Robotman_(Robert_Crane)
@@ -2373,7 +2373,7 @@ Rock_the_House_(album)
 Rock_the_Kasbah_(film)
 Rock_the_Nations
 Rock_the_Night_(song)
-Rock_the_Rebel/Metal_the_Devil
+Metal_the_Devil
 Rock_the_Vote
 Rock_tripe
 Rock_wit_U_(Awww_Baby)
@@ -4248,10 +4248,10 @@ Rollover_(film)
 Rollover_protection_structure
 Rollright_Stones
 Rolls-Royce
-Rolls-Royce/Snecma_Olympus_593
+Snecma_Olympus_593
 Rolls-Royce_100EX
 Rolls-Royce_10_hp
-Rolls-Royce_20/25
+25
 Rolls-Royce_ACCEL
 Rolls-Royce_AE_2100
 Rolls-Royce_AE_3007
@@ -7898,9 +7898,9 @@ Rover_(ice_hockey)
 Rover_(marque)
 Rover_(space_exploration)
 Rover_(yacht)
-Rover_200_/_25
+_25
 Rover_200_Coupé
-Rover_400_/_45
+_45
 Rover_600_Series
 Rover_75
 Rover_800_series
@@ -8291,7 +8291,7 @@ Roy_North
 Roy_O'Donovan
 Roy_O._Disney
 Roy_Orbison
-Roy_Orbison/The_Beatles_Tour
+The_Beatles_Tour
 Roy_Orbison_at_the_Rock_House
 Roy_Orbison_discography
 Roy_Oswalt
@@ -8646,7 +8646,7 @@ Royal_Enfield_Interceptor_650
 Royal_Enfield_Meteor
 Royal_Enfield_Super_Meteor
 Royal_Enfield_Thunderbird
-Royal_Enfield_WD/RE
+RE
 Royal_Engineers
 Royal_Engineers_A.F.C.
 Royal_Excel_Mouscron
@@ -10165,7 +10165,7 @@ Rugelach
 Rugeley
 Ruger-57
 Ruger_(musician)
-Ruger_10/22
+22
 Ruger_AR-556
 Ruger_American_Pistol
 Ruger_American_Rifle
@@ -13283,7 +13283,7 @@ S'illot_(Mallorca)
 S'more
 S*P*Y*S
 S-100_bus
-S-125_Neva/Pechora
+Pechora
 S-13_rocket
 S-1_Executive_Committee
 S-200_missile_system
@@ -13601,13 +13601,13 @@ S._Venkitaramanan
 S._W._R._D._Bandaranaike
 S._Y._Quraishi
 S._Z._Sakall
-S/2009_S_1
-S/2015_(136472)_1
-S/KEY
-S/MIME
-S/O_Satyamurthy
-S/PDIF
-S/Z
+2009_S_1
+2015_(136472)_1
+KEY
+MIME
+O_Satyamurthy
+PDIF
+Z
 S1000D
 S100_protein
 S10_(UPU_standard)
@@ -13643,7 +13643,7 @@ S6G_reactor
 S7_(Vienna)
 S7_Airlines
 S7_Airlines_Flight_778
-S84/98_III_bayonet
+98_III_bayonet
 S8G_reactor
 S8_(Munich)
 S91_(song)
@@ -13762,8 +13762,8 @@ SAP_HANA
 SAP_IS-U
 SAP_NetWeaver
 SAP_NetWeaver_Business_Warehouse
-SAP_R/3
-SAP_S/4HANA
+3
+4HANA
 SAP_SuccessFactors
 SAR
 SAR-Lupe
@@ -13822,7 +13822,7 @@ SB19_discography
 SBA-60K2_Bulat
 SBAR
 SBA_Communications
-SBB-CFF-FFS_Ae_6/6
+6
 SBB-CFF-FFS_Re_460
 SBB_(band)
 SBB_RABDe_500
@@ -14030,7 +14030,7 @@ SECI_model_of_knowledge_dimensions
 SECR_K_and_SR_K1_classes
 SECR_N_class
 SECR_P_class
-SECS/GEM
+GEM
 SECURE_Act
 SECU_Stadium
 SEC_Armadillo
@@ -14790,7 +14790,7 @@ SS-Totenkopfverbände
 SS-Verfügungstruppe
 SS.10
 SS.11
-SS.12/AS.12
+AS.12
 SS2,_Petaling_Jaya
 SS501
 SSAB
@@ -15118,7 +15118,7 @@ STFU_acronym
 STG-556
 STH_BNK_by_Beulah
 STI
-STIR/SHAKEN
+SHAKEN
 STI_College
 STI_West_Negros_University
 STK11
@@ -15131,7 +15131,7 @@ STM-4
 STM32
 STM_Kargu
 STMicroelectronics
-STN_MTN_/_Kauai
+_Kauai
 STN_display
 STO-nG_basis_sets
 STOBAR
@@ -15347,7 +15347,7 @@ SWEEPS-04
 SWEET16
 SWF
 SWI-Prolog
-SWI/SNF
+SNF
 SWIFT
 SWIFT_ban_against_Russian_banks
 SWIFT_message_types
@@ -15808,7 +15808,7 @@ Sabena_Flight_548
 Sabena_Flight_571
 Saber-toothed_predator
 SaberCats_Stadium
-Saber_(Fate/stay_night)
+stay_night)
 Saber_(cruise_missile)
 Saber_Hossain_Chowdhury
 Saber_Interactive
@@ -16365,7 +16365,7 @@ Sacrum
 Sacré-Cœur,_Paris
 Sacsayhuamán
 Sacubitril
-Sacubitril/valsartan
+valsartan
 Sad_Angel
 Sad_Book
 Sad_Café
@@ -21145,7 +21145,7 @@ Samsung_Galaxy_A53_5G
 Samsung_Galaxy_A54_5G
 Samsung_Galaxy_A5_(2015)
 Samsung_Galaxy_A5_(2016)
-Samsung_Galaxy_A6_/_A6+
+_A6+
 Samsung_Galaxy_A70
 Samsung_Galaxy_A71
 Samsung_Galaxy_A72
@@ -23900,7 +23900,7 @@ Santa_Teresa,_New_Mexico
 Santa_Teresa,_Rio_de_Janeiro
 Santa_Trinita
 Santa_Trinita_Maestà
-Santa_Who?
+Santa_Who
 Santa_Ynez,_California
 Santa_Ynez_Mountains
 Santa_Ynez_Valley

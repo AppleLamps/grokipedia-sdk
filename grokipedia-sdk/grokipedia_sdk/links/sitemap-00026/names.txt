@@ -2583,7 +2583,7 @@ Piper_to_the_Sovereign
 Pipera
 Piperaceae
 Piperacillin
-Piperacillin/tazobactam
+tazobactam
 Piperade
 Piperales
 Piperazine
@@ -2932,7 +2932,7 @@ Pistol-whipping
 Pistol_(miniseries)
 Pistol_Annies
 Pistol_Auto_9mm_1A
-Pistol_Mitralieră_model_1963/1965
+1965
 Pistol_Packin'_Mama
 Pistol_Pete_(Oklahoma_State_University)
 Pistol_Star
@@ -4551,7 +4551,7 @@ Playing_for_Keeps_(album)
 Playing_for_Time_(film)
 Playing_for_Time_(song)
 Playing_in_the_Band
-Playing_in_the_Band,_Seattle,_Washington,_5/21/74
+74
 Playing_the_Angel
 Playing_the_Field
 Playing_the_Fool
@@ -6038,7 +6038,7 @@ Polar-class_icebreaker
 Polar_(film)
 Polar_(webcomic)
 Polar_Air_Cargo
-Polar_Bear,_Polar_Bear,_What_Do_You_Hear?
+Polar_Bear,_Polar_Bear,_What_Do_You_Hear
 Polar_Bear_(film)
 Polar_Bear_Café
 Polar_Bear_Club
@@ -7997,7 +7997,7 @@ Ponnar_Shankar
 Ponnar_Shankar_(film)
 Ponneri
 Ponni_(TV_series)
-Ponni_C/O_Rani
+O_Rani
 Ponni_rice
 Ponniyin_Selvan
 Ponniyin_Selvan_(2005_film)
@@ -8420,7 +8420,7 @@ Pop-up_notification
 Pop-up_restaurant
 Pop-up_retail
 Pop._1280
-Pop/Stars
+Stars
 PopCap_Games
 PopMart_Tour
 PopMaster
@@ -8450,7 +8450,7 @@ Pop_Idol
 Pop_Idol_(series_1)
 Pop_Idol_(series_2)
 Pop_Is_Dead
-Pop_Kaun?
+Pop_Kaun
 Pop_Life_(David_Guetta_album)
 Pop_Life_(Prince_song)
 Pop_Mart
@@ -9298,7 +9298,7 @@ Porron
 Porsche
 Porsche_3512
 Porsche_356
-Porsche_356/1
+1
 Porsche_550
 Porsche_64
 Porsche_718
@@ -10031,7 +10031,7 @@ Portrait_of_a_Family_(upcoming_film)
 Portrait_of_a_Lady_(poem)
 Portrait_of_a_Lady_(van_der_Weyden)
 Portrait_of_a_Lady_on_Fire
-Portrait_of_a_Man_(Self_Portrait?)
+Portrait_of_a_Man_(Self_Portrait
 Portrait_of_a_Man_in_Red_Chalk
 Portrait_of_a_Musician
 Portrait_of_a_Political_Figure_on_Fire
@@ -10443,7 +10443,7 @@ Post-1975_Vietnamese_reunification_era
 Post-1992_university
 Post-2008_Irish_banking_crisis
 Post-2008_Irish_economic_downturn
-Post-9/11
+11
 Post-Angkor_period
 Post-Apocalypto
 Post-Attack_Command_and_Control_System
@@ -10457,7 +10457,7 @@ Post-Islamism
 Post-Keynesian_economics
 Post-Marxism
 Post-Newtonian_expansion
-Post-PFI_Soviet/Russian_aircraft_projects
+Russian_aircraft_projects
 Post-Scarcity_Anarchism
 Post-Soviet_states
 Post-Suharto_era_in_Indonesia
@@ -10547,7 +10547,7 @@ Post-war_Britain_(1945–1979)
 Post-war_consensus
 Post-war_immigration_to_Australia
 Post-work_society
-Post/Redirect/Get
+Get
 PostBus_Switzerland
 PostFinance
 PostGIS
@@ -11243,7 +11243,7 @@ Pound_(currency)
 Pound_(film)
 Pound_(force)
 Pound_(mass)
-Pound_Cake_/_Paris_Morton_Music_2
+_Paris_Morton_Music_2
 Pound_Cake_speech
 Pound_Puppies
 Pound_Puppies_(1986_TV_series)
@@ -11331,7 +11331,7 @@ Poverty_of_the_stimulus
 Poverty_reduction
 Poverty_threshold
 Povidone-iodine
-Pow-Wows;_or,_Long_Lost_Friend
+Pow-Wows
 Pow-wow_(folk_magic)
 PowWow_(chat_program)
 Powada
@@ -11412,7 +11412,7 @@ Power-to-X
 Power-to-gas
 Power-to-weight_ratio
 Power-up
-Power/Rangers
+Rangers
 Power10
 PowerAnimator
 PowerBASIC
@@ -12115,7 +12115,7 @@ Praise_Petey
 Praise_This
 Praise_You
 Praise_You_In_This_Storm
-Praise_a_Lord_Who_Chews_but_Which_Does_Not_Consume;_(Or_Simply,_Hot_Between_Worlds)
+Praise_a_Lord_Who_Chews_but_Which_Does_Not_Consume
 Praise_the_Lord_(Da_Shine)
 Praise_the_Lord_(film)
 Praise_the_Lord_and_Pass_the_Ammunition
@@ -13156,7 +13156,7 @@ Prek_Pnov_Bridge
 Preki
 Prekmurje
 Prelabor_rupture_of_membranes
-Prelamin-A/C
+C
 Prelate
 Prelate_of_Honour_of_His_Holiness
 Prelest
@@ -14219,7 +14219,7 @@ Pretoria_Zoo
 Pretties
 Pretties_for_You
 Pretty._Odd.
-Pretty/Handsome
+Handsome
 PrettyLittleThing
 PrettyMuch
 Pretty_Baby_(1978_film)
@@ -14323,7 +14323,7 @@ Preventable_causes_of_death
 Prevention_(magazine)
 Prevention_of_Corruption_Act,_1988
 Prevention_of_Cruelty_to_Animals_Act
-Prevention_of_HIV/AIDS
+AIDS
 Prevention_of_Insults_to_National_Honour_Act,_1971
 Prevention_of_Money_Laundering_Act,_2002
 Prevention_of_Terrorism_Act,_2002
@@ -17124,7 +17124,7 @@ Problem_Child_(TV_series)
 Problem_Child_(film)
 Problem_Child_2
 Problem_Child_in_House
-Problem_Children_Are_Coming_from_Another_World,_Aren't_They?
+Problem_Children_Are_Coming_from_Another_World,_Aren't_They
 Problem_Dog
 Problem_Solvers_Caucus
 Problem_gambling
@@ -17904,7 +17904,7 @@ Project_523
 Project_56_(nuclear_test)
 Project_57
 Project_571
-Project_58/58A
+58A
 Project_596
 Project_75_Alpha
 Project_86
@@ -18045,7 +18045,7 @@ Project_Rap_Rabbit
 Project_Reality
 Project_Regeneration_Vol._1
 Project_Riese
-Project_Rocket_/_Fall_Out_Boy
+_Fall_Out_Boy
 Project_Rover
 Project_Rulison
 Project_Runway
@@ -18415,7 +18415,7 @@ Proof_of_the_Truthful
 Proof_of_work
 Proof_sketch_for_Gödel's_first_incompleteness_theorem
 Proof_test
-Proof_that_22/7_exceeds_π
+7_exceeds_π
 Proof_that_e_is_irrational
 Proof_that_π_is_irrational
 Proof_theory
@@ -18632,7 +18632,7 @@ Proposed_Russian_annexation_of_South_Ossetia
 Proposed_Soviet_invasion_of_Hokkaido
 Proposed_Transnistria_Governorate
 Proposed_United_Kingdom_confederation
-Proposed_VFL/AFL_clubs
+AFL_clubs
 Proposed_constitutional_amendments_on_fetal_personhood
 Proposed_developments_of_Manchester_Metrolink
 Proposed_expansion_of_the_New_York_City_Subway
@@ -18690,7 +18690,7 @@ Propylparaben
 Propylthiouracil
 Propyne
 Propyphenazone
-Propyphenazone/paracetamol/caffeine
+caffeine
 Propædia
 Prora
 Prorogation
@@ -19450,7 +19450,7 @@ Proverbs_31
 Providence
 Providence,_Rhode_Island
 Providence-class_cruiser
-Providence/Stoughton_Line
+Stoughton_Line
 Providence_(1977_film)
 Providence_(American_TV_series)
 Providence_(Avatar_Press)
@@ -20128,7 +20128,7 @@ Pseudocyst
 Pseudodementia
 Pseudoelasticity
 Pseudoephedrine
-Pseudoephedrine/loratadine
+loratadine
 Pseudofolliculitis_barbae
 Pseudogene
 Pseudognaphalium_obtusifolium
@@ -21813,7 +21813,7 @@ Punchbowl_Crater
 Punchbowl_News
 Punchcutting
 Punched_card
-Punched_card_input/output
+output
 Punched_pocket
 Punched_tape
 Punchestown_Racecourse
@@ -22659,7 +22659,7 @@ Pusong_Bato
 Pusong_Ligaw
 Pusoy_dos
 Puspakom
-Puss_/_Oh,_the_Guilt
+_Oh,_the_Guilt
 Puss_in_Boots
 Puss_in_Boots_(1922_film)
 Puss_in_Boots_(1961_film)
@@ -23204,7 +23204,7 @@ Pyridinium_chlorochromate
 Pyridostigmine
 Pyridoxal_phosphate
 Pyridoxine
-Pyridoxine/doxylamine
+doxylamine
 Pyriform_sinus
 Pyrilla_perpusilla
 Pyrilutamide
@@ -23492,7 +23492,7 @@ Q'ero
 Q'orianka_Kilcher
 Q's_Jook_Joint
 Q*bert
-Q+/Papias_hypothesis
+Papias_hypothesis
 Q+A_(Australian_talk_show)
 Q-D-Š
 Q-Force
@@ -23519,7 +23519,7 @@ Q-value_(statistics)
 Q..._(TV_series)
 Q.E.D.
 Q.E.D._(manga)
-Q._Are_We_Not_Men?_A:_We_Are_Devo!
+Q._Are_We_Not_Men
 Q._T._Marshall
 Q0_(mathematical_logic)
 Q1
@@ -23533,7 +23533,7 @@ Q4OS
 Q5_(band)
 Q70_(New_York_City_bus)
 QA
-QA/QC
+QC
 QAC_Quickie_Q2
 QAD_Inc.
 QAM_(television)
@@ -23601,7 +23601,7 @@ QLZ-87_grenade_launcher
 QLab
 QLine
 QM-AM-GM-HM_inequalities
-QM/MM
+MM
 QML
 QMobile
 QNAP_Systems
@@ -24799,7 +24799,7 @@ Que_Dios_Te_Maldiga_Mi_Corazón
 Que_Haidar
 Que_Sera,_Sera_(Whatever_Will_Be,_Will_Be)
 Que_nadie_sepa_mi_sufrir
-Que_reste-t-il_de_nos_amours_?
+Que_reste-t-il_de_nos_amours_
 Que_te_perdone_Dios
 Queanbeyan
 Quebec

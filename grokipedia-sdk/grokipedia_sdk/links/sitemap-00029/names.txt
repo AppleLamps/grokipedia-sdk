@@ -1689,7 +1689,7 @@ Saunders-Roe
 Saunders-Roe_A.36_Lerwick
 Saunders-Roe_Princess
 Saunders-Roe_SR.177
-Saunders-Roe_SR.A/1
+1
 Saunders-Roe_Skeeter
 Saunders_Lewis
 Saunders_Mac_Lane
@@ -2978,7 +2978,7 @@ Scene
 Scene+
 Scene_(performing_arts)
 Scene_(subculture)
-Scene_It?
+Scene_It
 Scene_Queen
 Scene_at_the_Signing_of_the_Constitution_of_the_United_States
 Scene_from_the_Great_Flood
@@ -4081,7 +4081,7 @@ Scooby-Doo!_Stage_Fright
 Scooby-Doo!_The_Mystery_Begins
 Scooby-Doo!_The_Sword_and_the_Scoob
 Scooby-Doo!_Unmasked
-Scooby-Doo!_Who's_Watching_Who?
+Scooby-Doo!_Who's_Watching_Who
 Scooby-Doo!_WrestleMania_Mystery
 Scooby-Doo!_and_Krypto,_Too!
 Scooby-Doo!_and_the_Beach_Beastie
@@ -4095,7 +4095,7 @@ Scooby-Doo!_and_the_Reluctant_Werewolf
 Scooby-Doo!_and_the_Samurai_Sword
 Scooby-Doo!_and_the_Witch's_Ghost
 Scooby-Doo!_in_Arabian_Nights
-Scooby-Doo!_in_Where's_My_Mummy?
+Scooby-Doo!_in_Where's_My_Mummy
 Scooby-Doo's_Haunted_Mansion
 Scooby-Doo,_Where_Are_You!
 Scooby-Doo,_Where_Are_You_Now!
@@ -4107,7 +4107,7 @@ Scooby-Doo_(video_game)
 Scooby-Doo_Meets_the_Boo_Brothers
 Scooby-Doo_Mystery
 Scooby-Doo_Spooky_Coaster
-Scooby-Doo_and_Guess_Who?
+Scooby-Doo_and_Guess_Who
 Scooby-Doo_and_Scrappy-Doo_(1979_TV_series)
 Scooby-Doo_and_Scrappy-Doo_(1980_TV_series)
 Scooby-Doo_and_the_Alien_Invaders
@@ -5683,7 +5683,7 @@ Sea_Island_red_pea
 Sea_Islands
 Sea_Isle_City,_New_Jersey
 Sea_Jet
-Sea_Killer_/_Marte
+_Marte
 Sea_Launch
 Sea_Level_(band)
 Sea_Life
@@ -8867,7 +8867,7 @@ Self-transcendence
 Self-tying_shoes
 Self-uniting_marriage
 Self-verification_theory
-Self/less
+less
 Self_(band)
 Self_(programming_language)
 Self_Care_(song)
@@ -8973,7 +8973,7 @@ Selknam_(rugby_union)
 Selkup_language
 Selkup_people
 Sell-through
-Sell/Buy/Date
+Date
 Sell_Out_(Reel_Big_Fish_song)
 Sell_Your_Dope
 Sell_Your_Haunted_House
@@ -9321,13 +9321,13 @@ Semolina
 Semolina_pudding
 Semon_Knudsen
 Semotilus_atromaculatus
-Semovente_da_105/25
-Semovente_da_20/70_quadruplo
-Semovente_da_47/32
-Semovente_da_75/18
-Semovente_da_75/34
-Semovente_da_75/46
-Semovente_da_90/53
+25
+70_quadruplo
+32
+18
+34
+46
+53
 Semper_Femina
 Semper_Fi_(film)
 Semper_Fidelis_(march)
@@ -10460,7 +10460,7 @@ Serdar_Gürler
 Serdar_Ortaç
 Serdar_Saatçı
 Serdexmethylphenidate
-Serdexmethylphenidate/dexmethylphenidate
+dexmethylphenidate
 Serdika
 Serebro
 Sereepisuth_Temeeyaves
@@ -10998,7 +10998,7 @@ Serilingampally
 Serilingampally_Assembly_constituency
 Serinda_Swan
 Serine
-Serine/threonine-specific_protein_kinase
+threonine-specific_protein_kinase
 Serine_protease
 Serinethinae
 Seringapatam_Medal
@@ -12152,7 +12152,7 @@ Sex-positive_movement
 Sex-ratio_imbalance_in_China
 Sex-selective_abortion
 Sex.com
-Sex/Life
+Life
 Sex141
 SexBomb_Girls
 SexLikeReal
@@ -13909,11 +13909,11 @@ Shalishuka
 Shalita_Grant
 Shalivahana
 Shaliza_Dhami
-Shall_We_Dance?_(1996_film)
-Shall_We_Dance?_(2004_film)
+Shall_We_Dance
+Shall_We_Dance
 Shall_We_Dance_(1937_film)
-Shall_We_Gather_at_the_River?
-Shall_We_Tell_the_President?
+Shall_We_Gather_at_the_River
+Shall_We_Tell_the_President
 Shall_and_will
 Shalla-Bal
 Shallipopi
@@ -14989,7 +14989,7 @@ Share_icon
 Share_repurchase
 Share_taxi
 Share_the_Land
-Share_the_World_/_We_Are!
+_We_Are!
 Shareasale
 Shareaza
 Sharecare
@@ -14997,7 +14997,7 @@ Sharecropping
 Shared-nothing_architecture
 Shared_Socioeconomic_Pathways
 Shared_Source_Initiative
-Shared_earning/shared_parenting_marriage
+shared_parenting_marriage
 Shared_graphics_memory
 Shared_library
 Shared_memory
@@ -16912,7 +16912,7 @@ Shenzhen
 Shenzhen_Airlines
 Shenzhen_Bao'an_International_Airport
 Shenzhen_F.C.
-Shenzhen_I/O
+O
 Shenzhen_Leopards
 Shenzhen_Metro
 Shenzhen_Peng_City_F.C.
@@ -19326,7 +19326,7 @@ Short_Sandringham
 Short_Seamew
 Short_Shorts
 Short_Singapore
-Short_Skirt/Long_Jacket
+Long_Jacket
 Short_Solent
 Short_Sperrin
 Short_Stack
@@ -19454,7 +19454,7 @@ Shoshone_National_Forest
 Shoshoni_language
 Shostka
 Shot-for-shot
-Shot/reverse_shot
+reverse_shot
 ShotSpotter
 Shot_(filmmaking)
 Shot_(ice_hockey)
@@ -19539,7 +19539,7 @@ Shoukri_brothers
 Should've_Been_a_Cowboy
 Should've_Said_No
 Should_I_Stay_or_Should_I_Go
-Should_We_Kiss_First?
+Should_We_Kiss_First
 Should_the_World_Fail_to_Fall_Apart
 Shoulda_Woulda_Coulda
 Shoulder
@@ -20079,7 +20079,7 @@ Shu_Chang_(actress)
 Shu_Han
 Shu_Qi
 Shu_Takumi
-Shu_Thayu?
+Shu_Thayu
 Shu_Uchida
 Shuafat
 Shuah
@@ -22178,7 +22178,7 @@ Signs_(film)
 Signs_and_Symbols
 Signs_and_Wonders_(The_X-Files)
 Signs_and_symptoms
-Signs_and_symptoms_of_HIV/AIDS
+AIDS
 Signs_and_symptoms_of_Parkinson's_disease
 Signs_and_symptoms_of_pregnancy
 Signs_and_wonders
@@ -22459,7 +22459,7 @@ Sildenafil
 Sildi
 Silence
 Silence!_The_Musical
-Silence..._Can_You_Hear_It?
+Silence..._Can_You_Hear_It
 Silence=Death_Project
 Silence_&_Darkness
 Silence_(1971_film)
@@ -24627,7 +24627,7 @@ Single-point_urban_interchange
 Single-precision_floating-point_format
 Single-rail_roller_coaster
 Single-reed_instrument
-Single-root_input/output_virtualization
+output_virtualization
 Single-rope_technique
 Single-serve_coffee_container
 Single-sex_education

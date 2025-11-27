@@ -28,7 +28,7 @@ The_World's_Most_Extraordinary_Homes
 The_World's_Strictest_Parents
 The_World's_Wife
 The_World,_the_Flesh_and_the_Devil_(1959_film)
-The_World/Inferno_Friendship_Society
+Inferno_Friendship_Society
 The_World_(WWE)
 The_World_(archipelago)
 The_World_(film)
@@ -621,7 +621,7 @@ Theil_index
 Theileria
 Theil–Sen_estimator
 Thein_Sein
-Their_/_They're_/_There
+_There
 Their_16_Greatest_Hits
 Their_Eyes_Were_Watching_God
 Their_Eyes_Were_Watching_God_(film)
@@ -745,7 +745,7 @@ Theme_of_Exodus
 Theme_park_live_adaptations_of_The_Lion_King
 Theme_restaurant
 Themeda_triandra
-Themes_for_Great_Cities_79/81
+81
 Themes_from_William_Blake's_The_Marriage_of_Heaven_and_Hell
 Themes_in_A_Song_of_Ice_and_Fire
 Themes_in_Avatar
@@ -1225,8 +1225,8 @@ Therapie_Taxi
 Therapist
 Therapsid
 Therapy
-Therapy?
-Therapy?_discography
+Therapy
+Therapy
 Therapy_(Anne-Marie_album)
 Therapy_(Fitzek_novel)
 Therapy_Game
@@ -1693,14 +1693,14 @@ They're_Playing_with_Fire
 They're_Red_Hot
 They're_Taking_the_Hobbits_to_Isengard
 They're_a_Weird_Mob_(film)
-They/Them_(film)
+Them_(film)
 They_(2002_film)
 They_(duo)
 They_(song)
 They_All_Laughed
 They_Are_Billions
 They_Both_Die_at_the_End
-They_Call_Me_Bruce?
+They_Call_Me_Bruce
 They_Call_Me_Jeeg
 They_Call_Me_Mister_Tibbs!
 They_Call_Me_Renegade
@@ -1743,8 +1743,8 @@ They_Reminisce_Over_You_(T.R.O.Y.)
 They_Saved_Hitler's_Brain
 They_Saved_Lisa's_Brain
 They_Shall_Not_Grow_Old
-They_Shoot_Horses,_Don't_They?_(film)
-They_Shoot_Horses,_Don't_They?_(novel)
+They_Shoot_Horses,_Don't_They
+They_Shoot_Horses,_Don't_They
 They_Shot_the_Piano_Player
 They_Think_It's_All_Over_(TV_series)
 They_Wait
@@ -1850,7 +1850,7 @@ Thiel_Audio
 Thiel_College
 Thiel_Fellowship
 Thiel_Foundation
-Thiele/Small_parameters
+Small_parameters
 Thiele_tube
 Thielert_Centurion
 Thien_Hau_Temple_(Cholon)
@@ -2010,7 +2010,7 @@ Things_We_Lost_in_the_Fire_(film)
 Things_We_Said_Today
 Things_You_Can_Tell_Just_by_Looking_at_Her
 Things_a_Man_Oughta_Know
-Things_as_They_Are;_or,_The_Adventures_of_Caleb_Williams
+Things_as_They_Are
 Things_to_Come
 Things_to_Come_(2016_film)
 Things_to_Do_in_Denver_When_You're_Dead
@@ -2078,7 +2078,7 @@ Thinking_Out_Loud
 Thinking_XXX
 Thinking_about_the_immortality_of_the_crab
 Thinking_in_Pictures
-Thinking_man's/woman's_crumpet
+woman's_crumpet
 Thinking_of_You_(I_Drive_Myself_Crazy)
 Thinking_of_You_(Katy_Perry_song)
 Thinking_outside_the_box
@@ -2420,7 +2420,7 @@ Thirty_Seconds_Over_Winterland
 Thirty_Seconds_to_Mars
 Thirty_Seconds_to_Mars_discography
 Thirty_Thousand_Islands
-Thirty_Three_&_1/3
+3
 Thirty_Tigers
 Thirty_Two_Short_Films_About_Glenn_Gould
 Thirty_Tyrants
@@ -3890,8 +3890,8 @@ Thompson's_Station,_Tennessee
 Thompson's_construction
 Thompson,_Manitoba
 Thompson-Nicola_Regional_District
-Thompson/Center_Arms
-Thompson/Center_Contender
+Center_Arms
+Center_Contender
 Thompson_(band)
 Thompson_(surname)
 Thompson_Autorifle
@@ -7177,7 +7177,7 @@ Time_Crisis_II
 Time_Crisis_with_Ezra_Koenig
 Time_Cube
 Time_Does_Not_Heal
-Time_Enna_Boss!?
+Time_Enna_Boss!
 Time_Enough_at_Last
 Time_Enough_for_Love
 Time_Exposure_(Little_River_Band_album)
@@ -7285,7 +7285,7 @@ Time_deposit
 Time_dilation
 Time_domain
 Time_evolution
-Time_flies_like_an_arrow;_fruit_flies_like_a_banana
+Time_flies_like_an_arrow
 Time_for_Beany
 Time_for_Me_to_Fly_(song)
 Time_for_Three
@@ -7522,7 +7522,7 @@ Timeline_of_German_history
 Timeline_of_Ghanaian_history
 Timeline_of_Google_Search
 Timeline_of_HAL_Tejas
-Timeline_of_HIV/AIDS
+AIDS
 Timeline_of_Haitian_history
 Timeline_of_Hindu_texts
 Timeline_of_Hurricane_Katrina
@@ -7684,7 +7684,7 @@ Timeline_of_discovery_of_Solar_System_planets_and_their_moons
 Timeline_of_diving_technology
 Timeline_of_drafting_and_ratification_of_the_United_States_Constitution
 Timeline_of_e-commerce
-Timeline_of_early_HIV/AIDS_cases
+AIDS_cases
 Timeline_of_early_Islamic_history
 Timeline_of_electrical_and_electronic_engineering
 Timeline_of_electromagnetism_and_classical_optics
@@ -9377,7 +9377,7 @@ Tiwi_Islands
 Tiwi_language
 Tiwi_people
 Tix
-Tixagevimab/cilgavimab
+cilgavimab
 Tixati
 Tixel
 Tiya_(archaeological_site)
@@ -9534,7 +9534,7 @@ To_Grandmother's_House_We_Go
 To_Green_Angel_Tower
 To_Have_and_Have_Not
 To_Have_and_Have_Not_(film)
-To_Have_or_to_Be?
+To_Have_or_to_Be
 To_Heart
 To_Heart_2
 To_Helen
@@ -9821,7 +9821,7 @@ Tobolsk
 Tobolsk_Governorate
 Tobot
 Tobramycin
-Tobramycin/dexamethasone
+dexamethasone
 Tobruk
 Tobruk_(1967_film)
 Tobu_Railway
@@ -9916,7 +9916,7 @@ Toccata
 Toccata_and_Fugue_in_D_minor,_BWV_565
 Toccatas_for_Keyboard_(Bach)
 Toccoa,_Georgia
-Toccoa/Ocoee_River
+Ocoee_River
 Tochal
 Tocharian_languages
 Tocharian_script
@@ -10718,7 +10718,7 @@ Tollense_valley_battlefield
 Toller_Cranston
 Tolleson,_Arizona
 Tollhouse
-Tollin/Robbins_Productions
+Robbins_Productions
 Tolling_(law)
 Tollund_Man
 Tolly_Lights
@@ -14037,7 +14037,7 @@ Top_Model_(Polish_TV_series)
 Top_Model_of_the_World
 Top_Off
 Top_Priority
-Top_R&B/Hip-Hop_Albums
+Hip-Hop_Albums
 Top_Ramen
 Top_Rank
 Top_Secret!
@@ -14095,7 +14095,7 @@ Topaz_Page-Green
 Topco
 Topcon
 Topcraft
-Topdog/Underdog
+Underdog
 Tope_Alabi
 Topeka,_Kansas
 Topeka_Regional_Airport
@@ -15938,7 +15938,7 @@ Toyosu
 Toyosu_Market
 Toyota
 Toyota,_Aichi
-Toyota/Save_Mart_350
+Save_Mart_350
 Toyota_2000GT
 Toyota_4Runner
 Toyota_7
@@ -16146,7 +16146,7 @@ Toyota_Prius_(XW50)
 Toyota_Prius_C
 Toyota_Prius_Plug-in_Hybrid
 Toyota_Prius_V
-Toyota_Pro/Celebrity_Race
+Celebrity_Race
 Toyota_Probox
 Toyota_Production_System
 Toyota_Progrès
@@ -19220,7 +19220,7 @@ Trentemøller
 Trentepohlia_(alga)
 Trentham_Estate
 Trentino
-Trentino-Alto_Adige/Südtirol
+Südtirol
 Trentino_Volley
 Trento
 Trento,_Agusan_del_Sur
@@ -20328,7 +20328,7 @@ Trimester
 Trimetazidine
 Trimethobenzamide
 Trimethoprim
-Trimethoprim/sulfamethoxazole
+sulfamethoxazole
 Trimethoxyamphetamine
 Trimethyl_borate
 Trimethylaluminium
@@ -22261,12 +22261,12 @@ Truth_or_Consequences
 Truth_or_Consequences,_N.M._(film)
 Truth_or_Consequences,_New_Mexico
 Truth_or_Consequences_(NCIS)
-Truth_or_Dare?_(1986_film)
+Truth_or_Dare
 Truth_or_Dare_(2012_film)
 Truth_or_Dare_(2017_film)
 Truth_or_Dare_(2018_film)
 Truth_or_Dare_by_Madonna
-Truth_or_dare?
+Truth_or_dare
 Truth_serum
 Truth_table
 Truth_value
@@ -23198,7 +23198,7 @@ Tuluva_Brahmin
 Tuluva_Narasa_Nayaka
 Tuluva_dynasty
 Tulā
-Tum?:_A_Dangerous_Obsession
+Tum
 Tum_Bin
 Tum_Bin_2
 Tum_Bin_Jaaoon_Kahaan
@@ -23749,7 +23749,7 @@ Turian_(Mass_Effect)
 Turibius_of_Mogrovejo
 Turicum
 Turiel
-Turilli_/_Lione_Rhapsody
+_Lione_Rhapsody
 Turin
 Turin_Airport
 Turin_Brakes
@@ -24055,7 +24055,7 @@ Turn_Every_Page
 Turn_It_On_Again
 Turn_It_Over
 Turn_It_Up_(Pixie_Lott_album)
-Turn_It_Up_(Remix)_/_Fire_It_Up
+_Fire_It_Up
 Turn_It_Up_(film)
 Turn_It_Up_Faggot
 Turn_It_Upside_Down
@@ -24812,7 +24812,7 @@ Twin-lens_reflex_camera
 Twin-stick_shooter
 Twin-to-twin_transfusion_syndrome
 Twin-turbo
-Twin/Tone_Records
+Tone_Records
 TwinBee
 TwinBee_(series)
 Twin_(TV_series)

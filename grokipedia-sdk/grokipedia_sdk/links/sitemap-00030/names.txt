@@ -673,7 +673,7 @@ Sita_Sings_the_Blues
 Sitaara
 Sitabuldi_Fort
 Sitagliptin
-Sitagliptin/metformin
+metformin
 Sitagu_Sayadaw
 Sitakunda
 Sitakunda_Upazila
@@ -1894,7 +1894,7 @@ SkyWest_Airlines
 SkyWorld
 Sky_(2015_film)
 Sky_(2021_film)
-Sky_(English/Australian_band)
+Australian_band)
 Sky_(New_Zealand)
 Sky_(Playboi_Carti_song)
 Sky_(Sky_album)
@@ -2322,7 +2322,7 @@ Slapton,_Devon
 Slartibartfast
 Slash's_Snakepit
 Slash-and-burn
-Slash/Back
+Back
 Slash_(album)
 Slash_(musician)
 Slash_(punctuation)
@@ -2568,7 +2568,7 @@ Slavín
 Slaxx
 Slay_the_Princess
 Slay_the_Spire
-Slayed?
+Slayed
 Slayer
 Slayer_(Buffy_the_Vampire_Slayer)
 Slayer_Farewell_Tour
@@ -3672,7 +3672,7 @@ Smash_TV
 Smash_Williams
 Smash_and_grab
 Smash_cut
-Smash_or_pass?
+Smash_or_pass
 Smash_product
 Smashburger
 Smashed_(Buffy_the_Vampire_Slayer)
@@ -3832,7 +3832,7 @@ Smith_&_Nephew
 Smith_&_Pyle
 Smith_&_Thell
 Smith_&_Wesson
-Smith_&_Wesson_.38/44
+44
 Smith_&_Wesson_459
 Smith_&_Wesson_AS
 Smith_&_Wesson_Bodyguard
@@ -4341,7 +4341,7 @@ Snakes_&_Arrows_Live
 Snakes_'n'_Ladders
 Snakes_and_Earrings
 Snakes_and_Ladders_(Gerry_Rafferty_album)
-Snakes_and_Ladders_/_The_Best_of_Faces
+_The_Best_of_Faces
 Snakes_and_ladders
 Snakes_in_Chinese_mythology
 Snakes_in_mythology
@@ -4560,7 +4560,7 @@ Snooker
 Snooker_Loopy
 Snooker_Shoot_Out
 Snooker_world_rankings
-Snooker_world_rankings_1980/1981
+1981
 Snooki
 Snooki_&_Jwoww
 Snooks_Eaglin
@@ -4869,10 +4869,10 @@ Snøhetta_(company)
 Sněžka
 So,_I_Can't_Play_H!
 So,_It's_Like_That
-So,_Who's_Paranoid?
+So,_Who's_Paranoid
 So,_we'll_go_no_more_a_roving
 So-Called_Chaos
-So..._How's_Your_Girl?
+So..._How's_Your_Girl
 So._Central_Rain_(I'm_Sorry)
 SoBe
 SoCal_Uncensored
@@ -4942,7 +4942,7 @@ So_Help_Me_Todd
 So_High_(Doja_Cat_song)
 So_Hot
 So_Hot_You're_Hurting_My_Feelings
-So_I'm_a_Spider,_So_What?
+So_I'm_a_Spider,_So_What
 So_I_Married_an_Anti-fan_(film)
 So_I_Married_an_Axe_Murderer
 So_I_Married_the_Anti-fan
@@ -4988,7 +4988,7 @@ So_So_Def_Recordings
 So_Solid_Crew
 So_Sweet..._So_Perverse
 So_Taguchi
-So_This_Is_Christmas?
+So_This_Is_Christmas
 So_This_is_Love_(Cinderella_song)
 So_Tonight_That_I_Might_See
 So_Tough
@@ -4998,7 +4998,7 @@ So_Very_Hard_to_Go
 So_Wa_Wai
 So_Weird
 So_What'cha_Want
-So_What?_(Anti-Nowhere_League_song)
+So_What
 So_What_(Joe_Walsh_album)
 So_What_(Miles_Davis_composition)
 So_What_(Pink_song)
@@ -5032,7 +5032,7 @@ So_help_me_God
 So_in_Love
 So_in_Love_(Orchestral_Manoeuvres_in_the_Dark_song)
 So_mote_it_be
-So_where_the_bloody_hell_are_you?
+So_where_the_bloody_hell_are_you
 Soa_Palelei
 Soacha
 Soad_Hosny
@@ -5263,11 +5263,11 @@ Social_Islami_Bank_Limited
 Social_Liberal_Humanist_Party
 Social_Liberal_Party_(Brazil)
 Social_Path
-Social_Path_/_Super_Bowl_(Japanese_Ver.)
+_Super_Bowl_(Japanese_Ver.)
 Social_Problems
 Social_Progress_Index
 Social_Progress_Narratives
-Social_Reform_or_Revolution?
+Social_Reform_or_Revolution
 Social_Register
 Social_Repose
 Social_Science_Research_Network
@@ -5903,7 +5903,7 @@ Sodium-cooled_fast_reactor
 Sodium-glucose_transport_proteins
 Sodium-ion_battery
 Sodium-vapor_lamp
-Sodium/glucose_cotransporter_2
+glucose_cotransporter_2
 Sodium_Reactor_Experiment
 Sodium_acetate
 Sodium_adsorption_ratio
@@ -5994,7 +5994,7 @@ Sodium_permanganate
 Sodium_peroxide
 Sodium_persulfate
 Sodium_phenylbutyrate
-Sodium_phenylbutyrate/ursodoxicoltaurine
+ursodoxicoltaurine
 Sodium_phosphate
 Sodium_picosulfate
 Sodium_polyacrylate
@@ -7106,7 +7106,7 @@ Soliton
 Soliton_(optics)
 Solitreo
 Solitude
-Solitude/Solitaire
+Solitaire
 Solitude_(football_ground)
 Solitude_Palace
 Solitude_Standing
@@ -7244,9 +7244,9 @@ Solon_Bixler
 Solonian_constitution
 Solos_(TV_series)
 Solothurn
-Solothurn_S-18/100
-Solothurn_S-18/1000
-Solothurn_S-18/1100
+100
+1000
+1100
 Solothurn_ST-5
 Soloti_military_training_ground_shooting
 Solotvyno
@@ -7692,7 +7692,7 @@ Something's_Gotta_Give_(film)
 Something's_Gotten_Hold_of_My_Heart
 Something's_Wrong_with_Us
 Something,_Something,_Something,_Dark_Side
-Something/Anything?
+Anything
 Something_(Beatles_song)
 Something_(Chairlift_album)
 Something_(Lasgo_song)
@@ -10516,7 +10516,7 @@ South_Ethiopia_Regional_State
 South_Extension
 South_Extension_metro_station
 South_Fallsburg,_New_York
-South_Ferry/Whitehall_Street_station
+Whitehall_Street_station
 South_Florida
 South_Florida_Bulls
 South_Florida_Bulls_football
@@ -10725,7 +10725,7 @@ South_Park_Street_Cemetery
 South_Park_The_Streaming_Wars
 South_Park_The_Streaming_Wars_Part_2
 South_Park_controversies
-South_Pars/North_Dome_Gas-Condensate_field
+North_Dome_Gas-Condensate_field
 South_Pasadena,_California
 South_Pasadena_High_School
 South_Pass_(Wyoming)
@@ -12798,7 +12798,7 @@ Speaker_of_the_United_States_House_of_Representatives
 Speaker_of_the_senate
 Speaker_recognition
 Speaker_types
-Speakerboxxx/The_Love_Below
+The_Love_Below
 Speakers'_Corner
 Speakers'_Corner,_Singapore
 Speaking_Out_movement
@@ -12976,7 +12976,7 @@ Special_Ops_(Indian_TV_series)
 Special_Order_191
 Special_Organization_(Ottoman_Empire)
 Special_Patrol_Group
-Special_Patrol_Insertion/Extraction
+Extraction
 Special_Period
 Special_Police_Forces_(Ukraine)
 Special_Police_Unit_of_the_Chinese_People's_Armed_Police_Force
@@ -13866,7 +13866,7 @@ Spider-Gwen
 Spider-Ham
 Spider-Island
 Spider-Man
-Spider-Man/Deadpool
+Deadpool
 Spider-Man:_Across_the_Spider-Verse
 Spider-Man:_Far_From_Home
 Spider-Man:_India
@@ -14079,7 +14079,7 @@ Spilotes_pullatus
 Spilsby
 Spilt_Milk_(Jellyfish_album)
 Spin
-Spin-1/2
+2
 Spin-off
 Spin-off_(media)
 Spin-stabilized_magnetic_levitation
@@ -14628,7 +14628,7 @@ Split-ring_resonator
 Split-single_engine
 Split-step_method
 Split-ticket_voting
-Split/Second:_Velocity
+Second:_Velocity
 Split_(2016_American_film)
 Split_(TV_series)
 Split_(bowling)
@@ -16575,7 +16575,7 @@ St._Catherine_University
 St._Catherines_Island
 St._Charles,_Illinois
 St._Charles,_Missouri
-St._Charles_/_Resurrection_Cemeteries
+_Resurrection_Cemeteries
 St._Charles_County,_Missouri
 St._Charles_Parish,_Louisiana
 St._Charles_Streetcar_Line
@@ -16699,7 +16699,7 @@ St._John's,_Newfoundland_and_Labrador
 St._John's_Cathedral_('s-Hertogenbosch)
 St._John's_Church,_Kolkata
 St._John's_College,_Agra
-St._John's_College_(Annapolis/Santa_Fe)
+Santa_Fe)
 St._John's_College_(Harare)
 St._John's_College_High_School
 St._John's_Day,_Masonic_feast
@@ -18838,7 +18838,7 @@ Star-crossed
 Star-nosed_mole
 Star-shaped_polygon
 Star-ving
-Star/Boom_Boom
+Boom_Boom
 StarBeam
 StarCraft
 StarCraft_(video_game)
@@ -20640,7 +20640,7 @@ Steel_Train
 Steel_Troops
 Steel_Vengeance
 Steel_Wheels
-Steel_Wheels/Urban_Jungle_Tour
+Urban_Jungle_Tour
 Steel_Wheels_Live
 Steel_and_Glass
 Steel_and_tin_cans
@@ -20976,11 +20976,11 @@ Steinitz_exchange_lemma
 Steinke_hood
 Steinmetz's_equation
 Steinmetz_solid
-Steins;???
-Steins;Gate
-Steins;Gate_(TV_series)
-Steins;Gate_0
-Steins;Gate_0_(TV_series)
+Steins
+Steins
+Steins
+Steins
+Steins
 Steinstossen
 Steinunn_Ólína_Þorsteinsdóttir
 Steinway_&_Sons
@@ -21240,7 +21240,7 @@ Step_in_the_Name_of_Love
 Step_into_Christmas
 Step_into_Liquid
 Step_into_a_World_(Rapture's_Delight)
-Step_into_the_Light_/_Failure_Will_Follow
+_Failure_Will_Follow
 Step_over
 Step_potential
 Step_pyramid
@@ -23635,7 +23635,7 @@ Steyr_ACR
 Steyr_AUG
 Steyr_Arms
 Steyr_GB
-Steyr_HS_.50_/_HS_.460
+_HS_.460
 Steyr_IWS_2000
 Steyr_M
 Steyr_M1912_pistol
@@ -24765,7 +24765,7 @@ Storm_of_the_Century
 Storm_of_the_Light's_Bane
 Storm_petrel
 Storm_surge
-Stormartillerivagn_m/43
+43
 Stormblåst
 Stormborn
 Stormbreaker

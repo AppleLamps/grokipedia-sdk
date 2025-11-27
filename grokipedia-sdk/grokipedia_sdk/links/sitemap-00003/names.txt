@@ -1731,7 +1731,7 @@ Albert_Pierrepoint
 Albert_Pike
 Albert_Pike_Memorial
 Albert_Pinto_Ko_Gussa_Kyoon_Aata_Hai
-Albert_Pinto_Ko_Gussa_Kyun_Aata_Hai?
+Albert_Pinto_Ko_Gussa_Kyun_Aata_Hai
 Albert_Plesman
 Albert_Popwell
 Albert_Productions
@@ -4710,7 +4710,7 @@ Alfa_Laval
 Alfa_Mist
 Alfa_Nero
 Alfa_Romeo
-Alfa_Romeo_105/115_Series_Coupés
+115_Series_Coupés
 Alfa_Romeo_145_and_146
 Alfa_Romeo_147
 Alfa_Romeo_155
@@ -5984,7 +5984,7 @@ Alice_in_Wonderland_(disambiguation)
 Alice_in_Wonderland_(film_score)
 Alice_in_Wonderland_(franchise)
 Alice_in_Wonderland_(song)
-Alice_in_Wonderland_or_What's_a_Nice_Kid_like_You_Doing_in_a_Place_like_This?
+Alice_in_Wonderland_or_What's_a_Nice_Kid_like_You_Doing_in_a_Place_like_This
 Alice_in_Wonderland_syndrome
 Alice_in_the_Cities
 Alice_in_the_Country_of_Hearts
@@ -6291,7 +6291,7 @@ Alipurduar_district
 Alipurduars_Lok_Sabha_constituency
 Aliquat_336
 Aliquippa,_Pennsylvania
-Aliquippa_Junior/Senior_High_School
+Senior_High_School
 Aliquot
 Aliquot_sequence
 Alirajpur_district
@@ -6506,7 +6506,7 @@ Alive
 Alive!_(Kiss_album)
 Alive!_The_Millennium_Concert
 Alive,_She_Cried
-Alive/Worldwide_Tour
+Worldwide_Tour
 AliveCor
 Alive_&_Well_HIV_AIDS_denialism_organization
 Alive_'N_Kickin'
@@ -6698,7 +6698,7 @@ All-Bran
 All-China_Federation_of_Trade_Unions
 All-Clad
 All-EuroLeague_Team
-All-German_Bloc/League_of_Expellees_and_Deprived_of_Rights
+League_of_Expellees_and_Deprived_of_Rights
 All-India_Muslim_League
 All-Ireland
 All-Ireland_Intermediate_Club_Football_Championship
@@ -6820,7 +6820,7 @@ All_About_Nina
 All_About_Steve
 All_About_That_Bass
 All_About_Us_(t.A.T.u._song)
-All_About_You/You've_Got_a_Friend
+You've_Got_a_Friend
 All_About_You_(album)
 All_About_the_Andersons
 All_About_the_Benjamins
@@ -7992,7 +7992,7 @@ Alliance_(Firefly)
 Alliance_(New_Zealand_political_party)
 Alliance_(Norway)
 Alliance_90
-Alliance_90/The_Greens
+The_Greens
 Alliance_Air_(India)
 Alliance_Air_Flight_7412
 Alliance_Airlines
@@ -8741,7 +8741,7 @@ Alondra_Nelson
 Alondra_de_la_Parra
 Alone
 Alone,_Pt._II
-Alone/Together
+Together
 Alone_(2007_film)
 Alone_(2015_Hindi_film)
 Alone_(2015_Kannada_film)
@@ -10089,18 +10089,18 @@ AmTran
 AmTrust_Financial_Services
 Am_Abend
 Am_Fear_Liath_Mòr
-Am_I_Actually_the_Strongest?
-Am_I_Being_Unreasonable?
-Am_I_Blue?
+Am_I_Actually_the_Strongest
+Am_I_Being_Unreasonable
+Am_I_Blue
 Am_I_Dreaming_(Metro_Boomin,_ASAP_Rocky_and_Roisee_song)
 Am_I_Ever_Gonna_See_Your_Face_Again
-Am_I_Evil?
-Am_I_Next?_slogan
-Am_I_Not_Your_Girl?
-Am_I_OK?
+Am_I_Evil
+Am_I_Next
+Am_I_Not_Your_Girl
+Am_I_OK
 Am_I_That_Easy_to_Forget
 Am_I_Wrong
-Am_I_a_Girl?
+Am_I_a_Girl
 Am_I_the_Only_One_(Aaron_Lewis_song)
 Am_I_the_Same_Girl
 Am_Spiegelgrund_clinic
@@ -11681,7 +11681,7 @@ American_Basketball_League_(1996–1998)
 American_Battle_Monuments_Commission
 American_Battlefield_Trust
 American_Beach,_Florida
-American_Beauty/American_Psycho
+American_Psycho
 American_Beauty_(1999_film)
 American_Beauty_(EP)
 American_Beauty_(album)
@@ -13428,7 +13428,7 @@ Amoureuse
 Amourricho_van_Axel_Dongen
 Amoxapine
 Amoxicillin
-Amoxicillin/clavulanic_acid
+clavulanic_acid
 Amoy_dialect
 Amp
 Amp_Fiddler
@@ -15572,7 +15572,7 @@ Ancylostoma_duodenale
 Ancylostomiasis
 Ancylotherium
 And
-And/or
+or
 And_All_That_Could_Have_Been
 And_Also_the_Trees
 And_Another_Thing..._(novel)
@@ -15631,13 +15631,13 @@ And_This_Is_Our_Music
 And_We_Danced_(Macklemore_song)
 And_We_Danced_(The_Hooters_song)
 And_We_Run
-And_When_Did_You_Last_See_Your_Father?
+And_When_Did_You_Last_See_Your_Father
 And_When_I_Die
 And_When_the_Sky_Was_Opened
 And_Winter_Came...
 And_Yet,_You_Are_So_Sweet
 And_Yet_the_Town_Moves
-And_You_Thought_There_Is_Never_a_Girl_Online?
+And_You_Thought_There_Is_Never_a_Girl_Online
 And_You_and_I
 And_Your_Bird_Can_Sing
 And_death_shall_have_no_dominion
@@ -19328,7 +19328,7 @@ Animacy
 Animage
 Animal
 Animal's_People
-Animal,_Vegetable,_Mineral?
+Animal,_Vegetable,_Mineral
 Animal,_Vegetable,_Miracle
 Animal-Vegetable-Mineral_Man
 Animal-assisted_therapy
@@ -21566,7 +21566,7 @@ Anonno_Mamun
 Anonychia
 Anonymity
 Anonymous
-Anonymous;Code
+Anonymous
 Anonymous_(film)
 Anonymous_(hacker_group)
 Anonymous_Bodies_in_an_Empty_Room
@@ -22494,7 +22494,7 @@ Anthony_Jung
 Anthony_K._Roberts
 Anthony_Kaldellis
 Anthony_Kalik
-Anthony_Kaun_Hai?
+Anthony_Kaun_Hai
 Anthony_Kay
 Anthony_Kennedy
 Anthony_Kenny
@@ -22972,7 +22972,7 @@ Anti-Rightist_Campaign
 Anti-Romani_sentiment
 Anti-Romanian_sentiment
 Anti-Russian_sentiment
-Anti-SSA/Ro_autoantibodies
+Ro_autoantibodies
 Anti-Saloon_League
 Anti-Scl-70_antibodies
 Anti-Scottish_sentiment
@@ -23010,7 +23010,7 @@ Anti-Western_sentiment
 Anti-Western_sentiment_in_China
 Anti-Zionism
 Anti-_(record_label)
-Anti-access/area_denial
+area_denial
 Anti-aging_movement
 Anti-aging_product
 Anti-aircraft_warfare
@@ -24051,7 +24051,7 @@ Antoniusstraße
 Antonivka_Road_Bridge
 Antonomasia
 Antonov
-Antonov/Taqnia_An-132
+Taqnia_An-132
 Antonov_A-40
 Antonov_Airlines
 Antonov_An-10
@@ -24500,7 +24500,7 @@ Any_Major_Dude_Will_Tell_You
 Any_Man_of_Mine
 Any_Number_Can_Play
 Any_Number_Can_Win_(film)
-Any_Questions_for_Ben?
+Any_Questions_for_Ben
 Any_Road
 Any_Song
 Any_Time,_Any_Place
@@ -24536,8 +24536,8 @@ Anyang_Jung_Kwan_Jang_Red_Boosters
 Anyanwu
 Anyanya
 Anybody_Killa
-Anybody_Seen_My_Baby?
-Anybody_Wanna_Buy_a_Heart?
+Anybody_Seen_My_Baby
+Anybody_Wanna_Buy_a_Heart
 Anybody_but_Bush
 Anycast
 Anyim_Pius_Anyim
@@ -24696,8 +24696,8 @@ Aonla,_Uttar_Pradesh
 Aonla_Lok_Sabha_constituency
 Aontú
 Aoora
-Aoraki_/_Mount_Cook
-Aoraki_/_Mount_Cook_National_Park
+_Mount_Cook
+_Mount_Cook_National_Park
 Aori_Qileng
 Aorist
 Aorist_(Ancient_Greek)

@@ -253,7 +253,7 @@ DCB_Bank
 DCC
 DCC_plc
 DCD2_Records
-DCE/RPC
+RPC
 DCF77
 DCI
 DCI-P3
@@ -317,7 +317,7 @@ DCappella
 DCeased
 DD
 DD-WRT
-DD/MM/YYYY
+YYYY
 DDB_Mudra
 DDB_Worldwide
 DDD
@@ -830,7 +830,7 @@ DOM_event
 DONKEY.BAS
 DOP
 DOS
-DOS/V
+V
 DOSAAF
 DOSBox
 DOS_API
@@ -1177,7 +1177,7 @@ Da_Vinci_(disambiguation)
 Da_Vinci_Surgical_System
 Da_Vinci_Systems
 Da_Vinci_family
-Da_Ya_Think_I'm_Sexy?
+Da_Ya_Think_I'm_Sexy
 Da_Yoopers
 Da_Youngsta's
 Da_capo
@@ -1335,7 +1335,7 @@ Dactylotum_bicolor
 Dactyls_(mythology)
 Dactyly
 Dacula,_Georgia
-Dad!_Where_Are_We_Going?
+Dad!_Where_Are_We_Going
 Dad's_Army
 Dad's_Army_(2016_film)
 Dad's_Army_missing_episodes
@@ -1391,7 +1391,7 @@ Daddy's_Little_Girl
 Daddy's_Little_Girl_(film)
 Daddy's_Little_Girls
 Daddy,_I'm_a_Zombie
-Daddy,_what_did_you_do_in_the_Great_War?
+Daddy,_what_did_you_do_in_the_Great_War
 Daddy-Long-Legs_(1919_film)
 Daddy-Long-Legs_(2005_film)
 Daddy-Long-Legs_(novel)
@@ -3777,9 +3777,9 @@ Dance,_Girl,_Dance
 Dance-pop
 Dance-punk
 Dance-rock
-Dance/Electronic_Albums
-Dance/Electronic_Songs
-Dance/Mix_Show_Airplay
+Electronic_Albums
+Electronic_Songs
+Mix_Show_Airplay
 Dance_'til_Dawn
 Dance_(Ass)
 Dance_(Gary_Numan_album)
@@ -5442,7 +5442,7 @@ Danja_(record_producer)
 Danja_production_discography
 Danjaq
 Danjiri_Matsuri
-Danjo_no_Yūjō_wa_Seiritsu_Suru?_(Iya,_Shinai!!)
+Danjo_no_Yūjō_wa_Seiritsu_Suru
 Danjong_of_Joseon
 Danka_Kovinić
 Dankaur
@@ -5856,7 +5856,7 @@ Dano_Heriban
 Danone
 Danone_Nations_Cup
 Danone_North_America
-Dans_le_Noir_?
+Dans_le_Noir_
 Dansband
 Dansby_Swanson
 Danse_Macabre
@@ -7573,7 +7573,7 @@ Dasol
 Daspletosaurus
 Dassam_Falls
 Dassault-Breguet_Super_Étendard
-Dassault/Dornier_Alpha_Jet
+Dornier_Alpha_Jet
 Dassault_Aviation
 Dassault_Balzac_V
 Dassault_Falcon
@@ -11289,7 +11289,7 @@ Day-Timer
 Day-age_creationism
 Day-fine
 Day-year_principle
-Day/night_cricket
+night_cricket
 Day26
 Day6
 Day69
@@ -15596,7 +15596,7 @@ Delahaye_175
 Delain
 Delamination
 Delancey_Street
-Delancey_Street/Essex_Street_station
+Essex_Street_station
 Deland_McCullough
 Delaney_&_Bonnie
 Delaney_Bramlett
@@ -15909,7 +15909,7 @@ Delinquent_Habits
 Delio_Onnis
 Deliquescence_(album)
 Deliriant
-Delirious?
+Delirious
 Delirious_(1991_film)
 Delirious_(2006_film)
 Delirious_(Prince_song)
@@ -19075,7 +19075,7 @@ Derrimut,_Victoria
 Derringer
 Derrius_Guice
 Derry,_New_Hampshire
-Derry/Londonderry_name_dispute
+Londonderry_name_dispute
 Derry_(Stephen_King)
 Derry_City_F.C.
 Derry_City_and_Strabane_District_Council
@@ -20051,7 +20051,7 @@ Detritus_(geology)
 Detroit
 Detroit,_Toledo_and_Ironton_Railroad
 Detroit-style_pizza
-Detroit/Hamtramck_Assembly
+Hamtramck_Assembly
 Detroit_(1920s_NFL_teams)
 Detroit_(film)
 Detroit_(mixtape)
@@ -21062,8 +21062,8 @@ Dextro-Transposition_of_the_great_arteries
 Dextroamphetamine
 Dextrocardia
 Dextromethorphan
-Dextromethorphan/bupropion
-Dextromethorphan/quinidine
+bupropion
+quinidine
 Dextromethorphan_regulation_by_U.S._jurisdiction
 Dextromoramide
 Dextropropoxyphene
@@ -21775,7 +21775,7 @@ Diagnosis-related_group
 Diagnosis_(American_TV_series)
 Diagnosis_code
 Diagnosis_of_Asperger_syndrome
-Diagnosis_of_HIV/AIDS
+AIDS
 Diagnosis_of_autism
 Diagnosis_of_exclusion
 Diagnosis_of_malaria
@@ -22876,16 +22876,16 @@ Dictyota
 Dicyclopentadiene
 Dicycloverine
 Dicynodont
-Did_I_Shave_My_Legs_for_This?
-Did_I_Stutter?
+Did_I_Shave_My_Legs_for_This
+Did_I_Stutter
 Did_It_On'em
 Did_It_in_a_Minute
-Did_Jesus_Exist?_(Ehrman_book)
-Did_She_Mention_My_Name?
-Did_Six_Million_Really_Die?_pamphlet
-Did_You_Ever_See_a_Lassie?
-Did_You_Hear_About_the_Morgans?
-Did_You_Know_Gaming?
+Did_Jesus_Exist
+Did_She_Mention_My_Name
+Did_Six_Million_Really_Die
+Did_You_Ever_See_a_Lassie
+Did_You_Hear_About_the_Morgans
+Did_You_Know_Gaming
 Did_You_Know_That_There's_a_Tunnel_Under_Ocean_Blvd
 Did_You_Know_That_There's_a_Tunnel_Under_Ocean_Blvd_(song)
 Did_not_finish
@@ -22954,11 +22954,11 @@ Didier_Zokora
 Didinium
 Didit_Hediprasetyo
 Didius_Julianus
-Didn't_Cha_Know?
-Didn't_I_Say_to_Make_My_Abilities_Average_in_the_Next_Life?!
+Didn't_Cha_Know
+Didn't_I_Say_to_Make_My_Abilities_Average_in_the_Next_Life
 Didn't_It_Rain_(Hugh_Laurie_album)
 Didn't_We_Almost_Have_It_All
-Didn't_We_Almost_Have_It_All?
+Didn't_We_Almost_Have_It_All
 Dido
 Dido's_Lament
 Dido,_Queen_of_Carthage_(play)
@@ -24064,7 +24064,7 @@ Dil_Raju
 Dil_Ruba
 Dil_Sambhal_Jaa_Zara
 Dil_Se..
-Dil_Se_Di_Dua..._Saubhagyavati_Bhava?
+Dil_Se_Di_Dua..._Saubhagyavati_Bhava
 Dil_Se_Dil_Tak
 Dil_Se_Diya_Vachan
 Dil_Tera_Aashiq

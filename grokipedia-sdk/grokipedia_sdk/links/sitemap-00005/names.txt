@@ -1813,7 +1813,7 @@ Bat_hawk
 Bat_phone
 Bat_ray
 Bat_virome
-Bata,_Bata..._Pa'no_Ka_Ginawa?
+Bata,_Bata..._Pa'no_Ka_Ginawa
 Bata,_Equatorial_Guinea
 Bata_Corporation
 Bata_Shoe_Museum
@@ -2052,8 +2052,8 @@ Batley_and_Spen_(UK_Parliament_constituency)
 Batman
 Batman's_utility_belt
 Batman,_Turkey
-Batman/Aliens
-Batman/Teenage_Mutant_Ninja_Turtles
+Aliens
+Teenage_Mutant_Ninja_Turtles
 Batman:_Arkham_Knight
 Batman:_The_Long_Halloween
 Batman_&_Bill
@@ -4753,7 +4753,7 @@ Battlestar_Galactica_(season_4)
 Battlestar_Galactica_Deadlock
 Battlestar_Galactica_Online
 Battletoads
-Battletoads/Double_Dragon
+Double_Dragon
 Battletoads_(1991_video_game)
 Battletoads_(2020_video_game)
 Battletoads_Arcade
@@ -4883,7 +4883,7 @@ Bava_Bavamaridi
 Bava_Chelladurai
 Bava_Kamma
 Bava_Nachadu
-Bavagaru_Bagunnara?
+Bavagaru_Bagunnara
 Bavand_dynasty
 Bavar-373
 Bavaria
@@ -8352,7 +8352,7 @@ Belostomatidae
 Belote
 Belouis_Some
 Belousov–Zhabotinsky_reaction
-Beloved!_Paradise!_Jazz!?
+Beloved!_Paradise!_Jazz!
 Beloved_(1998_film)
 Beloved_(band)
 Beloved_(novel)
@@ -8486,7 +8486,7 @@ Belzoni,_Mississippi
 Belçim_Bilgin
 Belém
 Belém,_Lisbon
-Belém/Val-de-Cans_International_Airport
+Val-de-Cans_International_Airport
 Belém_Cultural_Center
 Belém_Palace
 Belém_Tower
@@ -10655,7 +10655,7 @@ Berlin-Bonn_Act
 Berlin-Hohenschönhausen_Memorial
 Berlin-class_replenishment_ship
 Berlin-to-Kitchener_name_change
-Berlin/Brandenburg_Metropolitan_Region
+Brandenburg_Metropolitan_Region
 Berlin_(Lou_Reed_album)
 Berlin_(Money_Heist)
 Berlin_(Spanish_TV_series)
@@ -11598,7 +11598,7 @@ Best_Friend_of_Charleston
 Best_Friends_(1982_film)
 Best_Friends_(professional_wrestling)
 Best_Friends_Animal_Society
-Best_Friends_Forever?
+Best_Friends_Forever
 Best_Friends_Forever_(American_TV_series)
 Best_Friends_Forever_(South_Park)
 Best_Friends_Whenever
@@ -12711,7 +12711,7 @@ Beyond_Good_and_Evil
 Beyond_Good_and_Evil_(film)
 Beyond_Good_and_Evil_2
 Beyond_Gravity
-Beyond_Hell/Above_Heaven
+Above_Heaven
 Beyond_International
 Beyond_Justice
 Beyond_Lies_the_Wub
@@ -14100,7 +14100,7 @@ Bicorn_and_Chichevache
 Bicorne
 Bicornuate_uterus
 Bictegravir
-Bictegravir/emtricitabine/tenofovir_alafenamide
+tenofovir_alafenamide
 Bicubic_interpolation
 Bicuculline
 Bicuspid_aortic_valve
@@ -14237,7 +14237,7 @@ Biebrich_Palace
 Biedermeier
 Biedronka
 Biefeld–Brown_effect
-Biel/Bienne
+Bienne
 Biela's_Comet
 Bieldside
 Bielefeld
@@ -17469,7 +17469,7 @@ Bionic_Commando_(1988_video_game)
 Bionic_Commando_(2009_video_game)
 Bionic_Commando_Rearmed
 Bionic_Commando_Rearmed_2
-Bionic_Ever_After?
+Bionic_Ever_After
 Bionic_Six
 Bionic_Woman_(2007_TV_series)
 Bionic_contact_lens
@@ -17959,7 +17959,7 @@ Birshrestha_Noor_Mohammad_Public_College
 Birstall,_West_Yorkshire
 Birtamod_Municipality
 Birth
-Birth/Rebirth
+Rebirth
 Birth_(2004_film)
 Birth_Control_(band)
 Birth_aboard_aircraft_and_ships
@@ -18291,7 +18291,7 @@ Bistatic_radar
 Bistec_de_palomilla
 Bistecca_alla_fiorentina
 Bistek
-Bisti/De-Na-Zin_Wilderness
+De-Na-Zin_Wilderness
 Bisto
 Bistre
 Bistriflimide
@@ -19021,7 +19021,7 @@ Black_Economic_Empowerment
 Black_Elk
 Black_Elk_Peak
 Black_Elk_Speaks
-Black_Elvis/Lost_in_Space
+Lost_in_Space
 Black_Emanuelle
 Black_Emanuelle_2
 Black_Enterprise
@@ -19923,7 +19923,7 @@ Blackboard_bold
 Blackboard_system
 Blackbox
 Blackbox_Life_Recorder_21f
-Blackbox_Life_Recorder_21f_/_In_a_Room7_F760
+_In_a_Room7_F760
 Blackboxing
 Blackbraid
 Blackbriar_(band)
@@ -20066,7 +20066,7 @@ Blacknose_shark
 Blackout
 Blackout!_(Method_Man_&_Redman_album)
 Blackout!_2
-Blackout/All_Clear
+All_Clear
 Blackout_(1985_film)
 Blackout_(2007_film)
 Blackout_(2008_American_film)
@@ -20641,7 +20641,7 @@ Blasius_boundary_layer
 Blasket_Islands
 Blasphemous_(video_game)
 Blasphemous_2
-Blasphemous_Rumours_/_Somebody
+_Somebody
 Blasphemy
 Blasphemy_(band)
 Blasphemy_Day
@@ -22022,7 +22022,7 @@ Blue-water_navy
 Blue-winged_macaw
 Blue-winged_parakeet
 Blue-winged_teal
-Blue/Orange
+Orange
 Blue1
 BlueBorne_(security_vulnerability)
 BlueCo
@@ -22264,7 +22264,7 @@ Blue_Lagoon_Island
 Blue_Lake,_California
 Blue_Lake_(Croatia)
 Blue_Lake_(Tasman)
-Blue_Lake_/_Warwar
+_Warwar
 Blue_Lantern_Corps
 Blue_Legion
 Blue_Letter_Bible
@@ -22449,7 +22449,7 @@ Blue_Star_Ferries
 Blue_Star_Kachina
 Blue_Star_Line
 Blue_Star_Memorial_Highway
-Blue_Stars/FIFA_Youth_Cup
+FIFA_Youth_Cup
 Blue_Stars_Drum_and_Bugle_Corps
 Blue_Steel_(1990_film)
 Blue_Steel_(missile)
@@ -24609,7 +24609,7 @@ Boeing_EA-18G_Growler
 Boeing_EC-135
 Boeing_Everett_Factory
 Boeing_F-15EX_Eagle_II
-Boeing_F/A-18E/F_Super_Hornet
+F_Super_Hornet
 Boeing_F2B
 Boeing_Field
 Boeing_Insitu_RQ-21_Blackjack
@@ -24714,20 +24714,20 @@ Bofedales
 Boff_Whalley
 Boffin
 Bofors
-Bofors/Nexter_Bonus
-Bofors_120_mm_Automatic_Gun_L/46
-Bofors_25_mm_M/32
-Bofors_283_mm_M/12_naval_gun
+Nexter_Bonus
+46
+32
+12_naval_gun
 Bofors_375mm_anti_submarine_rockets
 Bofors_37_mm_anti-tank_gun
-Bofors_40_mm_Automatic_Gun_L/70
-Bofors_40_mm_L/60_gun
+70
+60_gun
 Bofors_40_mm_gun
-Bofors_57_mm_Naval_Automatic_Gun_L/60
-Bofors_57_mm_Naval_Automatic_Gun_L/70
+60
+70
 Bofors_57_mm_anti-tank_gun
 Bofors_57_mm_gun
-Bofors_57_mm_m/47_aircraft_gun
+47_aircraft_gun
 Bofors_75_mm_Model_1934
 Bofors_STRIX
 Bofors_scandal

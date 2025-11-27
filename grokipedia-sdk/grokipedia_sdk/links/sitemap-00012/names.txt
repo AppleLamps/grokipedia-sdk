@@ -597,7 +597,7 @@ Firewind
 Firewood
 Firework_(song)
 Fireworks
-Fireworks,_Should_We_See_It_from_the_Side_or_the_Bottom?_(1993_film)
+Fireworks,_Should_We_See_It_from_the_Side_or_the_Bottom
 Fireworks_(1947_film)
 Fireworks_(2017_film)
 Fireworks_(Angra_album)
@@ -3543,7 +3543,7 @@ Flipper_Anderson
 Flipper_Zero
 Flippin,_Arkansas
 Flipping
-Flipping_101_w/_Tarek_El_Moussa
+_Tarek_El_Moussa
 Flipping_Out
 Flipping_Vegas
 Flipsyde
@@ -3691,7 +3691,7 @@ Floods_in_India
 Floods_in_the_United_States_(2000–present)
 Floogals
 Flook_(band)
-FloopaLoo,_Where_Are_You?
+FloopaLoo,_Where_Are_You
 Floor
 Floor_(gymnastics)
 Floor_Is_Lava
@@ -4332,7 +4332,7 @@ Flowers_and_Trees
 Flowers_for_Algernon
 Flowers_for_Algernon_(film)
 Flowers_for_Mrs_Harris_(musical)
-Flowers_for_Vases_/_Descansos
+_Descansos
 Flowers_in_the_Attic
 Flowers_in_the_Attic_(1987_film)
 Flowers_in_the_Attic_(2014_film)
@@ -4560,7 +4560,7 @@ Fluorouracil
 Fluoxetine
 Fluoxymesterone
 Flupentixol
-Flupentixol/melitracen
+melitracen
 Fluphenazine
 Flupirtine
 Fluppy_Dogs
@@ -4585,9 +4585,9 @@ Flushing–Main_Street_station_(IRT_Flushing_Line)
 Flute
 Flute_Concerto_No._1_(Mozart)
 Fluticasone
-Fluticasone/salmeterol
+salmeterol
 Fluticasone_furoate
-Fluticasone_furoate/vilanterol
+vilanterol
 Fluticasone_propionate
 Flutie_Flakes
 Fluting_(architecture)
@@ -4696,7 +4696,7 @@ Fly_by_Night_(musical)
 Fly_fishing
 Fly_from_Here
 Fly_in_the_ointment
-Fly_on_the_Wall_(AC/DC_album)
+DC_album)
 Fly_on_the_Wall_(song)
 Fly_on_the_Wings_of_Love
 Fly_on_the_wall
@@ -5040,7 +5040,7 @@ FokI
 Fokino,_Primorsky_Krai
 Fokker
 Fokker-Leimberger
-Fokker/Republic_D-24_Alliance
+Republic_D-24_Alliance
 Fokker_100
 Fokker_50
 Fokker_70
@@ -5937,7 +5937,7 @@ For_Britain_Movement
 For_Broken_Ears
 For_Certain_Because
 For_Colored_Girls
-For_Colored_Girls_Who_Have_Considered_Suicide_/_When_the_Rainbow_Is_Enuf
+_When_the_Rainbow_Is_Enuf
 For_Crying_Out_Loud_(album)
 For_Dummies
 For_Earth_Below
@@ -5946,7 +5946,7 @@ For_Emma,_Forever_Ago
 For_Esmé—with_Love_and_Squalor
 For_Ever_(Jungle_album)
 For_Everyman
-For_Free?_(Interlude)
+For_Free
 For_Free_(album)
 For_Georgia
 For_Girls_Who_Grow_Plump_in_the_Night
@@ -6277,7 +6277,7 @@ Forcipule
 Ford
 Ford's_Garage
 Ford's_Theatre
-Ford-Cosworth_EC_/_ED_engine
+_ED_engine
 Ford-Cosworth_HB_engine
 Ford-Utilimaster_FFV
 Ford_(crossing)
@@ -6294,7 +6294,7 @@ Ford_6R_transmission
 Ford_7Y
 Ford_8.8_axle
 Ford_9-inch_axle
-Ford_AJD-V6/PSA_DT17
+PSA_DT17
 Ford_AOD_transmission
 Ford_AXOD_transmission
 Ford_A_series
@@ -7069,7 +7069,7 @@ Forensic_science
 Forensic_serology
 Forensic_toxicology
 Foreplay
-Foreplay/Long_Time
+Long_Time
 Forequarter_amputation
 Forerunner_Saga
 Foreshadowing
@@ -8742,7 +8742,7 @@ Four_Tops_Second_Album
 Four_Tops_discography
 Four_Treasures_of_the_Study
 Four_Treasures_of_the_Tuatha_Dé_Danann
-Four_Walls_/_Paradise_Circus
+_Paradise_Circus
 Four_Walls_and_a_Roof
 Four_Weddings
 Four_Weddings_and_a_Funeral
@@ -9294,7 +9294,7 @@ Framing_Britney_Spears
 Framing_Hanley
 Framing_effect_(psychology)
 Framingham,_Massachusetts
-Framingham/Worcester_Line
+Worcester_Line
 Framingham_Heart_Study
 Framingham_Risk_Score
 Framingham_State_University
@@ -11181,7 +11181,7 @@ Franklin,_Pennsylvania
 Franklin,_Tennessee
 Franklin,_Texas
 Franklin,_Virginia
-Franklin/Foxboro_Line
+Foxboro_Line
 FranklinCovey
 Franklin_&_Bash
 Franklin_&_Marshall_College
@@ -11192,7 +11192,7 @@ Franklin_(class)
 Franklin_(given_name)
 Franklin_(miniseries)
 Franklin_(village),_New_York
-Franklin_Avenue/Botanic_Garden_station
+Botanic_Garden_station
 Franklin_Avenue_Shuttle
 Franklin_Avenue_station_(Fulton_Street)
 Franklin_Barbecue
@@ -14285,7 +14285,7 @@ Friend_of_a_Friend_(Foo_Fighters_song)
 Friend_of_a_friend
 Friend_of_the_Devil
 Friend_of_the_World
-Friend_or_Foe?_(game_show)
+Friend_or_Foe
 Friend_zone
 Friendica
 Friending_and_following
@@ -14384,7 +14384,7 @@ Frieren
 Friern_Hospital
 Fries's_Rebellion
 Fries_rearrangement
-Fries_with_That?
+Fries_with_That
 Friesian_Sporthorse
 Friesian_horse
 Friesland
@@ -14729,7 +14729,7 @@ From_Mars_to_Sirius
 From_Me_Flows_What_You_Call_Time_(novella)
 From_Me_to_U
 From_Me_to_You
-From_Memphis_to_Vegas_/_From_Vegas_to_Memphis
+_From_Vegas_to_Memphis
 From_Nothin'_to_Somethin'
 From_Now_On,_Showtime!
 From_Nowhere
@@ -14960,8 +14960,8 @@ Frosinone_Calcio
 Froskurinn
 Frost
 Frost*
-Frost/Nixon_(film)
-Frost/Nixon_(play)
+Nixon_(film)
+Nixon_(play)
 FrostWire
 Frost_&_Fire_(Adventure_Time)
 Frost_&_Sullivan
@@ -15722,7 +15722,7 @@ Full_Members'_Cup
 Full_Metal_Jacket
 Full_Metal_Panic!
 Full_Metal_Panic!_(season_2)
-Full_Metal_Panic?_Fumoffu
+Full_Metal_Panic
 Full_Moon,_Dirty_Hearts
 Full_Moon_(Brandy_album)
 Full_Moon_(Kris_Kristofferson_and_Rita_Coolidge_album)
@@ -15834,7 +15834,7 @@ Fulton_Fish_Market
 Fulton_Hogan
 Fulton_Houses
 Fulton_J._Sheen
-Fulton_MX991/U_Flashlight
+U_Flashlight
 Fulton_Mackay
 Fulton_Market_District
 Fulton_Street_(Brooklyn)
@@ -16545,7 +16545,7 @@ Future_Combat_Systems_Manned_Ground_Vehicles
 Future_Commando_Force
 Future_Cop_(TV_series)
 Future_Cops
-Future_Cruise/Anti-Ship_Weapon
+Anti-Ship_Weapon
 Future_Days
 Future_Development
 Future_Diary
@@ -16877,7 +16877,7 @@ Führersonderzug
 Für_Alina
 Für_Elise
 Fürst
-Fürstenberg/Havel
+Havel
 Fürstenfeldbruck
 Fürstenzug
 Fürth
@@ -17134,7 +17134,7 @@ G._Wood
 G.co
 G.hn
 G.o.d
-G/O_Media
+O_Media
 G0_phase
 G10_currencies
 G12_Vision
@@ -17188,8 +17188,8 @@ G8+5
 GA
 GA-20
 GA16DE
-GAA/GPA_Footballer_of_the_Year
-GAA/GPA_Hurler_of_the_Year
+GPA_Footballer_of_the_Year
+GPA_Hurler_of_the_Year
 GAA_GPA_All_Stars_Awards
 GAA_Interprovincial_Championship
 GABAA_receptor
@@ -17214,7 +17214,7 @@ GAIL
 GAIN_Capital
 GAIS
 GAI_(musician)
-GAL4/UAS_system
+UAS_system
 GALEX
 GAL_(paramilitary_group)
 GAM-63_RASCAL
@@ -17262,7 +17262,7 @@ GAZ_Volga
 GAZelle
 GA_Personal_Defense_Weapon
 GB
-GB/T_charging_standard
+T_charging_standard
 GB3_Championship
 GBH_(band)
 GBI_(German_Bold_Italic)
@@ -17276,10 +17276,10 @@ GBU-27_Paveway_III
 GBU-28
 GBU-37_GPS-Aided_Munition
 GBU-39_Small_Diameter_Bomb
-GBU-43/B_MOAB
+B_MOAB
 GBU-44%2fB_Viper_Strike
-GBU-53/B_StormBreaker
-GBU-57A/B_MOP
+B_StormBreaker
+B_MOP
 GBU-8
 GB_18030
 GB_2312
@@ -17537,7 +17537,7 @@ GMC_Denali
 GMC_Envoy
 GMC_General
 GMC_Hummer_EV
-GMC_Sprint_/_Caballero
+_Caballero
 GMC_Syclone
 GMC_Terrain
 GMC_Typhoon
@@ -17632,7 +17632,7 @@ GNSS_applications
 GNSS_augmentation
 GNS_theory
 GNU
-GNU/Linux_naming_controversy
+Linux_naming_controversy
 GNU_Affero_General_Public_License
 GNU_Assembler
 GNU_Autotools
@@ -19660,7 +19660,7 @@ Game_Genie
 Game_Grumps
 Game_Informer
 Game_Jolt
-Game_Ka_Na_Ba?
+Game_Ka_Na_Ba
 Game_Link_Cable
 Game_Night_(Brooklyn_Nine-Nine)
 Game_Night_(film)
@@ -20277,7 +20277,7 @@ Ganiga
 Ganina_Yama
 Ganira_Pashayeva
 Ganirelix
-Ganito_Kami_Noon..._Paano_Kayo_Ngayon?
+Ganito_Kami_Noon..._Paano_Kayo_Ngayon
 Ganj-i-Sawai
 Ganj_Basoda
 Ganj_Dareh
@@ -21064,7 +21064,7 @@ Garter_Principal_King_of_Arms
 Garter_snake
 Garth_(comics)
 Garth_Brooks
-Garth_Brooks/Plus_ONE
+Plus_ONE
 Garth_Brooks_&_the_Magic_of_Christmas
 Garth_Brooks_(album)
 Garth_Brooks_discography
@@ -21120,7 +21120,7 @@ Garveyism
 Garwin_Sanford
 Gary
 Gary,_Indiana
-Gary/Chicago_International_Airport
+Chicago_International_Airport
 Gary_&_Mike
 Gary_(given_name)
 Gary_(rapper)
@@ -21613,7 +21613,7 @@ Gas-fired_power_plant
 Gas-generator_cycle
 Gas-operated_reloading
 Gas-s-s-s
-Gas/oil_ratio
+oil_ratio
 GasBuddy
 Gas_(Hopper)
 Gas_(app)
@@ -21971,7 +21971,7 @@ Gatha_(India)
 Gatha_(Zoroaster)
 Gatha_Navnathanchi
 Gathbandhan
-Gather/scatter_(vector_addressing)
+scatter_(vector_addressing)
 Gather_(film)
 Gather_Me
 Gather_Together_in_My_Name
@@ -23311,7 +23311,7 @@ Gendry
 Gendèr
 Gene
 Gene-centered_view_of_evolution
-GeneXpert_MTB/RIF
+RIF
 Gene_(band)
 Gene_Amdahl
 Gene_Ammons
@@ -23498,7 +23498,7 @@ Generac
 General's_Lady
 General-purpose_bomb
 General-purpose_computing_on_graphics_processing_units
-General-purpose_input/output
+output
 General-purpose_language
 General-purpose_machine_gun
 General-purpose_macro_processor
@@ -23581,13 +23581,13 @@ General_Dynamics_Land_Systems
 General_Dynamics_Mission_Systems
 General_Dynamics_UK
 General_Dynamics_X-62_VISTA
-General_Dynamics–Boeing_AFTI/F-111A_Aardvark
+F-111A_Aardvark
 General_Dynamics–Grumman_EF-111A_Raven
 General_Dynamics–Grumman_F-111B
 General_Education_Board
 General_Educational_Development
 General_Electric
-General_Electric/Rolls-Royce_F136
+Rolls-Royce_F136
 General_Electric_Affinity
 General_Electric_Building
 General_Electric_CF34

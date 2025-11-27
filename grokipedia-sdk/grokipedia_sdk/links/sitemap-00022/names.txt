@@ -200,9 +200,9 @@ May_Gibbs
 May_God_Save_Us
 May_Golan
 May_Hallatt
-May_I_Come_In_Madam?
-May_I_Come_In_Madam?_(season_2)
-May_I_Help_You?
+May_I_Come_In_Madam
+May_I_Come_In_Madam
+May_I_Help_You
 May_I_Sing_with_Me
 May_It_Be
 May_It_Please_the_Court
@@ -231,7 +231,7 @@ May_Uprising_in_Dresden
 May_Warden
 May_Week
 May_Whitty
-May_Who?
+May_Who
 May_Wright
 May_Wynn
 May_Ziadeh
@@ -1157,11 +1157,11 @@ McDonnell_Douglas_DC-9
 McDonnell_Douglas_DC-X
 McDonnell_Douglas_F-15E_Strike_Eagle
 McDonnell_Douglas_F-15_Eagle
-McDonnell_Douglas_F-15_STOL/MTD
+MTD
 McDonnell_Douglas_F-4_Phantom_II
 McDonnell_Douglas_F-4_Phantom_II_non-U.S._operators
-McDonnell_Douglas_F/A-18_Hornet
-McDonnell_Douglas_F/A-18_Hornet_in_Australian_service
+A-18_Hornet
+A-18_Hornet_in_Australian_service
 McDonnell_Douglas_KC-10_Extender
 McDonnell_Douglas_MD-11
 McDonnell_Douglas_MD-12
@@ -2063,7 +2063,7 @@ Medford,_Massachusetts
 Medford,_New_Jersey
 Medford,_New_York
 Medford,_Oregon
-Medford/Tufts_station
+Tufts_station
 Medgar_Evers
 Medgar_Evers_College
 Medgar_and_Myrlie_Evers_Home_National_Monument
@@ -2085,7 +2085,7 @@ Media,_Pennsylvania
 Media-independent_interface
 Media.Monks
 Media.net
-Media/Wawa_Line
+Wawa_Line
 Media24
 MediaCityUK
 MediaFire
@@ -2102,7 +2102,7 @@ MediaWorks_(publisher)
 MediaWorks_New_Zealand
 Media_(communication)
 Media_(region)
-Media_Bias/Fact_Check
+Fact_Check
 Media_Blasters
 Media_Composer
 Media_Descriptor_File
@@ -2430,7 +2430,7 @@ Medicine_Lodge,_Kansas
 Medicine_Lodge_Treaty
 Medicine_Man_(film)
 Medicine_Park,_Oklahoma
-Medicine_Wheel/Medicine_Mountain_National_Historic_Landmark
+Medicine_Mountain_National_Historic_Landmark
 Medicine_at_Midnight
 Medicine_bag
 Medicine_ball
@@ -4883,7 +4883,7 @@ Memorization
 Memory
 Memory,_Sorrow,_and_Thorn
 Memory,_the_Heart
-Memory-mapped_I/O_and_port-mapped_I/O
+O
 Memory-mapped_file
 Memory_(2022_film)
 Memory_(2023_film)
@@ -5768,12 +5768,12 @@ Mercedes-Benz_M139_engine
 Mercedes-Benz_M152_engine
 Mercedes-Benz_M156_engine
 Mercedes-Benz_M166_engine
-Mercedes-Benz_M176/M177/M178_engine
+M178_engine
 Mercedes-Benz_M180_engine
 Mercedes-Benz_M256_engine
-Mercedes-Benz_M260/M264_engine
+M264_engine
 Mercedes-Benz_M266_engine
-Mercedes-Benz_M270/M274_engine
+M274_engine
 Mercedes-Benz_M271_engine
 Mercedes-Benz_M272_engine
 Mercedes-Benz_M273_engine
@@ -5905,7 +5905,7 @@ Mercedes-EQ_Formula_E_Team
 Mercedes-Maybach_6
 Mercedes_(car_brand)
 Mercedes_(name)
-Mercedes_24/100/140_PS
+140_PS
 Mercedes_AMG_F1_W08_EQ_Power+
 Mercedes_AMG_F1_W09_EQ_Power+
 Mercedes_AMG_F1_W10_EQ_Power+
@@ -6749,8 +6749,8 @@ Mes_Aïeux
 Mes_Rafsanjan_F.C.
 Mesa
 Mesa,_Arizona
-Mesa/Boogie
-Mesa/Boogie_Mark_Series
+Boogie
+Boogie_Mark_Series
 Mesa_(computer_graphics)
 Mesa_(programming_language)
 Mesa_Air_Group
@@ -7087,7 +7087,7 @@ Mestizo_Colombians
 Mestizos_in_Mexico
 Mestiço
 Mestra
-Mestranol/noretynodrel
+noretynodrel
 Mestre
 Mestri_(film)
 Mesua_ferrea
@@ -8089,7 +8089,7 @@ Metrosideros
 Metrosideros_excelsa
 Metrosideros_polymorpha
 Metrotown,_Burnaby
-Metrovagonmash_81-717/81-714
+81-714
 Metrovalencia
 Metrowagonmash
 Metroxylon_sagu
@@ -18477,7 +18477,7 @@ Mischmetal
 Mischocyttarus_flavitarsis
 Miscibility
 Miscibility_gap
-Misconceptions_about_HIV/AIDS
+AIDS
 Misconduct
 Misconduct_(film)
 Misdemeanor
@@ -20363,7 +20363,7 @@ Mixed-sex_sports
 Mixed-signal_integrated_circuit
 Mixed-species_foraging_flock
 Mixed-use_development
-Mixed/dual_cycle
+dual_cycle
 Mixed_(United_Kingdom_ethnicity_category)
 Mixed_4_×_400_metres_relay
 Mixed_Dominicans
@@ -21108,7 +21108,7 @@ Model_1913_Cavalry_Saber
 Model_302_telephone
 Model_39_grenade
 Model_500_telephone
-Model_91/98/23_carbine
+23_carbine
 Model_98a_rifle
 Model_Behavior
 Model_Code_of_Conduct
@@ -21424,7 +21424,7 @@ Modified_Newtonian_dynamics
 Modified_Rankin_Scale
 Modified_Richardson_iteration
 Modified_atmosphere
-Modified_condition/decision_coverage
+decision_coverage
 Modified_discrete_cosine_transform
 Modified_frequency_modulation
 Modified_gross_national_income
