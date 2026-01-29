@@ -1,20 +1,22 @@
 """Slug index for fast article lookup"""
 
 import asyncio
+import bisect
 import heapq
 import logging
 import random
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple, Set
+from typing import Dict, List, Optional, Set, Tuple
 
 try:
     from rapidfuzz import fuzz
     HAS_RAPIDFUZZ = True
 except ImportError:
+    # Fallback to difflib if rapidfuzz is not installed
+    from difflib import SequenceMatcher
     HAS_RAPIDFUZZ = False
-
-# Import SequenceMatcher for fallback similarity scoring
-from difflib import SequenceMatcher
+else:
+    from difflib import SequenceMatcher
 
 try:
     from .bk_tree import BKTree
@@ -29,7 +31,7 @@ logger = logging.getLogger(__name__)
 class SlugIndex:
     """Index of available article slugs from sitemap"""
     
-    def __init__(self, links_dir: Optional[Path] = None, use_bktree: bool = True, use_trigram: bool = True):
+    def __init__(self, links_dir: Optional[Path] = None, use_bktree: bool = True):
         """
         Initialize slug index.
         
@@ -38,9 +40,6 @@ class SlugIndex:
             use_bktree: Enable BK-Tree for O(log n) fuzzy search (default: True)
                        When enabled, provides 100-1000x speedup for fuzzy queries.
                        Adds ~5-10 seconds to initial load time for large datasets.
-            use_trigram: Enable trigram indexing for candidate filtering (default: True)
-                         When enabled, provides 5-10x speedup by reducing search space.
-                         Adds ~1-2 seconds to initial load time.
         """
         if links_dir is None:
             # Auto-detect links directory relative to this file
@@ -49,33 +48,15 @@ class SlugIndex:
         
         self.links_dir = Path(links_dir)
         self.use_bktree = use_bktree and HAS_BKTREE
-        self.use_trigram = use_trigram
-        self._trigram_index: Dict[str, Set[str]] = {}  # trigram -> set of slugs
         self._index: Optional[Dict[str, str]] = None
         self._all_slugs: Optional[List[str]] = None
+        self._slug_dates: Optional[Dict[str, str]] = None  # slug -> lastmod date
         self._bk_tree: Optional['BKTree'] = None
         self._load_errors: List[Tuple[str, Exception]] = []  # Track file load errors
-    
-    @staticmethod
-    def _generate_trigrams(text: str) -> Set[str]:
-        """
-        Generate all 3-character trigrams from text.
-        
-        Args:
-            text: Input text to generate trigrams from
-            
-        Returns:
-            Set of trigram strings
-            
-        Example:
-            >>> SlugIndex._generate_trigrams("python")
-            {'pyt', 'yth', 'tho', 'hon'}
-        """
-        if len(text) < 3:
-            return {text.lower()}
-        
-        text = text.lower()
-        return {text[i:i+3] for i in range(len(text) - 2)}
+        self._all_slugs_lower_sorted: Optional[List[str]] = None
+        self._all_slugs_sorted_by_lower: Optional[List[str]] = None
+        self._token_index: Optional[Dict[str, List[str]]] = None
+        self._token_keys_sorted: Optional[List[str]] = None
     
     @staticmethod
     def _normalize_name(slug: str) -> str:
@@ -203,6 +184,7 @@ class SlugIndex:
             return self._index
         
         self._index = {}
+        self._slug_dates = {}
         unique_slugs = set()
         self._load_errors = []  # Reset errors for this load
         
@@ -219,19 +201,31 @@ class SlugIndex:
         
         for sitemap_dir in sorted(self.links_dir.glob("sitemap-*")):
             names_file = sitemap_dir / "names.txt"
+            dates_file = sitemap_dir / "dates.txt"
             if names_file.exists():
                 total_files += 1
                 try:
+                    # Load names
                     with open(names_file, 'r', encoding='utf-8') as f:
-                        for line_num, line in enumerate(f, 1):
-                            slug = line.strip()
-                            if slug:
-                                unique_slugs.add(slug)
-                                # Store normalized version for flexible matching
-                                normalized = self._normalize_name(slug)
-                                self._index[normalized] = slug
-                                # Also store the lowercase original for exact matches
-                                self._index[slug.lower()] = slug
+                        names_lines = [line.strip() for line in f]
+                    
+                    # Load dates if available
+                    dates_lines = []
+                    if dates_file.exists():
+                        with open(dates_file, 'r', encoding='utf-8') as f:
+                            dates_lines = [line.strip() for line in f]
+                    
+                    for i, slug in enumerate(names_lines):
+                        if slug:
+                            unique_slugs.add(slug)
+                            # Store normalized version for flexible matching
+                            normalized = self._normalize_name(slug)
+                            self._index[normalized] = slug
+                            # Also store the lowercase original for exact matches
+                            self._index[slug.lower()] = slug
+                            # Store date if available
+                            if i < len(dates_lines) and dates_lines[i]:
+                                self._slug_dates[slug] = dates_lines[i]
                 except (IOError, OSError) as e:
                     # Handle file access errors (permissions, disk issues, etc.)
                     failed_files += 1
@@ -243,8 +237,7 @@ class SlugIndex:
                     # Handle encoding issues in the file
                     failed_files += 1
                     error_msg = (
-                        f"Invalid UTF-8 encoding in {names_file} "
-                        f"(likely at line {line_num}): {e}"
+                        f"Invalid UTF-8 encoding in {names_file}: {e}"
                     )
                     self._load_errors.append((str(names_file), e))
                     logger.error(error_msg)
@@ -264,6 +257,10 @@ class SlugIndex:
         
         # Store sorted list of all unique slugs
         self._all_slugs = sorted(unique_slugs)
+        self._all_slugs_lower_sorted = None
+        self._all_slugs_sorted_by_lower = None
+        self._token_index = None
+        self._token_keys_sorted = None
         
         # Build BK-Tree for O(log n) fuzzy search (if enabled)
         if self.use_bktree and HAS_BKTREE:
@@ -271,19 +268,91 @@ class SlugIndex:
             for slug in self._all_slugs:
                 normalized = self._normalize_name(slug)
                 self._bk_tree.add(slug, normalized)
-        
-        # Build trigram index for candidate filtering (if enabled)
-        if self.use_trigram:
-            self._trigram_index = {}
-            for slug in self._all_slugs:
-                normalized = self._normalize_name(slug)
-                trigrams = self._generate_trigrams(normalized)
-                for trigram in trigrams:
-                    if trigram not in self._trigram_index:
-                        self._trigram_index[trigram] = set()
-                    self._trigram_index[trigram].add(slug)
-        
+
         return self._index
+
+    def _build_token_index(self) -> None:
+        """Build a token-to-slugs index for fast multi-word search."""
+        if self._token_index is not None:
+            return
+        self._token_index = {}
+        self._token_keys_sorted = []
+
+        if not self._all_slugs:
+            return
+
+        for slug in self._all_slugs:
+            normalized = self._normalize_name(slug)
+            tokens = [token for token in normalized.split() if len(token) >= 2]
+            for token in tokens:
+                self._token_index.setdefault(token, []).append(slug)
+
+        self._token_keys_sorted = sorted(self._token_index.keys())
+
+    def _collect_token_candidates(
+        self,
+        query_normalized: str,
+        limit: int,
+        max_candidates: int = 5000,
+    ) -> List[str]:
+        """Gather top matches using token index for speed."""
+        tokens = [token for token in query_normalized.split() if len(token) >= 2]
+        if not tokens:
+            return []
+
+        self._build_token_index()
+        if not self._token_index:
+            return []
+
+        token_index = self._token_index
+        candidates: Optional[Set[str]] = None
+
+        if len(tokens) == 1 and len(tokens[0]) < 4:
+            prefix = tokens[0]
+            if not self._token_keys_sorted:
+                return []
+            upper_bound = prefix + '{'
+            start = bisect.bisect_left(self._token_keys_sorted, prefix)
+            end = bisect.bisect_left(self._token_keys_sorted, upper_bound)
+            for token in self._token_keys_sorted[start:end]:
+                slugs = token_index.get(token, [])
+                if not slugs:
+                    continue
+                if candidates is None:
+                    candidates = set(slugs)
+                else:
+                    candidates.update(slugs)
+                if candidates and len(candidates) >= max_candidates:
+                    break
+        else:
+            tokens_by_size = sorted(tokens, key=lambda t: len(token_index.get(t, [])))
+            for token in tokens_by_size:
+                slugs = token_index.get(token)
+                if not slugs:
+                    return []
+                if candidates is None:
+                    candidates = set(slugs)
+                else:
+                    candidates.intersection_update(slugs)
+                if not candidates:
+                    return []
+
+        if not candidates:
+            return []
+
+        ranked: List[Tuple[Tuple[float, float, float, float], str]] = []
+        for slug in candidates:
+            normalized = self._normalize_name(slug)
+            substring_score = self._substring_match_score(normalized, query_normalized)
+            if substring_score is not None:
+                rank = (2, float(substring_score[0]), float(substring_score[1]), float(substring_score[2]))
+            else:
+                similarity = self._compute_similarity_score(query_normalized, normalized)
+                rank = (1, similarity, float(-len(normalized)), 0.0)
+            ranked.append((rank, slug))
+
+        ranked.sort(reverse=True)
+        return [slug for _, slug in ranked[:limit]]
     
     async def load_async(self) -> Dict[str, str]:
         """
@@ -323,40 +392,31 @@ class SlugIndex:
         """
         return self._load_errors.copy()
     
-    def _collect_trigram_candidates(self, query_normalized: str, limit: int) -> Set[str]:
+    def get_slug_date(self, slug: str) -> Optional[str]:
         """
-        Collect candidate slugs using trigram indexing.
-        
-        This reduces the search space by finding slugs that share
-        trigrams with the query, then running fuzzy matching only on candidates.
+        Get the lastmod date for a slug.
         
         Args:
-            query_normalized: Normalized query string
-            limit: Maximum number of candidates to return
+            slug: The article slug
             
         Returns:
-            Set of candidate slugs that share trigrams with query
+            Date string (YYYY-MM-DD) or None if not available
         """
-        if not self.use_trigram or not self._trigram_index:
-            return set()
-        
-        query_trigrams = self._generate_trigrams(query_normalized)
-        candidate_counts: Dict[str, int] = {}
-        
-        # Count trigram overlaps for each candidate
-        for trigram in query_trigrams:
-            if trigram in self._trigram_index:
-                for slug in self._trigram_index[trigram]:
-                    candidate_counts[slug] = candidate_counts.get(slug, 0) + 1
-        
-        # Filter candidates with sufficient trigram overlap
-        # Require at least 50% of query trigrams to match
-        min_overlap = max(1, len(query_trigrams) // 2)
-        candidates = {slug for slug, count in candidate_counts.items() if count >= min_overlap}
-        
-        return candidates
+        self.load()
+        return self._slug_dates.get(slug) if self._slug_dates else None
     
-    def search(self, query: str, limit: int = 10, fuzzy: bool = True, min_similarity: float = 0.6) -> List[str]:
+    def _sort_by_date(self, slugs: List[str]) -> List[str]:
+        """Sort slugs by lastmod date (most recent first)."""
+        if not self._slug_dates:
+            return slugs
+        
+        def date_key(slug: str) -> str:
+            # Return date or empty string (sorts to end)
+            return self._slug_dates.get(slug, "")
+        
+        return sorted(slugs, key=date_key, reverse=True)
+    
+    def search(self, query: str, limit: int = 10, fuzzy: bool = True, min_similarity: float = 0.6, sort_by_date: bool = False) -> List[str]:
         """
         Search for matching slugs with optimized fuzzy matching.
         
@@ -365,9 +425,10 @@ class SlugIndex:
             limit: Maximum number of results to return
             fuzzy: Enable fuzzy matching if no exact matches found
             min_similarity: Minimum similarity score for fuzzy matching (0.0 to 1.0)
+            sort_by_date: Sort results by lastmod date (most recent first)
             
         Returns:
-            List of matching slugs, ordered by relevance
+            List of matching slugs, ordered by relevance (or date if sort_by_date=True)
             
         Example:
             >>> index = SlugIndex()
@@ -375,7 +436,6 @@ class SlugIndex:
             ['Joe_Biden', 'Joe_Biden_presidential_campaign', ...]
             
         Note:
-            - Uses trigram indexing for 5-10x faster candidate filtering when enabled
             - Uses BK-Tree for O(log n) fuzzy search when enabled (100-1000x faster)
             - Falls back to linear search with rapidfuzz if BK-Tree unavailable
             - Uses difflib.SequenceMatcher as final fallback
@@ -391,12 +451,12 @@ class SlugIndex:
                 return []
             return self._all_slugs[:limit]
 
-        # Strategy 1: Exact/substring matches ranked by relevance
+        # Strategy 1: Token-based matches ranked by relevance
         matches: List[str] = []
         seen = set()
 
-        substring_candidates = self._collect_substring_candidates(index, query_normalized, limit)
-        for slug in substring_candidates:
+        token_candidates = self._collect_token_candidates(query_normalized, limit)
+        for slug in token_candidates:
             if slug not in seen:
                 matches.append(slug)
                 seen.add(slug)
@@ -411,39 +471,7 @@ class SlugIndex:
             remaining = limit - len(matches)
             min_similarity_threshold = min_similarity * 100.0
             
-            # Strategy 2a: Use trigram indexing to reduce search space (if available)
-            if self.use_trigram and self._trigram_index:
-                trigram_candidates = self._collect_trigram_candidates(query_normalized, remaining * 10)
-                
-                # If trigram filtering found candidates, run fuzzy matching only on them
-                if trigram_candidates:
-                    ranked_candidates: List[Tuple[float, str]] = []
-                    
-                    for slug in trigram_candidates:
-                        if slug in seen:
-                            continue
-                        
-                        candidate_normalized = self._normalize_name(slug)
-                        similarity = self._compute_similarity_score(query_normalized, candidate_normalized)
-                        
-                        if similarity >= min_similarity_threshold:
-                            ranked_candidates.append((similarity, slug))
-                    
-                    # Sort by similarity and take top matches
-                    ranked_candidates.sort(key=lambda item: (-item[0], item[1]))
-                    
-                    for similarity, slug in ranked_candidates:
-                        if slug not in seen:
-                            matches.append(slug)
-                            seen.add(slug)
-                        if len(matches) >= limit:
-                            break
-                    
-                    # If we have enough matches after trigram filtering, return early
-                    if len(matches) >= limit:
-                        return matches[:limit]
-            
-            # Strategy 2b: Use BK-Tree for O(log n) fuzzy search (if available)
+            # Strategy 2a: Use BK-Tree for O(log n) fuzzy search (if available)
             if self._bk_tree is not None:
                 # Convert similarity threshold to max edit distance
                 query_len = len(query_normalized)
@@ -475,7 +503,7 @@ class SlugIndex:
                     if len(matches) >= limit:
                         break
             
-            # Strategy 2c: Fallback to optimized linear search (if BK-Tree unavailable)
+            # Strategy 2b: Fallback to optimized linear search (if BK-Tree unavailable)
             else:
                 # Use min-heap to efficiently track top-k results without sorting all items
                 top_matches = []
@@ -512,6 +540,10 @@ class SlugIndex:
                     if slug not in seen:
                         matches.append(slug)
                         seen.add(slug)
+        
+        # Apply date sorting if requested
+        if sort_by_date and matches:
+            matches = self._sort_by_date(matches)
         
         return matches
     
@@ -565,27 +597,48 @@ class SlugIndex:
             
         Returns:
             List of article slugs matching the prefix
-            
+
         Example:
             >>> index = SlugIndex()
             >>> index.list_by_prefix(prefix="Artificial", limit=20)
             ['Artificial_Intelligence', 'Artificial_Neural_Network', ...]
         """
         self.load()  # Ensure index is loaded
-        
+
         if not self._all_slugs:
             return []
-        
+
+        if limit <= 0:
+            return []
+
         prefix_lower = prefix.lower()
-        matches = []
-        
-        for slug in self._all_slugs:
-            if slug.lower().startswith(prefix_lower):
-                matches.append(slug)
-                if len(matches) >= limit:
-                    break
-        
-        return matches
+        if not prefix_lower:
+            return self._all_slugs[:limit]
+
+        self._ensure_prefix_cache()
+        if not self._all_slugs_lower_sorted or not self._all_slugs_sorted_by_lower:
+            return []
+
+        upper_bound = prefix_lower + '{'
+        start = bisect.bisect_left(self._all_slugs_lower_sorted, prefix_lower)
+        end = bisect.bisect_left(self._all_slugs_lower_sorted, upper_bound)
+
+        matches = self._all_slugs_sorted_by_lower[start:end]
+        return matches[:limit]
+
+    def _ensure_prefix_cache(self) -> None:
+        """Build a lowercase-sorted slug list for fast prefix searches."""
+        if self._all_slugs is None:
+            return
+        if self._all_slugs_lower_sorted is not None:
+            return
+
+        pairs = sorted(
+            ((slug.lower(), slug) for slug in self._all_slugs),
+            key=lambda item: item[0]
+        )
+        self._all_slugs_lower_sorted = [item[0] for item in pairs]
+        self._all_slugs_sorted_by_lower = [item[1] for item in pairs]
     
     def get_total_count(self) -> int:
         """

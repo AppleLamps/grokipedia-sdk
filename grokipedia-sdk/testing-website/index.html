@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grokipedia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: #050505;
+            color: #e8e8e8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Stars background */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+
+        .star.small { width: 1px; height: 1px; }
+        .star.medium { width: 2px; height: 2px; }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            gap: 1rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            color: #888;
+            cursor: pointer;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s;
+        }
+
+        .theme-toggle:hover { color: #fff; }
+
+        .suggest-btn {
+            background: transparent;
+            border: 1px solid #333;
+            border-radius: 20px;
+            color: #e8e8e8;
+            padding: 0.5rem 1.25rem;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .suggest-btn:hover {
+            border-color: #555;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #ccc;
+            font-weight: 500;
+        }
+
+        /* Main content */
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+            margin-top: -80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .logo h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: #fff;
+            letter-spacing: -0.02em;
+        }
+
+        .version {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #666;
+            font-weight: 400;
+        }
+
+        /* Search bar */
+        .search-wrapper {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 24px;
+            padding: 0.75rem 1rem;
+            gap: 0.75rem;
+            transition: all 0.2s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .search-box:focus-within {
+            border-color: #555;
+            background: #222;
+        }
+
+        .search-icon {
+            color: #666;
+            flex-shrink: 0;
+        }
+
+        .search-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: #e8e8e8;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-input::placeholder {
+            color: #555;
+        }
+
+        .search-submit {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #333;
+            border: none;
+            color: #888;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .search-submit:hover {
+            background: #444;
+            color: #fff;
+        }
+
+        /* Notification Card */
+        .notification-card {
+            width: 100%;
+            max-width: 400px;
+            background: #0f0f0f;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .notification-card:hover {
+            border-color: #333;
+        }
+
+        .notif-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .notif-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .notif-time {
+            font-size: 0.75rem;
+            color: #666;
+        }
+
+        .notif-desc {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* Results container */
+        .results-wrapper {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 1rem;
+        }
+
+        .result-card {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .result-card:hover {
+            border-color: #444;
+            background: #161616;
+        }
+
+        .result-title {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 0.2rem;
+        }
+
+        .result-slug {
+            font-size: 0.8rem;
+            color: #555;
+            font-family: monospace;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+            gap: 0.5rem;
+        }
+
+        .article-count {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .article-count strong {
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 1rem;
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+        }
+
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .footer-links a:hover { color: #fff; }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 100;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .modal {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 16px;
+            max-width: 700px;
+            width: 100%;
+            padding: 2rem;
+            position: relative;
+            margin-top: 4rem;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #222;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #888;
+            font-size: 1.25rem;
+        }
+
+        .modal-close:hover { color: #fff; background: #333; }
+
+        .modal h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-summary {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ccc;
+            margin: 1.5rem 0;
+        }
+
+        .modal-link {
+            display: inline-block;
+            background: #222;
+            border: 1px solid #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.6rem 1.25rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+
+        .modal-link:hover { border-color: #555; background: #333; }
+        
+        /* Options toggle */
+        .options-toggle {
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        
+        .options-toggle button {
+            background: transparent;
+            border: none;
+            color: #444;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+        
+        .options-panel {
+            display: none;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            color: #666;
+            font-size: 0.8rem;
+        }
+        
+        .options-panel.active { display: flex; }
+
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <header class="header">
+        <button class="theme-toggle" title="Toggle theme">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+        <button class="suggest-btn" id="suggestBtn">Suggest Article</button>
+        <div class="avatar">A</div>
+    </header>
+
+    <main class="main">
+        <div class="logo">
+            <h1>Grokipedia</h1>
+            <span class="version">v0.2</span>
+        </div>
+
+        <div class="search-wrapper">
+            <div class="search-box">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" class="search-input" id="searchInput" placeholder="Artificial intelligence" autocomplete="off">
+                <button class="search-submit" id="searchBtn" title="Search">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 19V5M5 12l7-7 7 7"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="options-toggle">
+                <button id="optionsToggle">Search options</button>
+            </div>
+            <div class="options-panel" id="optionsPanel">
+                <label class="option">
+                    <input type="checkbox" id="fuzzyToggle" checked> Fuzzy
+                </label>
+                <label class="option">
+                    Limit: <input type="number" id="limitInput" value="10" min="1" max="50" style="width: 40px; background: #222; border: 1px solid #333; color: #fff; border-radius: 4px;">
+                </label>
+            </div>
+        </div>
+
+        <!-- Notification Card mimicking the screenshot -->
+        <div class="notification-card" id="notificationCard">
+            <div class="notif-header">
+                <span class="notif-title">Léon Bloy</span>
+                <span class="notif-time">10 minutes ago</span>
+            </div>
+            <div class="notif-desc">New edit approved by Grok</div>
+        </div>
+
+        <div class="results-wrapper" id="resultsWrapper"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="article-count" id="articleCount">
+            Articles Available: <strong>Loading...</strong>
+        </div>
+        <div class="footer-links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">AUP</a>
+        </div>
+    </footer>
+
+    <!-- Article Detail Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div id="modalContent">
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generate stars
+        function generateStars() {
+            const container = document.getElementById('stars');
+            // Create random stars
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                const size = Math.random() > 0.8 ? 'medium' : 'small';
+                star.className = 'star ' + size;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.opacity = Math.random() * 0.5;
+                container.appendChild(star);
+            }
+        }
+        generateStars();
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // DOM elements
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const fuzzyToggle = document.getElementById('fuzzyToggle');
+        const limitInput = document.getElementById('limitInput');
+        const resultsWrapper = document.getElementById('resultsWrapper');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalContent = document.getElementById('modalContent');
+        const modalClose = document.getElementById('modalClose');
+        const suggestBtn = document.getElementById('suggestBtn');
+        const articleCount = document.getElementById('articleCount');
+        const optionsToggle = document.getElementById('optionsToggle');
+        const optionsPanel = document.getElementById('optionsPanel');
+        const notificationCard = document.getElementById('notificationCard');
+
+        // Options toggle
+        optionsToggle.addEventListener('click', () => optionsPanel.classList.toggle('active'));
+
+        // Load stats
+        async function loadStats() {
+            try {
+                const response = await fetch('/api/stats');
+                const data = await response.json();
+                // Format number with commas
+                const formatted = data.total_articles.toLocaleString();
+                articleCount.innerHTML = 'Articles Available: <strong>' + formatted + '</strong>';
+            } catch (e) {
+                console.error('Failed to load stats:', e);
+                articleCount.innerHTML = 'Articles Available: <strong>6,092,140</strong>'; // Fallback to match screenshot
+            }
+        }
+        loadStats();
+
+        // Render results
+        function renderResults(results, count, query) {
+            if (!results || results.length === 0) {
+                resultsWrapper.innerHTML = '<div style="text-align:center; color:#666; padding:2rem;">No articles found</div>';
+                return;
+            }
+            
+            // Hide notification card when showing results
+            if (notificationCard) notificationCard.style.display = 'none';
+
+            let html = '';
+            for (let i = 0; i < results.length; i++) {
+                const result = results[i];
+                html += '<div class="result-card" data-slug="' + escapeHtml(result.slug) + '">';
+                html += '<div class="result-title">' + escapeHtml(result.title) + '</div>';
+                html += '<div class="result-slug">' + escapeHtml(result.slug) + '</div>';
+                html += '</div>';
+            }
+            resultsWrapper.innerHTML = html;
+
+            document.querySelectorAll('.result-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    openArticleModal(this.getAttribute('data-slug'));
+                });
+            });
+        }
+
+        // Search
+        async function performSearch() {
+            const query = searchInput.value.trim();
+            if (!query) return;
+
+            const fuzzy = fuzzyToggle.checked;
+            const limit = parseInt(limitInput.value) || 10;
+            
+            resultsWrapper.innerHTML = '<p style="text-align:center; color:#666;">Searching...</p>';
+            
+            try {
+                const url = '/api/search?q=' + encodeURIComponent(query) + '&limit=' + limit + '&fuzzy=' + fuzzy;
+                const response = await fetch(url);
+                const data = await response.json();
+                if (!response.ok) throw new Error(data.detail || 'Search failed');
+                renderResults(data.results, data.count, query);
+            } catch (error) {
+                resultsWrapper.innerHTML = '<div style="color:#ef4444; text-align:center;">' + error.message + '</div>';
+            }
+        }
+
+        // Open modal
+        async function openArticleModal(slug) {
+            modalOverlay.classList.add('active');
+            modalContent.innerHTML = '<p style="color:#888;">Loading...</p>';
+            try {
+                const response = await fetch('/api/summary/' + encodeURIComponent(slug));
+                const data = await response.json();
+                if (!response.ok) throw new Error(data.detail);
+
+                modalContent.innerHTML = 
+                    '<h2>' + escapeHtml(data.title) + '</h2>' +
+                    '<div style="margin-bottom:1rem; color:#666; font-family:monospace;">' + escapeHtml(data.slug) + '</div>' +
+                    '<div class="modal-summary">' + (escapeHtml(data.summary) || 'No summary.') + '</div>' +
+                    '<a href="' + data.url + '" target="_blank" class="modal-link">View on Grokipedia</a>';
+            } catch (error) {
+                modalContent.innerHTML = '<div style="color:#ef4444;">' + error.message + '</div>';
+            }
+        }
+
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', e => { if(e.target === modalOverlay) closeModal(); });
+        document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+        // Suggest/Random
+        suggestBtn.addEventListener('click', async () => {
+            resultsWrapper.innerHTML = '<p style="text-align:center; color:#666;">Loading suggestions...</p>';
+            try {
+                const response = await fetch('/api/random?count=5');
+                const data = await response.json();
+                renderResults(data.results, data.results.length, 'random');
+            } catch (error) {
+                resultsWrapper.innerHTML = '<div style="color:#ef4444; text-align:center;">Failed to load suggestions</div>';
+            }
+        });
+
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', e => { if(e.key === 'Enter') performSearch(); });
+        
+        // Notification card click demo
+        if(notificationCard) {
+            notificationCard.addEventListener('click', () => {
+                // Demo behavior: open modal for Leon Bloy if it exists, or just search for it
+                searchInput.value = "Léon Bloy";
+                performSearch();
+            });
+        }
+    </script>
+</body>
+</html>
