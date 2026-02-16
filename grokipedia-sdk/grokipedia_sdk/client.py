@@ -143,7 +143,28 @@ class Client:
     def __exit__(self, exc_type, exc_val, exc_tb):
         """Clean up httpx client on exit"""
         self.close()
-    
+
+    def __del__(self):
+        """Best-effort cleanup if the user forgets to close the client."""
+        try:
+            if hasattr(self, "_client") and self._client:
+                self._client.close()
+                self._client = None
+
+            # Avoid creating/running event loops during GC/interpreter shutdown.
+            if hasattr(self, "_async_client") and self._async_client:
+                try:
+                    loop = asyncio.get_running_loop()
+                except RuntimeError:
+                    loop = None
+
+                if loop and not loop.is_closed():
+                    loop.create_task(self._async_client.aclose())
+                self._async_client = None
+        except Exception:
+            # Never raise from a destructor
+            pass
+
     def close(self):
         """
         Close the HTTP clients (synchronous).
@@ -526,7 +547,20 @@ class Client:
             >>> client.search_slug("artificial intelligence", limit=5)
             ['Artificial_Intelligence', 'Artificial_Neural_Network', ...]
         """
-        return self._slug_index.search(query, limit=limit, fuzzy=fuzzy, sort_by_date=sort_by_date)
+        # Only pass optional kwargs when explicitly requested to keep compatibility
+        # with injected/custom SlugIndex implementations.
+        search_kwargs = {"limit": limit, "fuzzy": fuzzy}
+        if sort_by_date:
+            try:
+                return self._slug_index.search(query, **search_kwargs, sort_by_date=True)
+            except TypeError as exc:
+                # Only swallow the specific compatibility case.
+                msg = exc.args[0] if exc.args else str(exc)
+                if "unexpected keyword argument" in msg and "sort_by_date" in msg:
+                    return self._slug_index.search(query, **search_kwargs)
+                raise
+
+        return self._slug_index.search(query, **search_kwargs)
     
     def find_slug(self, query: str) -> Optional[str]:
         """
@@ -805,4 +839,3 @@ class Client:
         url = f"{self.base_url}/page/{slug}"
         html = await self._fetch_html_async(url, slug=slug)
         return self._parse_article_html(html, slug, url, full_content=False)
-
