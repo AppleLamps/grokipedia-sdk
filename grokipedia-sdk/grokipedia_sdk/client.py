@@ -147,7 +147,20 @@ class Client:
     def __del__(self):
         """Best-effort cleanup if the user forgets to close the client."""
         try:
-            self.close()
+            if hasattr(self, "_client") and self._client:
+                self._client.close()
+                self._client = None
+
+            # Avoid creating/running event loops during GC/interpreter shutdown.
+            if hasattr(self, "_async_client") and self._async_client:
+                try:
+                    loop = asyncio.get_running_loop()
+                except RuntimeError:
+                    loop = None
+
+                if loop and not loop.is_closed():
+                    loop.create_task(self._async_client.aclose())
+                self._async_client = None
         except Exception:
             # Never raise from a destructor
             pass
@@ -536,16 +549,17 @@ class Client:
         """
         # Only pass optional kwargs when explicitly requested to keep compatibility
         # with injected/custom SlugIndex implementations.
+        search_kwargs = {"limit": limit, "fuzzy": fuzzy}
         if sort_by_date:
             try:
-                return self._slug_index.search(query, limit=limit, fuzzy=fuzzy, sort_by_date=True)
+                return self._slug_index.search(query, **search_kwargs, sort_by_date=True)
             except TypeError as exc:
                 # Only swallow the specific compatibility case.
                 if "unexpected keyword argument" in str(exc) and "sort_by_date" in str(exc):
-                    return self._slug_index.search(query, limit=limit, fuzzy=fuzzy)
+                    return self._slug_index.search(query, **search_kwargs)
                 raise
 
-        return self._slug_index.search(query, limit=limit, fuzzy=fuzzy)
+        return self._slug_index.search(query, **search_kwargs)
     
     def find_slug(self, query: str) -> Optional[str]:
         """
