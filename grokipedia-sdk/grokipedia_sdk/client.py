@@ -555,7 +555,8 @@ class Client:
                 return self._slug_index.search(query, **search_kwargs, sort_by_date=True)
             except TypeError as exc:
                 # Only swallow the specific compatibility case.
-                if "unexpected keyword argument" in str(exc) and "sort_by_date" in str(exc):
+                msg = exc.args[0] if exc.args else str(exc)
+                if "unexpected keyword argument" in msg and "sort_by_date" in msg:
                     return self._slug_index.search(query, **search_kwargs)
                 raise
 
