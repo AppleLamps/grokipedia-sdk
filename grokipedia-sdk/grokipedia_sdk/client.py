@@ -143,7 +143,15 @@ class Client:
     def __exit__(self, exc_type, exc_val, exc_tb):
         """Clean up httpx client on exit"""
         self.close()
-    
+
+    def __del__(self):
+        """Best-effort cleanup if the user forgets to close the client."""
+        try:
+            self.close()
+        except Exception:
+            # Never raise from a destructor
+            pass
+
     def close(self):
         """
         Close the HTTP clients (synchronous).
@@ -526,7 +534,15 @@ class Client:
             >>> client.search_slug("artificial intelligence", limit=5)
             ['Artificial_Intelligence', 'Artificial_Neural_Network', ...]
         """
-        return self._slug_index.search(query, limit=limit, fuzzy=fuzzy, sort_by_date=sort_by_date)
+        # Only pass optional kwargs when explicitly requested to keep compatibility
+        # with injected/custom SlugIndex implementations.
+        if sort_by_date:
+            try:
+                return self._slug_index.search(query, limit=limit, fuzzy=fuzzy, sort_by_date=True)
+            except TypeError:
+                return self._slug_index.search(query, limit=limit, fuzzy=fuzzy)
+
+        return self._slug_index.search(query, limit=limit, fuzzy=fuzzy)
     
     def find_slug(self, query: str) -> Optional[str]:
         """
@@ -805,4 +821,3 @@ class Client:
         url = f"{self.base_url}/page/{slug}"
         html = await self._fetch_html_async(url, slug=slug)
         return self._parse_article_html(html, slug, url, full_content=False)
-
