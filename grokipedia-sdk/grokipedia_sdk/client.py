@@ -539,8 +539,11 @@ class Client:
         if sort_by_date:
             try:
                 return self._slug_index.search(query, limit=limit, fuzzy=fuzzy, sort_by_date=True)
-            except TypeError:
-                return self._slug_index.search(query, limit=limit, fuzzy=fuzzy)
+            except TypeError as exc:
+                # Only swallow the specific compatibility case.
+                if "unexpected keyword argument" in str(exc) and "sort_by_date" in str(exc):
+                    return self._slug_index.search(query, limit=limit, fuzzy=fuzzy)
+                raise
 
         return self._slug_index.search(query, limit=limit, fuzzy=fuzzy)
     
